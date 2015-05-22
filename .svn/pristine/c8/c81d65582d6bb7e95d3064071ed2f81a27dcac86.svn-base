@@ -1,0 +1,845 @@
+﻿namespace ketoansoft.app
+{
+    partial class DanhMucCongTrinh
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhMucCongTrinh));
+            this.itemPanel1 = new DevComponents.DotNetBar.ItemPanel();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnSave = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem8 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem9 = new DevComponents.DotNetBar.ButtonItem();
+            this.checkBoxItem1 = new DevComponents.DotNetBar.CheckBoxItem();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.gridData = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MA_CT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_CT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN_Edit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.HOAN_THANH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NGAY_HD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SO_HD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GT_VND = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DT_USD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GT_NT_VND = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GT_NT_USD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SO_NGAY_LAM = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NGAY_NT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.NGAY_KC = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP_DK_621 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP_DK_622 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP_DK_623 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP_DK_627 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DO_DANG_DK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DOANH_THU_DK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.THUE_VAT_DK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DS_HD_DK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DS_HD_TK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TONG_CP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP_CK_621 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP_CK_622 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP_CK_623 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.CP_CK_627 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DO_DANG_CK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LAI_GOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TY_LE_LAI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TY_LE_PB = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GIA_VON_DK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TK_DO_DANG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TK_GIA_VON = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LK_CPDK_621 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LK_CPDK_622 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LK_CPDK_623 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LK_CPDK_627 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.LK_CPDK_TONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DANG_DAU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TRANG_THAI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TEN_Edit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // itemPanel1
+            // 
+            this.itemPanel1.AutoScroll = true;
+            // 
+            // 
+            // 
+            this.itemPanel1.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(227)))), ((int)(((byte)(231)))));
+            this.itemPanel1.BackgroundStyle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("itemPanel1.BackgroundStyle.BackgroundImage")));
+            this.itemPanel1.BackgroundStyle.Class = "ItemPanel";
+            this.itemPanel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.itemPanel1.BackgroundStyle.PaddingBottom = 5;
+            this.itemPanel1.BackgroundStyle.PaddingLeft = 5;
+            this.itemPanel1.BackgroundStyle.PaddingRight = 5;
+            this.itemPanel1.BackgroundStyle.PaddingTop = 5;
+            this.itemPanel1.ContainerControlProcessDialogKey = true;
+            this.itemPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.itemPanel1.DragDropSupport = true;
+            this.itemPanel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemPanel1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem1,
+            this.buttonItem2,
+            this.buttonItem3,
+            this.buttonItem4,
+            this.buttonItem5,
+            this.buttonItem6,
+            this.buttonItem7,
+            this.btnSave,
+            this.buttonItem8,
+            this.buttonItem9});
+            this.itemPanel1.ItemSpacing = 5;
+            this.itemPanel1.ItemTemplate = this.buttonItem7;
+            this.itemPanel1.Location = new System.Drawing.Point(0, 0);
+            this.itemPanel1.Name = "itemPanel1";
+            this.itemPanel1.Size = new System.Drawing.Size(1119, 60);
+            this.itemPanel1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.itemPanel1.TabIndex = 1;
+            this.itemPanel1.Text = "itemPanel1";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.buttonItem1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItem1.GlobalItem = false;
+            this.buttonItem1.ImagePaddingVertical = 4;
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F1);
+            this.buttonItem1.Text = "F1\r\nTìm kiếm";
+            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.buttonItem2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItem2.GlobalItem = false;
+            this.buttonItem2.ImagePaddingVertical = 4;
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F2);
+            this.buttonItem2.Text = "F2\r\nĐánh dấu";
+            // 
+            // buttonItem3
+            // 
+            this.buttonItem3.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.buttonItem3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItem3.GlobalItem = false;
+            this.buttonItem3.ImagePaddingVertical = 4;
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F4);
+            this.buttonItem3.Text = "F4\r\nMáy tính";
+            this.buttonItem3.Click += new System.EventHandler(this.buttonItem3_Click);
+            // 
+            // buttonItem4
+            // 
+            this.buttonItem4.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.buttonItem4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItem4.GlobalItem = false;
+            this.buttonItem4.ImagePaddingVertical = 4;
+            this.buttonItem4.Name = "buttonItem4";
+            this.buttonItem4.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F5);
+            this.buttonItem4.Text = "F5\r\nCopy dòng";
+            // 
+            // buttonItem5
+            // 
+            this.buttonItem5.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.buttonItem5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItem5.GlobalItem = false;
+            this.buttonItem5.ImagePaddingVertical = 4;
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F6);
+            this.buttonItem5.Text = "F6\r\nĐến cột";
+            this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click);
+            // 
+            // buttonItem6
+            // 
+            this.buttonItem6.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.buttonItem6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItem6.GlobalItem = false;
+            this.buttonItem6.ImagePaddingVertical = 4;
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F7);
+            this.buttonItem6.Text = "F7\r\nLọc chứng từ";
+            // 
+            // buttonItem7
+            // 
+            this.buttonItem7.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.buttonItem7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItem7.GlobalItem = false;
+            this.buttonItem7.ImagePaddingVertical = 4;
+            this.buttonItem7.Name = "buttonItem7";
+            this.buttonItem7.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.F10);
+            this.buttonItem7.Text = "F10\r\nSửa chứng từ";
+            // 
+            // btnSave
+            // 
+            this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.ImagePaddingVertical = 4;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlS);
+            this.btnSave.Text = "Ctrl + S\r\nLưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // buttonItem8
+            // 
+            this.buttonItem8.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.buttonItem8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItem8.GlobalItem = false;
+            this.buttonItem8.ImagePaddingVertical = 4;
+            this.buttonItem8.Name = "buttonItem8";
+            this.buttonItem8.Text = "Del\r\nXóa";
+            this.buttonItem8.Click += new System.EventHandler(this.buttonItem8_Click);
+            // 
+            // buttonItem9
+            // 
+            this.buttonItem9.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
+            this.buttonItem9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonItem9.ImagePaddingVertical = 4;
+            this.buttonItem9.Name = "buttonItem9";
+            this.buttonItem9.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlQ);
+            this.buttonItem9.Text = "Ctrl + Q\r\nThoát";
+            this.buttonItem9.Click += new System.EventHandler(this.buttonItem9_Click);
+            // 
+            // checkBoxItem1
+            // 
+            this.checkBoxItem1.GlobalItem = false;
+            this.checkBoxItem1.Name = "checkBoxItem1";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.gridData);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.itemPanel1);
+            this.splitContainer1.Size = new System.Drawing.Size(1119, 495);
+            this.splitContainer1.SplitterDistance = 431;
+            this.splitContainer1.TabIndex = 2;
+            // 
+            // gridData
+            // 
+            this.gridData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridData.Location = new System.Drawing.Point(0, 0);
+            this.gridData.MainView = this.gridView1;
+            this.gridData.Name = "gridData";
+            this.gridData.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.TEN_Edit1,
+            this.repositoryItemComboBox1,
+            this.repositoryItemDateEdit1});
+            this.gridData.Size = new System.Drawing.Size(1119, 431);
+            this.gridData.TabIndex = 0;
+            this.gridData.UseEmbeddedNavigator = true;
+            this.gridData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.gridData.Load += new System.EventHandler(this.gridData_Load);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ID,
+            this.MA_CT,
+            this.TEN_CT,
+            this.HOAN_THANH,
+            this.NGAY_HD,
+            this.SO_HD,
+            this.NOI_DUNG,
+            this.GT_VND,
+            this.DT_USD,
+            this.GT_NT_VND,
+            this.GT_NT_USD,
+            this.SO_NGAY_LAM,
+            this.NGAY_NT,
+            this.NGAY_KC,
+            this.CP_DK_621,
+            this.CP_DK_622,
+            this.CP_DK_623,
+            this.CP_DK_627,
+            this.DO_DANG_DK,
+            this.DOANH_THU_DK,
+            this.THUE_VAT_DK,
+            this.DS_HD_DK,
+            this.DS_HD_TK,
+            this.TONG_CP,
+            this.CP_CK_621,
+            this.CP_CK_622,
+            this.CP_CK_623,
+            this.CP_CK_627,
+            this.DO_DANG_CK,
+            this.LAI_GOP,
+            this.TY_LE_LAI,
+            this.TY_LE_PB,
+            this.GIA_VON_DK,
+            this.TK_DO_DANG,
+            this.TK_GIA_VON,
+            this.LK_CPDK_621,
+            this.LK_CPDK_622,
+            this.LK_CPDK_623,
+            this.LK_CPDK_627,
+            this.LK_CPDK_TONG,
+            this.DANG_DAU,
+            this.TRANG_THAI});
+            this.gridView1.GridControl = this.gridData;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            this.gridView1.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView1_CellValueChanged);
+            this.gridView1.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gridView1_InvalidRowException);
+            // 
+            // ID
+            // 
+            this.ID.Caption = "ID";
+            this.ID.FieldName = "ID";
+            this.ID.MinWidth = 10;
+            this.ID.Name = "ID";
+            this.ID.Width = 20;
+            // 
+            // MA_CT
+            // 
+            this.MA_CT.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MA_CT.AppearanceCell.Options.UseFont = true;
+            this.MA_CT.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MA_CT.AppearanceHeader.Options.UseFont = true;
+            this.MA_CT.Caption = "Mã C. Trình";
+            this.MA_CT.FieldName = "MA_CT";
+            this.MA_CT.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.MA_CT.Name = "MA_CT";
+            this.MA_CT.OptionsColumn.AllowEdit = false;
+            this.MA_CT.Visible = true;
+            this.MA_CT.VisibleIndex = 0;
+            this.MA_CT.Width = 70;
+            // 
+            // TEN_CT
+            // 
+            this.TEN_CT.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TEN_CT.AppearanceCell.Options.UseFont = true;
+            this.TEN_CT.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TEN_CT.AppearanceHeader.Options.UseFont = true;
+            this.TEN_CT.Caption = "Tên công trình";
+            this.TEN_CT.ColumnEdit = this.TEN_Edit1;
+            this.TEN_CT.FieldName = "TEN_CT";
+            this.TEN_CT.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.TEN_CT.Name = "TEN_CT";
+            this.TEN_CT.Visible = true;
+            this.TEN_CT.VisibleIndex = 1;
+            this.TEN_CT.Width = 280;
+            // 
+            // TEN_Edit1
+            // 
+            this.TEN_Edit1.AutoHeight = false;
+            this.TEN_Edit1.Name = "TEN_Edit1";
+            // 
+            // HOAN_THANH
+            // 
+            this.HOAN_THANH.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HOAN_THANH.AppearanceCell.Options.UseFont = true;
+            this.HOAN_THANH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HOAN_THANH.AppearanceHeader.Options.UseFont = true;
+            this.HOAN_THANH.Caption = "% HT";
+            this.HOAN_THANH.FieldName = "HOAN_THANH";
+            this.HOAN_THANH.Name = "HOAN_THANH";
+            this.HOAN_THANH.Visible = true;
+            this.HOAN_THANH.VisibleIndex = 2;
+            this.HOAN_THANH.Width = 120;
+            // 
+            // NGAY_HD
+            // 
+            this.NGAY_HD.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NGAY_HD.AppearanceCell.Options.UseFont = true;
+            this.NGAY_HD.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NGAY_HD.AppearanceHeader.Options.UseFont = true;
+            this.NGAY_HD.Caption = "Ngày HĐ";
+            this.NGAY_HD.FieldName = "NGAY_HD";
+            this.NGAY_HD.Name = "NGAY_HD";
+            this.NGAY_HD.Visible = true;
+            this.NGAY_HD.VisibleIndex = 3;
+            this.NGAY_HD.Width = 120;
+            // 
+            // SO_HD
+            // 
+            this.SO_HD.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SO_HD.AppearanceCell.Options.UseFont = true;
+            this.SO_HD.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SO_HD.AppearanceHeader.Options.UseFont = true;
+            this.SO_HD.Caption = "Số hợp đồng";
+            this.SO_HD.FieldName = "SO_HD";
+            this.SO_HD.Name = "SO_HD";
+            this.SO_HD.Visible = true;
+            this.SO_HD.VisibleIndex = 4;
+            this.SO_HD.Width = 120;
+            // 
+            // NOI_DUNG
+            // 
+            this.NOI_DUNG.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NOI_DUNG.AppearanceCell.Options.UseFont = true;
+            this.NOI_DUNG.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NOI_DUNG.AppearanceHeader.Options.UseFont = true;
+            this.NOI_DUNG.Caption = "Nội dung hợp đồng";
+            this.NOI_DUNG.FieldName = "NOI_DUNG";
+            this.NOI_DUNG.Name = "NOI_DUNG";
+            this.NOI_DUNG.Visible = true;
+            this.NOI_DUNG.VisibleIndex = 5;
+            this.NOI_DUNG.Width = 120;
+            // 
+            // GT_VND
+            // 
+            this.GT_VND.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.GT_VND.AppearanceCell.Options.UseFont = true;
+            this.GT_VND.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.GT_VND.AppearanceHeader.Options.UseFont = true;
+            this.GT_VND.Caption = "Giá trị Vnd";
+            this.GT_VND.FieldName = "GT_VND";
+            this.GT_VND.Name = "GT_VND";
+            this.GT_VND.Visible = true;
+            this.GT_VND.VisibleIndex = 6;
+            // 
+            // DT_USD
+            // 
+            this.DT_USD.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.DT_USD.AppearanceCell.Options.UseFont = true;
+            this.DT_USD.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.DT_USD.AppearanceHeader.Options.UseFont = true;
+            this.DT_USD.Caption = "Giá trị Usd";
+            this.DT_USD.FieldName = "GT_USD";
+            this.DT_USD.Name = "DT_USD";
+            this.DT_USD.Visible = true;
+            this.DT_USD.VisibleIndex = 7;
+            this.DT_USD.Width = 120;
+            // 
+            // GT_NT_VND
+            // 
+            this.GT_NT_VND.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.GT_NT_VND.AppearanceCell.Options.UseFont = true;
+            this.GT_NT_VND.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.GT_NT_VND.AppearanceHeader.Options.UseFont = true;
+            this.GT_NT_VND.Caption = "Giá trị Nghiệm thu Vnd";
+            this.GT_NT_VND.FieldName = "GT_NT_VND";
+            this.GT_NT_VND.Name = "GT_NT_VND";
+            this.GT_NT_VND.Visible = true;
+            this.GT_NT_VND.VisibleIndex = 8;
+            this.GT_NT_VND.Width = 100;
+            // 
+            // GT_NT_USD
+            // 
+            this.GT_NT_USD.Caption = "Giá trị Nghiệm thu Usd";
+            this.GT_NT_USD.FieldName = "GT_NT_USD";
+            this.GT_NT_USD.Name = "GT_NT_USD";
+            this.GT_NT_USD.Visible = true;
+            this.GT_NT_USD.VisibleIndex = 9;
+            // 
+            // SO_NGAY_LAM
+            // 
+            this.SO_NGAY_LAM.Caption = "Số ngày làm";
+            this.SO_NGAY_LAM.FieldName = "SO_NGAY_LAM";
+            this.SO_NGAY_LAM.Name = "SO_NGAY_LAM";
+            this.SO_NGAY_LAM.Visible = true;
+            this.SO_NGAY_LAM.VisibleIndex = 10;
+            // 
+            // NGAY_NT
+            // 
+            this.NGAY_NT.Caption = "Ngày NT";
+            this.NGAY_NT.FieldName = "NGAY_NT";
+            this.NGAY_NT.Name = "NGAY_NT";
+            this.NGAY_NT.Visible = true;
+            this.NGAY_NT.VisibleIndex = 11;
+            // 
+            // NGAY_KC
+            // 
+            this.NGAY_KC.Caption = "Ngày K.Chuyển";
+            this.NGAY_KC.FieldName = "NGAY_KC";
+            this.NGAY_KC.Name = "NGAY_KC";
+            this.NGAY_KC.Visible = true;
+            this.NGAY_KC.VisibleIndex = 12;
+            // 
+            // CP_DK_621
+            // 
+            this.CP_DK_621.Caption = "CP ĐK 621";
+            this.CP_DK_621.FieldName = "CP_DK_621";
+            this.CP_DK_621.Name = "CP_DK_621";
+            this.CP_DK_621.Visible = true;
+            this.CP_DK_621.VisibleIndex = 13;
+            // 
+            // CP_DK_622
+            // 
+            this.CP_DK_622.Caption = "CP ĐK 622";
+            this.CP_DK_622.FieldName = "CP_DK_622";
+            this.CP_DK_622.Name = "CP_DK_622";
+            this.CP_DK_622.Visible = true;
+            this.CP_DK_622.VisibleIndex = 14;
+            // 
+            // CP_DK_623
+            // 
+            this.CP_DK_623.Caption = "CP ĐK";
+            this.CP_DK_623.FieldName = "CP_DK_623";
+            this.CP_DK_623.Name = "CP_DK_623";
+            this.CP_DK_623.Visible = true;
+            this.CP_DK_623.VisibleIndex = 15;
+            // 
+            // CP_DK_627
+            // 
+            this.CP_DK_627.Caption = "CP ĐK";
+            this.CP_DK_627.FieldName = "CP_DK_627";
+            this.CP_DK_627.Name = "CP_DK_627";
+            this.CP_DK_627.Visible = true;
+            this.CP_DK_627.VisibleIndex = 16;
+            // 
+            // DO_DANG_DK
+            // 
+            this.DO_DANG_DK.Caption = "Dở dang ĐK";
+            this.DO_DANG_DK.FieldName = "DO_DANG_DK";
+            this.DO_DANG_DK.Name = "DO_DANG_DK";
+            this.DO_DANG_DK.Visible = true;
+            this.DO_DANG_DK.VisibleIndex = 17;
+            // 
+            // DOANH_THU_DK
+            // 
+            this.DOANH_THU_DK.Caption = "Doanh Thu ĐK";
+            this.DOANH_THU_DK.FieldName = "DOANH_THU_DK";
+            this.DOANH_THU_DK.Name = "DOANH_THU_DK";
+            this.DOANH_THU_DK.Visible = true;
+            this.DOANH_THU_DK.VisibleIndex = 18;
+            // 
+            // THUE_VAT_DK
+            // 
+            this.THUE_VAT_DK.Caption = "Thuế VAT ĐK";
+            this.THUE_VAT_DK.FieldName = "THUE_VAT_DK";
+            this.THUE_VAT_DK.Name = "THUE_VAT_DK";
+            this.THUE_VAT_DK.Visible = true;
+            this.THUE_VAT_DK.VisibleIndex = 19;
+            // 
+            // DS_HD_DK
+            // 
+            this.DS_HD_DK.Caption = "DS hóa đơn ĐK";
+            this.DS_HD_DK.FieldName = "DS_HD_DK";
+            this.DS_HD_DK.Name = "DS_HD_DK";
+            this.DS_HD_DK.Visible = true;
+            this.DS_HD_DK.VisibleIndex = 20;
+            // 
+            // DS_HD_TK
+            // 
+            this.DS_HD_TK.Caption = "DS hóa đơn TK";
+            this.DS_HD_TK.FieldName = "DS_HD_TK";
+            this.DS_HD_TK.Name = "DS_HD_TK";
+            this.DS_HD_TK.Visible = true;
+            this.DS_HD_TK.VisibleIndex = 21;
+            // 
+            // TONG_CP
+            // 
+            this.TONG_CP.Caption = "Tổng Chi Phí";
+            this.TONG_CP.FieldName = "TONG_CP";
+            this.TONG_CP.Name = "TONG_CP";
+            this.TONG_CP.Visible = true;
+            this.TONG_CP.VisibleIndex = 22;
+            // 
+            // CP_CK_621
+            // 
+            this.CP_CK_621.Caption = "CP CK 621";
+            this.CP_CK_621.FieldName = "CP_CK_621";
+            this.CP_CK_621.Name = "CP_CK_621";
+            this.CP_CK_621.Visible = true;
+            this.CP_CK_621.VisibleIndex = 23;
+            // 
+            // CP_CK_622
+            // 
+            this.CP_CK_622.Caption = "CP CK 622";
+            this.CP_CK_622.FieldName = "CP_CK_622";
+            this.CP_CK_622.Name = "CP_CK_622";
+            this.CP_CK_622.Visible = true;
+            this.CP_CK_622.VisibleIndex = 24;
+            // 
+            // CP_CK_623
+            // 
+            this.CP_CK_623.Caption = "CP CK 623";
+            this.CP_CK_623.FieldName = "CP_CK_623";
+            this.CP_CK_623.Name = "CP_CK_623";
+            this.CP_CK_623.Visible = true;
+            this.CP_CK_623.VisibleIndex = 25;
+            // 
+            // CP_CK_627
+            // 
+            this.CP_CK_627.Caption = "CP CK 627";
+            this.CP_CK_627.FieldName = "CP_CK_627";
+            this.CP_CK_627.Name = "CP_CK_627";
+            this.CP_CK_627.Visible = true;
+            this.CP_CK_627.VisibleIndex = 26;
+            // 
+            // DO_DANG_CK
+            // 
+            this.DO_DANG_CK.Caption = "Dở dang CK";
+            this.DO_DANG_CK.FieldName = "DO_DANG_CK";
+            this.DO_DANG_CK.Name = "DO_DANG_CK";
+            this.DO_DANG_CK.Visible = true;
+            this.DO_DANG_CK.VisibleIndex = 27;
+            // 
+            // LAI_GOP
+            // 
+            this.LAI_GOP.Caption = "Lãi gộp";
+            this.LAI_GOP.FieldName = "LAI_GOP";
+            this.LAI_GOP.Name = "LAI_GOP";
+            this.LAI_GOP.Visible = true;
+            this.LAI_GOP.VisibleIndex = 28;
+            // 
+            // TY_LE_LAI
+            // 
+            this.TY_LE_LAI.Caption = "Tỷ lệ lãi";
+            this.TY_LE_LAI.FieldName = "TY_LE_LAI";
+            this.TY_LE_LAI.Name = "TY_LE_LAI";
+            this.TY_LE_LAI.Visible = true;
+            this.TY_LE_LAI.VisibleIndex = 29;
+            // 
+            // TY_LE_PB
+            // 
+            this.TY_LE_PB.Caption = "Tỷ lệ PB";
+            this.TY_LE_PB.FieldName = "TY_LE_PB";
+            this.TY_LE_PB.Name = "TY_LE_PB";
+            this.TY_LE_PB.Visible = true;
+            this.TY_LE_PB.VisibleIndex = 30;
+            // 
+            // GIA_VON_DK
+            // 
+            this.GIA_VON_DK.Caption = "Giá vốn ĐK";
+            this.GIA_VON_DK.FieldName = "GIA_VON_DK";
+            this.GIA_VON_DK.Name = "GIA_VON_DK";
+            this.GIA_VON_DK.Visible = true;
+            this.GIA_VON_DK.VisibleIndex = 31;
+            // 
+            // TK_DO_DANG
+            // 
+            this.TK_DO_DANG.Caption = "TK dở dang";
+            this.TK_DO_DANG.FieldName = "TK_DO_DANG";
+            this.TK_DO_DANG.Name = "TK_DO_DANG";
+            this.TK_DO_DANG.Visible = true;
+            this.TK_DO_DANG.VisibleIndex = 32;
+            // 
+            // TK_GIA_VON
+            // 
+            this.TK_GIA_VON.Caption = "TK giá vốn";
+            this.TK_GIA_VON.FieldName = "TK_GIA_VON";
+            this.TK_GIA_VON.Name = "TK_GIA_VON";
+            this.TK_GIA_VON.Visible = true;
+            this.TK_GIA_VON.VisibleIndex = 33;
+            // 
+            // LK_CPDK_621
+            // 
+            this.LK_CPDK_621.Caption = "Lũy Kế CP ĐK 621";
+            this.LK_CPDK_621.FieldName = "LK_CPDK_621";
+            this.LK_CPDK_621.Name = "LK_CPDK_621";
+            this.LK_CPDK_621.Visible = true;
+            this.LK_CPDK_621.VisibleIndex = 34;
+            // 
+            // LK_CPDK_622
+            // 
+            this.LK_CPDK_622.Caption = "Lũy Kế CP ĐK 622";
+            this.LK_CPDK_622.FieldName = "LK_CPDK_622";
+            this.LK_CPDK_622.Name = "LK_CPDK_622";
+            this.LK_CPDK_622.Visible = true;
+            this.LK_CPDK_622.VisibleIndex = 35;
+            // 
+            // LK_CPDK_623
+            // 
+            this.LK_CPDK_623.Caption = "Lũy Kế CP ĐK 623";
+            this.LK_CPDK_623.FieldName = "LK_CPDK_623";
+            this.LK_CPDK_623.Name = "LK_CPDK_623";
+            this.LK_CPDK_623.Visible = true;
+            this.LK_CPDK_623.VisibleIndex = 36;
+            // 
+            // LK_CPDK_627
+            // 
+            this.LK_CPDK_627.Caption = "Lũy Kế CP ĐK 627";
+            this.LK_CPDK_627.FieldName = "LK_CPDK_627";
+            this.LK_CPDK_627.Name = "LK_CPDK_627";
+            this.LK_CPDK_627.Visible = true;
+            this.LK_CPDK_627.VisibleIndex = 37;
+            // 
+            // LK_CPDK_TONG
+            // 
+            this.LK_CPDK_TONG.Caption = "Tổng Lũy Kế CP ĐK";
+            this.LK_CPDK_TONG.FieldName = "LK_CPDK_TONG";
+            this.LK_CPDK_TONG.Name = "LK_CPDK_TONG";
+            this.LK_CPDK_TONG.Visible = true;
+            this.LK_CPDK_TONG.VisibleIndex = 38;
+            // 
+            // DANG_DAU
+            // 
+            this.DANG_DAU.Caption = "ĐD";
+            this.DANG_DAU.FieldName = "DANH_DAU";
+            this.DANG_DAU.Name = "DANG_DAU";
+            this.DANG_DAU.Visible = true;
+            this.DANG_DAU.VisibleIndex = 39;
+            // 
+            // TRANG_THAI
+            // 
+            this.TRANG_THAI.Caption = "Trạng thái";
+            this.TRANG_THAI.FieldName = "TRANG_THAI";
+            this.TRANG_THAI.Name = "TRANG_THAI";
+            this.TRANG_THAI.Visible = true;
+            this.TRANG_THAI.VisibleIndex = 40;
+            // 
+            // repositoryItemComboBox1
+            // 
+            this.repositoryItemComboBox1.AutoHeight = false;
+            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // repositoryItemDateEdit1
+            // 
+            this.repositoryItemDateEdit1.AutoHeight = false;
+            this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
+            this.repositoryItemDateEdit1.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            // 
+            // metroTileItem1
+            // 
+            this.metroTileItem1.GlobalItem = false;
+            this.metroTileItem1.Name = "metroTileItem1";
+            this.metroTileItem1.SymbolColor = System.Drawing.Color.Empty;
+            this.metroTileItem1.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
+            // 
+            // 
+            // 
+            this.metroTileItem1.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // DanhMucCongTrinh
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1119, 495);
+            this.Controls.Add(this.splitContainer1);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "DanhMucCongTrinh";
+            this.Text = "Danh mục công trình";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TEN_Edit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.VistaTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.ButtonItem buttonItem3;
+        private DevComponents.DotNetBar.ButtonItem buttonItem4;
+        private DevComponents.DotNetBar.ButtonItem buttonItem5;
+        private DevComponents.DotNetBar.ButtonItem buttonItem6;
+        private DevComponents.DotNetBar.ButtonItem buttonItem7;
+        private DevComponents.DotNetBar.ButtonItem buttonItem8;
+        private DevComponents.DotNetBar.ButtonItem buttonItem9;
+        private DevComponents.DotNetBar.CheckBoxItem checkBoxItem1;
+        private DevComponents.DotNetBar.ItemPanel itemPanel1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem1;
+        private DevComponents.DotNetBar.ButtonItem btnSave;
+        private DevExpress.XtraGrid.GridControl gridData;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
+        private DevExpress.XtraGrid.Columns.GridColumn MA_CT;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN_CT;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit TEN_Edit1;
+        private DevExpress.XtraGrid.Columns.GridColumn HOAN_THANH;
+        private DevExpress.XtraGrid.Columns.GridColumn NGAY_HD;
+        private DevExpress.XtraGrid.Columns.GridColumn SO_HD;
+        private DevExpress.XtraGrid.Columns.GridColumn NOI_DUNG;
+        private DevExpress.XtraGrid.Columns.GridColumn GT_VND;
+        private DevExpress.XtraGrid.Columns.GridColumn DT_USD;
+        private DevExpress.XtraGrid.Columns.GridColumn GT_NT_VND;
+        private DevExpress.XtraGrid.Columns.GridColumn GT_NT_USD;
+        private DevExpress.XtraGrid.Columns.GridColumn SO_NGAY_LAM;
+        private DevExpress.XtraGrid.Columns.GridColumn NGAY_NT;
+        private DevExpress.XtraGrid.Columns.GridColumn NGAY_KC;
+        private DevExpress.XtraGrid.Columns.GridColumn CP_DK_621;
+        private DevExpress.XtraGrid.Columns.GridColumn CP_DK_622;
+        private DevExpress.XtraGrid.Columns.GridColumn CP_DK_623;
+        private DevExpress.XtraGrid.Columns.GridColumn CP_DK_627;
+        private DevExpress.XtraGrid.Columns.GridColumn DO_DANG_DK;
+        private DevExpress.XtraGrid.Columns.GridColumn DOANH_THU_DK;
+        private DevExpress.XtraGrid.Columns.GridColumn THUE_VAT_DK;
+        private DevExpress.XtraGrid.Columns.GridColumn DS_HD_DK;
+        private DevExpress.XtraGrid.Columns.GridColumn DS_HD_TK;
+        private DevExpress.XtraGrid.Columns.GridColumn TONG_CP;
+        private DevExpress.XtraGrid.Columns.GridColumn CP_CK_621;
+        private DevExpress.XtraGrid.Columns.GridColumn CP_CK_622;
+        private DevExpress.XtraGrid.Columns.GridColumn CP_CK_623;
+        private DevExpress.XtraGrid.Columns.GridColumn CP_CK_627;
+        private DevExpress.XtraGrid.Columns.GridColumn DO_DANG_CK;
+        private DevExpress.XtraGrid.Columns.GridColumn LAI_GOP;
+        private DevExpress.XtraGrid.Columns.GridColumn TY_LE_LAI;
+        private DevExpress.XtraGrid.Columns.GridColumn TY_LE_PB;
+        private DevExpress.XtraGrid.Columns.GridColumn GIA_VON_DK;
+        private DevExpress.XtraGrid.Columns.GridColumn TK_DO_DANG;
+        private DevExpress.XtraGrid.Columns.GridColumn TK_GIA_VON;
+        private DevExpress.XtraGrid.Columns.GridColumn LK_CPDK_621;
+        private DevExpress.XtraGrid.Columns.GridColumn LK_CPDK_622;
+        private DevExpress.XtraGrid.Columns.GridColumn LK_CPDK_623;
+        private DevExpress.XtraGrid.Columns.GridColumn LK_CPDK_627;
+        private DevExpress.XtraGrid.Columns.GridColumn LK_CPDK_TONG;
+        private DevExpress.XtraGrid.Columns.GridColumn DANG_DAU;
+        private DevExpress.XtraGrid.Columns.GridColumn TRANG_THAI;
+        private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
+    }
+}

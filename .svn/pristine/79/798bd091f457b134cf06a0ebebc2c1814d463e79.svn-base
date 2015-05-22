@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using DevComponents.DotNetBar;
+
+namespace ketoansoft.app
+{
+    public partial class fHome : DevComponents.DotNetBar.Metro.MetroForm
+    {
+        public fHome()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCfg_DoubleClick(object sender, EventArgs e)
+        {
+            fCaiThongSo f = new fCaiThongSo();
+            f.ShowDialog();
+        }
+    }
+}

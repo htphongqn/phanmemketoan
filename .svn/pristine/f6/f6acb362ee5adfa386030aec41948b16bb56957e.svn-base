@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ketoansoft.app.Class.Global
+{
+    public class Const
+    {
+        public const int CAIDATTHONGSO = 1;
+        public const int DANHMUCTAIKHOAN = 2;
+        public const int DANHMUCCACLOAICHUNGTU = 3;
+    }
+}

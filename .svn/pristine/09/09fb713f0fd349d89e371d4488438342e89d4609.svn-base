@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using DevComponents.DotNetBar;
+using ketoansoft.app.Class.Global;
+
+namespace ketoansoft.app
+{
+    public partial class fMain : DevComponents.DotNetBar.Metro.MetroForm
+    {
+        public fMain()
+        {
+            InitializeComponent();
+        }
+
+        #region funtion
+        private void fCaiThongSo()
+        {
+            fCaiThongSo _from = null;
+            if (_from == null || _from.IsDisposed)
+            {
+                _from = new fCaiThongSo();
+                _from.MdiParent = this;
+                _from.Show();
+            }
+            else
+            {
+                _from.Activate();
+            }
+        }
+        private void showForm(int iform)
+        {
+            switch (iform) 
+            {
+                case 1: fCaiThongSo(); break;
+            }
+        }
+        #endregion
+
+        private void fMain_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                showForm(Const.CAIDATTHONGSO);
+            }
+            catch (Exception) { }
+        }
+    }
+}

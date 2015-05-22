@@ -1,0 +1,106 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ketoansoft.app.Class.Data
+{
+    public class KTDMTSCDRepo
+    {
+        dbVstoreAppDataContext db = new dbVstoreAppDataContext();
+
+        public virtual KT_DMTSCD GetById(string id)
+        {
+            try
+            {
+                return this.db.KT_DMTSCDs.Single(u => u.MA_TS == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public virtual List<KT_DMTSCD> GetAll()
+        {
+            return this.db.KT_DMTSCDs.ToList();
+        }
+        public virtual void Create(KT_DMTSCD user)
+        {
+            try
+            {
+                this.db.KT_DMTSCDs.InsertOnSubmit(user);
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual void Update(KT_DMTSCD user)
+        {
+            try
+            {
+                KT_DMTSCD userOld = this.GetById(user.MA_TS);
+                userOld = user;
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+
+        public virtual void Remove(string id)
+        {
+            try
+            {
+                KT_DMTSCD user = this.GetById(id);
+                this.Remove(user);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual void Remove(KT_DMTSCD user)
+        {
+            try
+            {
+                db.KT_DMTSCDs.DeleteOnSubmit(user);
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual int Delete(string id)
+        {
+            try
+            {
+                KT_DMTSCD user = this.GetById(id);
+                return this.Delete(user);
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual int Delete(KT_DMTSCD user)
+        {
+            try
+            {
+                //user.IsDelete = true;
+                db.SubmitChanges();
+                return 0;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+    }
+}

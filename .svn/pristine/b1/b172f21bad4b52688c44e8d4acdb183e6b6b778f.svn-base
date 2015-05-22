@@ -1,0 +1,120 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ketoansoft.app.Class.Data
+{
+    public class CFGRepo
+    {
+        dbVstoreAppDataContext db = new dbVstoreAppDataContext();
+
+        public virtual CFG GetById(int id)
+        {
+            try
+            {
+                return this.db.CFGs.Single(u => u.ID == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public virtual List<CFG> GetAll()
+        {
+            return this.db.CFGs.ToList();
+        }
+        public virtual void Create(CFG user)
+        {
+            try
+            {
+                this.db.CFGs.InsertOnSubmit(user);
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual void Update(CFG user)
+        {
+            try
+            {
+                CFG userOld = this.GetById(user.ID);
+                userOld = user;
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual bool Update(int _id, string _TEN, string _GIA_TRI, string _GHI_CHU)
+        {
+            try
+            {
+                CFG _obj = new CFG();
+                _obj.ID = _id;
+                _obj.TEN = _TEN;
+                _obj.GIA_TRI = _GIA_TRI;
+                _obj.GHI_CHU = _GHI_CHU;
+                Update(_obj);
+                return true;
+            }
+            catch (Exception) { return false; }
+        }
+
+
+        public virtual void Remove(int id)
+        {
+            try
+            {
+                CFG user = this.GetById(id);
+                this.Remove(user);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual void Remove(CFG user)
+        {
+            try
+            {
+                db.CFGs.DeleteOnSubmit(user);
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual int Delete(int id)
+        {
+            try
+            {
+                CFG user = this.GetById(id);
+                return this.Delete(user);
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual int Delete(CFG user)
+        {
+            try
+            {
+                //user.IsDelete = true;
+                db.SubmitChanges();
+                return 0;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+    }
+}

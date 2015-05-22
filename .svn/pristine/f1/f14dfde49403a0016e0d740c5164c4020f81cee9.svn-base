@@ -1,0 +1,112 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using DevComponents.DotNetBar;
+using ketoansoft.app.Class.Global;
+
+namespace ketoansoft.app
+{
+    public partial class fHome : DevComponents.DotNetBar.OfficeForm
+    {
+        public fHome()
+        {
+            InitializeComponent();
+        }
+        public static int _IdAction = 0;
+        public fHome(int idAction)
+        {
+            idAction = _IdAction;
+        }
+
+        #region Form function
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (!e.Cancel)
+            {
+                if (MessageBox.Show("Bạn có muốn đóng phần mềm không?", "Hỏi", MessageBoxButtons.YesNo) != DialogResult.Yes)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+        private void fHome_Load(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region DoubleClick
+        private void btnCfg_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.CAIDATTHONGSO;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void btnDMCauthanhSP_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.DANHMUCCAUTHANHSANPHAM;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void buttonItem14_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.DANHMUCTAIKHOAN;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void buttonItem15_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.DANHMUCCACLOAICHUNGTU;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void btnDoituongphapnhan_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.DOITUONGPHAPNHAN;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void buttonItem22_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.DANHMUCDIENGIAI;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
+        private void buttonItem23_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.DANHMUCCACCONGTRINH;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        #endregion
+
+        #region shortcutKey
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            KeyEventArgs e = new KeyEventArgs(keyData);
+            if (e.KeyCode == Keys.Q && e.Control)
+            {
+                Application.Exit();
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        #endregion
+
+
+
+    }
+}

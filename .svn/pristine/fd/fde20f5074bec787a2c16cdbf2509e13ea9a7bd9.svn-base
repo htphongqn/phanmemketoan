@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using DevComponents.DotNetBar;
+using ketoansoft.app.Class.Data;
+
+namespace ketoansoft.app
+{
+    public partial class fCaiThongSo : DevComponents.DotNetBar.Metro.MetroForm
+    {
+        dbVstoreAppDataContext db = new dbVstoreAppDataContext();
+        clsCFG _clsCFG = new clsCFG();
+        public fCaiThongSo()
+        {
+            InitializeComponent();
+        }
+
+        #region Data
+        private void Load_Data()
+        {
+            try
+            {
+                gridData.DataSource = _clsCFG.GetAll();
+            }
+            catch (Exception) { }
+        }
+        #endregion
+
+
+        private void gridData_Load(object sender, EventArgs e)
+        {
+            Load_Data();
+        }
+    }
+}

@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ketoansoft.app.Class.Data
+{
+    public class clsCFG
+    {
+        dbVstoreAppDataContext db = new dbVstoreAppDataContext();
+        public virtual List<CFG> load_cfg()
+        {
+            try
+            {
+                var l = db.CFGs.ToList();
+                return l;
+            }
+            catch (Exception) { return null; }
+        }
+    }
+}

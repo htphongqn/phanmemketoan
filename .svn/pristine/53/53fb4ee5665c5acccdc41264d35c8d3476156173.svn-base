@@ -1,0 +1,178 @@
+﻿namespace ketoansoft.app
+{
+    partial class fCaiThongSo
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.gridData = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.IDV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GIA_TRI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.GHI_CHU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.DANH_DAU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TRANG_THAI = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.gridData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // gridData
+            // 
+            this.gridData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridData.Location = new System.Drawing.Point(0, 0);
+            this.gridData.MainView = this.gridView1;
+            this.gridData.Name = "gridData";
+            this.gridData.Size = new System.Drawing.Size(706, 448);
+            this.gridData.TabIndex = 0;
+            this.gridData.UseEmbeddedNavigator = true;
+            this.gridData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.gridData.Load += new System.EventHandler(this.gridData_Load);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.IDV,
+            this.TEN,
+            this.GIA_TRI,
+            this.GHI_CHU,
+            this.DANH_DAU,
+            this.TRANG_THAI});
+            this.gridView1.GridControl = this.gridData;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView1.OptionsView.ColumnAutoWidth = false;
+            this.gridView1.OptionsView.ShowAutoFilterRow = true;
+            // 
+            // IDV
+            // 
+            this.IDV.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDV.AppearanceCell.Options.UseFont = true;
+            this.IDV.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDV.AppearanceHeader.Options.UseFont = true;
+            this.IDV.Caption = "ID";
+            this.IDV.FieldName = "IDV";
+            this.IDV.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
+            this.IDV.Name = "IDV";
+            this.IDV.Visible = true;
+            this.IDV.VisibleIndex = 0;
+            this.IDV.Width = 70;
+            // 
+            // TEN
+            // 
+            this.TEN.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TEN.AppearanceCell.Options.UseFont = true;
+            this.TEN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TEN.AppearanceHeader.Options.UseFont = true;
+            this.TEN.Caption = "Tên";
+            this.TEN.FieldName = "TEN";
+            this.TEN.Name = "TEN";
+            this.TEN.Visible = true;
+            this.TEN.VisibleIndex = 1;
+            this.TEN.Width = 280;
+            // 
+            // GIA_TRI
+            // 
+            this.GIA_TRI.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GIA_TRI.AppearanceCell.Options.UseFont = true;
+            this.GIA_TRI.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GIA_TRI.AppearanceHeader.Options.UseFont = true;
+            this.GIA_TRI.Caption = "Giá trị";
+            this.GIA_TRI.FieldName = "GIA_TRI";
+            this.GIA_TRI.Name = "GIA_TRI";
+            this.GIA_TRI.Visible = true;
+            this.GIA_TRI.VisibleIndex = 2;
+            this.GIA_TRI.Width = 280;
+            // 
+            // GHI_CHU
+            // 
+            this.GHI_CHU.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GHI_CHU.AppearanceCell.Options.UseFont = true;
+            this.GHI_CHU.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GHI_CHU.AppearanceHeader.Options.UseFont = true;
+            this.GHI_CHU.Caption = "Ghi chú";
+            this.GHI_CHU.FieldName = "GHI_CHU";
+            this.GHI_CHU.Name = "GHI_CHU";
+            this.GHI_CHU.Visible = true;
+            this.GHI_CHU.VisibleIndex = 3;
+            this.GHI_CHU.Width = 280;
+            // 
+            // DANH_DAU
+            // 
+            this.DANH_DAU.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DANH_DAU.AppearanceCell.Options.UseFont = true;
+            this.DANH_DAU.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DANH_DAU.AppearanceHeader.Options.UseFont = true;
+            this.DANH_DAU.Caption = "ĐD";
+            this.DANH_DAU.FieldName = "DANH_DAU";
+            this.DANH_DAU.Name = "DANH_DAU";
+            this.DANH_DAU.Visible = true;
+            this.DANH_DAU.VisibleIndex = 4;
+            this.DANH_DAU.Width = 70;
+            // 
+            // TRANG_THAI
+            // 
+            this.TRANG_THAI.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TRANG_THAI.AppearanceCell.Options.UseFont = true;
+            this.TRANG_THAI.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TRANG_THAI.AppearanceHeader.Options.UseFont = true;
+            this.TRANG_THAI.Caption = "Trạng thái";
+            this.TRANG_THAI.FieldName = "TRANG_THAI";
+            this.TRANG_THAI.Name = "TRANG_THAI";
+            this.TRANG_THAI.Visible = true;
+            this.TRANG_THAI.VisibleIndex = 5;
+            this.TRANG_THAI.Width = 70;
+            // 
+            // fCaiThongSo
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(706, 448);
+            this.Controls.Add(this.gridData);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name = "fCaiThongSo";
+            this.Text = "MetroForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.gridData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private DevExpress.XtraGrid.GridControl gridData;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn IDV;
+        private DevExpress.XtraGrid.Columns.GridColumn TEN;
+        private DevExpress.XtraGrid.Columns.GridColumn GIA_TRI;
+        private DevExpress.XtraGrid.Columns.GridColumn GHI_CHU;
+        private DevExpress.XtraGrid.Columns.GridColumn DANH_DAU;
+        private DevExpress.XtraGrid.Columns.GridColumn TRANG_THAI;
+    }
+}
