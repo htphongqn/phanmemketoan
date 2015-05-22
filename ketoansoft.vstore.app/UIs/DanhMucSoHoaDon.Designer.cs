@@ -1,6 +1,6 @@
 ﻿namespace ketoansoft.app
 {
-    partial class DanhMucKheUoc
+    partial class DanhMucSoHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhMucKheUoc));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DanhMucSoHoaDon));
             this.gridData = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.SO_KU = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MATK = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.MADTPN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.TENDTPN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.SO_HD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MA_TK = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.MA_DTPN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TEN_DTPN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NOI_DUNG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GT_KU_VND = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GT_KU_USD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NGAY_KU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NGAY_HD = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SR_HD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NGAY_DH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HANMUC_VND = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.HANMUC_USD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.LAI_SUAT_VAY = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ds = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GT_HD_VND = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GT_HD_USD = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GHI_CHU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TEN_Edit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.itemPanel1 = new DevComponents.DotNetBar.ItemPanel();
             this.btnSearch = new DevComponents.DotNetBar.ButtonItem();
@@ -132,24 +122,14 @@
             // 
             this.gridView1.ColumnPanelRowHeight = 30;
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.SO_KU,
+            this.ID,
+            this.MATK,
+            this.MADTPN,
+            this.TENDTPN,
             this.SO_HD,
-            this.MA_TK,
-            this.MA_DTPN,
-            this.TEN_DTPN,
-            this.NOI_DUNG,
-            this.GT_KU_VND,
-            this.GT_KU_USD,
-            this.NGAY_KU,
             this.NGAY_HD,
-            this.NGAY_DH,
-            this.HANMUC_VND,
-            this.HANMUC_USD,
-            this.LAI_SUAT_VAY,
-            this.ds,
-            this.GT_HD_VND,
-            this.GT_HD_USD,
-            this.GHI_CHU});
+            this.SR_HD,
+            this.NGAY_DH});
             this.gridView1.GridControl = this.gridData;
             this.gridView1.Name = "gridView1";
             this.gridView1.NewItemRowText = "Click Thêm mới";
@@ -165,109 +145,48 @@
             this.gridView1.InvalidRowException += new DevExpress.XtraGrid.Views.Base.InvalidRowExceptionEventHandler(this.gridView1_InvalidRowException);
             this.gridView1.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridView1_ValidateRow);
             // 
-            // SO_KU
+            // ID
             // 
-            this.SO_KU.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.SO_KU.AppearanceCell.Options.UseFont = true;
-            this.SO_KU.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.SO_KU.AppearanceHeader.Options.UseFont = true;
-            this.SO_KU.Caption = "Số khế ước";
-            this.SO_KU.FieldName = "SO_KU";
-            this.SO_KU.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.Left;
-            this.SO_KU.Name = "SO_KU";
-            this.SO_KU.Visible = true;
-            this.SO_KU.VisibleIndex = 0;
-            this.SO_KU.Width = 90;
+            this.ID.Caption = "ID";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
+            this.ID.OptionsColumn.AllowEdit = false;
+            this.ID.Visible = true;
+            this.ID.VisibleIndex = 0;
+            this.ID.Width = 50;
+            // 
+            // MATK
+            // 
+            this.MATK.Caption = "Mã TK";
+            this.MATK.FieldName = "MATK";
+            this.MATK.Name = "MATK";
+            this.MATK.Visible = true;
+            this.MATK.VisibleIndex = 1;
+            // 
+            // MADTPN
+            // 
+            this.MADTPN.Caption = "Mã ĐTPN";
+            this.MADTPN.FieldName = "MADTPN";
+            this.MADTPN.Name = "MADTPN";
+            this.MADTPN.Visible = true;
+            this.MADTPN.VisibleIndex = 2;
+            // 
+            // TENDTPN
+            // 
+            this.TENDTPN.Caption = "Tên đối tượng pháp nhân";
+            this.TENDTPN.FieldName = "TENDTPN";
+            this.TENDTPN.Name = "TENDTPN";
+            this.TENDTPN.Visible = true;
+            this.TENDTPN.VisibleIndex = 3;
+            this.TENDTPN.Width = 120;
             // 
             // SO_HD
             // 
-            this.SO_HD.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.SO_HD.AppearanceCell.Options.UseFont = true;
-            this.SO_HD.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.SO_HD.AppearanceHeader.Options.UseFont = true;
-            this.SO_HD.Caption = "Số hợp đồng";
+            this.SO_HD.Caption = "Số HĐ";
             this.SO_HD.FieldName = "SO_HD";
             this.SO_HD.Name = "SO_HD";
             this.SO_HD.Visible = true;
-            this.SO_HD.VisibleIndex = 1;
-            this.SO_HD.Width = 90;
-            // 
-            // MA_TK
-            // 
-            this.MA_TK.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.MA_TK.AppearanceCell.Options.UseFont = true;
-            this.MA_TK.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.MA_TK.AppearanceHeader.Options.UseFont = true;
-            this.MA_TK.Caption = "Mã TK";
-            this.MA_TK.FieldName = "MA_TK";
-            this.MA_TK.Name = "MA_TK";
-            this.MA_TK.Visible = true;
-            this.MA_TK.VisibleIndex = 2;
-            this.MA_TK.Width = 90;
-            // 
-            // MA_DTPN
-            // 
-            this.MA_DTPN.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.MA_DTPN.AppearanceCell.Options.UseFont = true;
-            this.MA_DTPN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.MA_DTPN.AppearanceHeader.Options.UseFont = true;
-            this.MA_DTPN.Caption = "Mã ĐTPN";
-            this.MA_DTPN.FieldName = "MA_DTPN";
-            this.MA_DTPN.Name = "MA_DTPN";
-            this.MA_DTPN.Visible = true;
-            this.MA_DTPN.VisibleIndex = 3;
-            this.MA_DTPN.Width = 90;
-            // 
-            // TEN_DTPN
-            // 
-            this.TEN_DTPN.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.TEN_DTPN.AppearanceCell.Options.UseFont = true;
-            this.TEN_DTPN.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.TEN_DTPN.AppearanceHeader.Options.UseFont = true;
-            this.TEN_DTPN.Caption = "Tên đối tượng pháp nhân";
-            this.TEN_DTPN.FieldName = "TEN_DTPN";
-            this.TEN_DTPN.Name = "TEN_DTPN";
-            this.TEN_DTPN.Visible = true;
-            this.TEN_DTPN.VisibleIndex = 4;
-            this.TEN_DTPN.Width = 120;
-            // 
-            // NOI_DUNG
-            // 
-            this.NOI_DUNG.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.NOI_DUNG.AppearanceCell.Options.UseFont = true;
-            this.NOI_DUNG.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            this.NOI_DUNG.AppearanceHeader.Options.UseFont = true;
-            this.NOI_DUNG.Caption = "Nội dung hợp đồng";
-            this.NOI_DUNG.FieldName = "NOI_DUNG";
-            this.NOI_DUNG.Name = "NOI_DUNG";
-            this.NOI_DUNG.Visible = true;
-            this.NOI_DUNG.VisibleIndex = 5;
-            this.NOI_DUNG.Width = 130;
-            // 
-            // GT_KU_VND
-            // 
-            this.GT_KU_VND.Caption = "GT Tiền Vnd";
-            this.GT_KU_VND.FieldName = "GT_KU_VND";
-            this.GT_KU_VND.Name = "GT_KU_VND";
-            this.GT_KU_VND.Visible = true;
-            this.GT_KU_VND.VisibleIndex = 6;
-            // 
-            // GT_KU_USD
-            // 
-            this.GT_KU_USD.Caption = "GT Tiền Usd";
-            this.GT_KU_USD.FieldName = "GT_KU_USD";
-            this.GT_KU_USD.Name = "GT_KU_USD";
-            this.GT_KU_USD.Visible = true;
-            this.GT_KU_USD.VisibleIndex = 7;
-            // 
-            // NGAY_KU
-            // 
-            this.NGAY_KU.Caption = "Ngày khế ước";
-            this.NGAY_KU.FieldName = "NGAY_KU";
-            this.NGAY_KU.Name = "NGAY_KU";
-            this.NGAY_KU.Visible = true;
-            this.NGAY_KU.VisibleIndex = 8;
-            this.NGAY_KU.Width = 120;
+            this.SO_HD.VisibleIndex = 4;
             // 
             // NGAY_HD
             // 
@@ -275,8 +194,16 @@
             this.NGAY_HD.FieldName = "NGAY_HD";
             this.NGAY_HD.Name = "NGAY_HD";
             this.NGAY_HD.Visible = true;
-            this.NGAY_HD.VisibleIndex = 9;
+            this.NGAY_HD.VisibleIndex = 5;
             this.NGAY_HD.Width = 120;
+            // 
+            // SR_HD
+            // 
+            this.SR_HD.Caption = "Seri HĐ";
+            this.SR_HD.FieldName = "SR_HD";
+            this.SR_HD.Name = "SR_HD";
+            this.SR_HD.Visible = true;
+            this.SR_HD.VisibleIndex = 6;
             // 
             // NGAY_DH
             // 
@@ -284,63 +211,8 @@
             this.NGAY_DH.FieldName = "NGAY_DH";
             this.NGAY_DH.Name = "NGAY_DH";
             this.NGAY_DH.Visible = true;
-            this.NGAY_DH.VisibleIndex = 10;
+            this.NGAY_DH.VisibleIndex = 7;
             this.NGAY_DH.Width = 120;
-            // 
-            // HANMUC_VND
-            // 
-            this.HANMUC_VND.Caption = "Hạn mức HĐ Vnd";
-            this.HANMUC_VND.FieldName = "HANMUC_VND";
-            this.HANMUC_VND.Name = "HANMUC_VND";
-            this.HANMUC_VND.Visible = true;
-            this.HANMUC_VND.VisibleIndex = 11;
-            // 
-            // HANMUC_USD
-            // 
-            this.HANMUC_USD.Caption = "Hạn mức HĐ Usd";
-            this.HANMUC_USD.FieldName = "HANMUC_USD";
-            this.HANMUC_USD.Name = "HANMUC_USD";
-            this.HANMUC_USD.Visible = true;
-            this.HANMUC_USD.VisibleIndex = 12;
-            // 
-            // LAI_SUAT_VAY
-            // 
-            this.LAI_SUAT_VAY.Caption = "Lãi suất";
-            this.LAI_SUAT_VAY.FieldName = "LAI_SUAT_VAY";
-            this.LAI_SUAT_VAY.Name = "LAI_SUAT_VAY";
-            this.LAI_SUAT_VAY.Visible = true;
-            this.LAI_SUAT_VAY.VisibleIndex = 13;
-            this.LAI_SUAT_VAY.Width = 70;
-            // 
-            // ds
-            // 
-            this.ds.Caption = "ds Lãi suất";
-            this.ds.Name = "ds";
-            // 
-            // GT_HD_VND
-            // 
-            this.GT_HD_VND.Caption = "GT Hợp đồng VND";
-            this.GT_HD_VND.FieldName = "GT_HD_VND";
-            this.GT_HD_VND.Name = "GT_HD_VND";
-            this.GT_HD_VND.Visible = true;
-            this.GT_HD_VND.VisibleIndex = 14;
-            // 
-            // GT_HD_USD
-            // 
-            this.GT_HD_USD.Caption = "GT Hợp đồng Usd";
-            this.GT_HD_USD.FieldName = "GT_HD_USD";
-            this.GT_HD_USD.Name = "GT_HD_USD";
-            this.GT_HD_USD.Visible = true;
-            this.GT_HD_USD.VisibleIndex = 15;
-            // 
-            // GHI_CHU
-            // 
-            this.GHI_CHU.Caption = "Ghi chú";
-            this.GHI_CHU.FieldName = "GHI_CHU";
-            this.GHI_CHU.Name = "GHI_CHU";
-            this.GHI_CHU.Visible = true;
-            this.GHI_CHU.VisibleIndex = 16;
-            this.GHI_CHU.Width = 120;
             // 
             // TEN_Edit1
             // 
@@ -706,7 +578,7 @@
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(158, 29);
             this.textBox6.TabIndex = 3;
-            this.textBox6.Text = "KT_DMKU";
+            this.textBox6.Text = "KT_DMHoaDon";
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -751,7 +623,7 @@
             // 
             this.metroTileItem1.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // DanhMucKheUoc
+            // DanhMucSoHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -759,8 +631,8 @@
             this.Controls.Add(this.splitContainer1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "DanhMucKheUoc";
-            this.Text = "Danh mục khế ước";
+            this.Name = "DanhMucSoHoaDon";
+            this.Text = "Danh mục số hóa đơn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gridData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -799,12 +671,6 @@
 
         private DevExpress.XtraGrid.GridControl gridData;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn SO_KU;
-        private DevExpress.XtraGrid.Columns.GridColumn SO_HD;
-        private DevExpress.XtraGrid.Columns.GridColumn MA_TK;
-        private DevExpress.XtraGrid.Columns.GridColumn MA_DTPN;
-        private DevExpress.XtraGrid.Columns.GridColumn TEN_DTPN;
-        private DevExpress.XtraGrid.Columns.GridColumn NOI_DUNG;
         private DevComponents.DotNetBar.ButtonItem btnSearch;
         private DevComponents.DotNetBar.ButtonItem btnTick;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
@@ -839,17 +705,13 @@
         private System.Windows.Forms.TextBox txtInfoRows;
         private System.Windows.Forms.TextBox textBox6;
         private DevComponents.DotNetBar.ButtonItem btnRefresh;
-        private DevExpress.XtraGrid.Columns.GridColumn GT_KU_VND;
-        private DevExpress.XtraGrid.Columns.GridColumn GT_KU_USD;
-        private DevExpress.XtraGrid.Columns.GridColumn NGAY_KU;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
+        private DevExpress.XtraGrid.Columns.GridColumn MATK;
+        private DevExpress.XtraGrid.Columns.GridColumn MADTPN;
+        private DevExpress.XtraGrid.Columns.GridColumn TENDTPN;
+        private DevExpress.XtraGrid.Columns.GridColumn SO_HD;
         private DevExpress.XtraGrid.Columns.GridColumn NGAY_HD;
+        private DevExpress.XtraGrid.Columns.GridColumn SR_HD;
         private DevExpress.XtraGrid.Columns.GridColumn NGAY_DH;
-        private DevExpress.XtraGrid.Columns.GridColumn HANMUC_VND;
-        private DevExpress.XtraGrid.Columns.GridColumn HANMUC_USD;
-        private DevExpress.XtraGrid.Columns.GridColumn LAI_SUAT_VAY;
-        private DevExpress.XtraGrid.Columns.GridColumn ds;
-        private DevExpress.XtraGrid.Columns.GridColumn GT_HD_VND;
-        private DevExpress.XtraGrid.Columns.GridColumn GT_HD_USD;
-        private DevExpress.XtraGrid.Columns.GridColumn GHI_CHU;
     }
 }

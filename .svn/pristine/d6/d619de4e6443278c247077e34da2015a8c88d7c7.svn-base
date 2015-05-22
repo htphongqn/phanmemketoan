@@ -124,8 +124,6 @@
             this.btnSave = new DevComponents.DotNetBar.ButtonItem();
             this.btnDelete = new DevComponents.DotNetBar.ButtonItem();
             this.btnExit = new DevComponents.DotNetBar.ButtonItem();
-            this.btnExport = new DevComponents.DotNetBar.ButtonItem();
-            this.btnPrint = new DevComponents.DotNetBar.ButtonItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.checkBoxItem1 = new DevComponents.DotNetBar.CheckBoxItem();
             this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -401,7 +399,7 @@
             this.TEN_CT.Name = "TEN_CT";
             this.TEN_CT.Visible = true;
             this.TEN_CT.VisibleIndex = 0;
-            this.TEN_CT.Width = 200;
+            this.TEN_CT.Width = 280;
             // 
             // TEN_Edit1
             // 
@@ -432,6 +430,7 @@
             this.CO_TK_DU_TK_THUE.Name = "CO_TK_DU_TK_THUE";
             this.CO_TK_DU_TK_THUE.Visible = true;
             this.CO_TK_DU_TK_THUE.VisibleIndex = 3;
+            this.CO_TK_DU_TK_THUE.Width = 120;
             // 
             // CO_THUE_GTGT
             // 
@@ -444,7 +443,7 @@
             this.CO_THUE_GTGT.Name = "CO_THUE_GTGT";
             this.CO_THUE_GTGT.Visible = true;
             this.CO_THUE_GTGT.VisibleIndex = 4;
-            this.CO_THUE_GTGT.Width = 90;
+            this.CO_THUE_GTGT.Width = 120;
             // 
             // CO_HANG_HOA
             // 
@@ -457,6 +456,7 @@
             this.CO_HANG_HOA.Name = "CO_HANG_HOA";
             this.CO_HANG_HOA.Visible = true;
             this.CO_HANG_HOA.VisibleIndex = 5;
+            this.CO_HANG_HOA.Width = 120;
             // 
             // SERI_HD
             // 
@@ -469,7 +469,6 @@
             this.SERI_HD.Name = "SERI_HD";
             this.SERI_HD.Visible = true;
             this.SERI_HD.VisibleIndex = 6;
-            this.SERI_HD.Width = 100;
             // 
             // LOAI_TIEN
             // 
@@ -482,6 +481,7 @@
             this.LOAI_TIEN.Name = "LOAI_TIEN";
             this.LOAI_TIEN.Visible = true;
             this.LOAI_TIEN.VisibleIndex = 7;
+            this.LOAI_TIEN.Width = 120;
             // 
             // SO_CT
             // 
@@ -503,7 +503,6 @@
             this.SO_HD.Name = "SO_HD";
             this.SO_HD.Visible = true;
             this.SO_HD.VisibleIndex = 9;
-            this.SO_HD.Width = 100;
             // 
             // CO_XUAT_KHO
             // 
@@ -525,6 +524,8 @@
             // 
             this.gridColumn4.Caption = "Màn hình";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 12;
             // 
             // TK_NO
             // 
@@ -532,8 +533,7 @@
             this.TK_NO.FieldName = "TK_NO";
             this.TK_NO.Name = "TK_NO";
             this.TK_NO.Visible = true;
-            this.TK_NO.VisibleIndex = 12;
-            this.TK_NO.Width = 100;
+            this.TK_NO.VisibleIndex = 13;
             // 
             // TK_CO
             // 
@@ -541,13 +541,14 @@
             this.TK_CO.FieldName = "TK_CO";
             this.TK_CO.Name = "TK_CO";
             this.TK_CO.Visible = true;
-            this.TK_CO.VisibleIndex = 13;
-            this.TK_CO.Width = 100;
+            this.TK_CO.VisibleIndex = 14;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Vòng lặp";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 15;
             // 
             // TK_THUE_NK
             // 
@@ -555,13 +556,14 @@
             this.TK_THUE_NK.FieldName = "TK_THUE_NK";
             this.TK_THUE_NK.Name = "TK_THUE_NK";
             this.TK_THUE_NK.Visible = true;
-            this.TK_THUE_NK.VisibleIndex = 14;
-            this.TK_THUE_NK.Width = 100;
+            this.TK_THUE_NK.VisibleIndex = 16;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Hàm in";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 17;
             // 
             // CO_UN_CHI
             // 
@@ -569,7 +571,7 @@
             this.CO_UN_CHI.FieldName = "CO_UN_CHI";
             this.CO_UN_CHI.Name = "CO_UN_CHI";
             this.CO_UN_CHI.Visible = true;
-            this.CO_UN_CHI.VisibleIndex = 15;
+            this.CO_UN_CHI.VisibleIndex = 18;
             // 
             // CO_XK_CUM
             // 
@@ -577,7 +579,7 @@
             this.CO_XK_CUM.FieldName = "CO_XK_CUM";
             this.CO_XK_CUM.Name = "CO_XK_CUM";
             this.CO_XK_CUM.Visible = true;
-            this.CO_XK_CUM.VisibleIndex = 16;
+            this.CO_XK_CUM.VisibleIndex = 19;
             // 
             // NGUOI_GD
             // 
@@ -585,7 +587,7 @@
             this.NGUOI_GD.FieldName = "NGUOI_GD";
             this.NGUOI_GD.Name = "NGUOI_GD";
             this.NGUOI_GD.Visible = true;
-            this.NGUOI_GD.VisibleIndex = 17;
+            this.NGUOI_GD.VisibleIndex = 20;
             // 
             // CO_VUNG_BAN
             // 
@@ -593,8 +595,7 @@
             this.CO_VUNG_BAN.FieldName = "CO_VUNG_BAN";
             this.CO_VUNG_BAN.Name = "CO_VUNG_BAN";
             this.CO_VUNG_BAN.Visible = true;
-            this.CO_VUNG_BAN.VisibleIndex = 18;
-            this.CO_VUNG_BAN.Width = 100;
+            this.CO_VUNG_BAN.VisibleIndex = 21;
             // 
             // CO_DON_TRONG
             // 
@@ -602,7 +603,7 @@
             this.CO_DON_TRONG.FieldName = "CO_DON_TRONG";
             this.CO_DON_TRONG.Name = "CO_DON_TRONG";
             this.CO_DON_TRONG.Visible = true;
-            this.CO_DON_TRONG.VisibleIndex = 19;
+            this.CO_DON_TRONG.VisibleIndex = 22;
             // 
             // CO_LO_NHAP
             // 
@@ -610,7 +611,7 @@
             this.CO_LO_NHAP.FieldName = "CO_LO_NHAP";
             this.CO_LO_NHAP.Name = "CO_LO_NHAP";
             this.CO_LO_NHAP.Visible = true;
-            this.CO_LO_NHAP.VisibleIndex = 20;
+            this.CO_LO_NHAP.VisibleIndex = 23;
             // 
             // FILE_MAU
             // 
@@ -618,8 +619,7 @@
             this.FILE_MAU.FieldName = "FILE_MAU";
             this.FILE_MAU.Name = "FILE_MAU";
             this.FILE_MAU.Visible = true;
-            this.FILE_MAU.VisibleIndex = 21;
-            this.FILE_MAU.Width = 100;
+            this.FILE_MAU.VisibleIndex = 24;
             // 
             // NHIEU_LIEN
             // 
@@ -627,7 +627,7 @@
             this.NHIEU_LIEN.FieldName = "NHIEU_LIEN";
             this.NHIEU_LIEN.Name = "NHIEU_LIEN";
             this.NHIEU_LIEN.Visible = true;
-            this.NHIEU_LIEN.VisibleIndex = 22;
+            this.NHIEU_LIEN.VisibleIndex = 25;
             // 
             // CLTG
             // 
@@ -635,8 +635,7 @@
             this.CLTG.FieldName = "CLTG";
             this.CLTG.Name = "CLTG";
             this.CLTG.Visible = true;
-            this.CLTG.VisibleIndex = 23;
-            this.CLTG.Width = 80;
+            this.CLTG.VisibleIndex = 26;
             // 
             // HOI_IN
             // 
@@ -644,7 +643,7 @@
             this.HOI_IN.FieldName = "HOI_IN";
             this.HOI_IN.Name = "HOI_IN";
             this.HOI_IN.Visible = true;
-            this.HOI_IN.VisibleIndex = 24;
+            this.HOI_IN.VisibleIndex = 27;
             // 
             // DIEN_GIAI
             // 
@@ -652,8 +651,7 @@
             this.DIEN_GIAI.FieldName = "DIEN_GIAI";
             this.DIEN_GIAI.Name = "DIEN_GIAI";
             this.DIEN_GIAI.Visible = true;
-            this.DIEN_GIAI.VisibleIndex = 25;
-            this.DIEN_GIAI.Width = 120;
+            this.DIEN_GIAI.VisibleIndex = 28;
             // 
             // SO_DONG_IN
             // 
@@ -661,7 +659,7 @@
             this.SO_DONG_IN.FieldName = "SO_DONG_IN";
             this.SO_DONG_IN.Name = "SO_DONG_IN";
             this.SO_DONG_IN.Visible = true;
-            this.SO_DONG_IN.VisibleIndex = 26;
+            this.SO_DONG_IN.VisibleIndex = 29;
             // 
             // MA_TIEP_THI
             // 
@@ -669,8 +667,7 @@
             this.MA_TIEP_THI.FieldName = "MA_TIEP_THI";
             this.MA_TIEP_THI.Name = "MA_TIEP_THI";
             this.MA_TIEP_THI.Visible = true;
-            this.MA_TIEP_THI.VisibleIndex = 27;
-            this.MA_TIEP_THI.Width = 80;
+            this.MA_TIEP_THI.VisibleIndex = 30;
             // 
             // NHIEU_DV
             // 
@@ -678,8 +675,7 @@
             this.NHIEU_DV.FieldName = "NHIEU_DV";
             this.NHIEU_DV.Name = "NHIEU_DV";
             this.NHIEU_DV.Visible = true;
-            this.NHIEU_DV.VisibleIndex = 28;
-            this.NHIEU_DV.Width = 80;
+            this.NHIEU_DV.VisibleIndex = 31;
             // 
             // CO_DIEN_GIAI2
             // 
@@ -687,7 +683,7 @@
             this.CO_DIEN_GIAI2.FieldName = "CO_DIEN_GIAI2";
             this.CO_DIEN_GIAI2.Name = "CO_DIEN_GIAI2";
             this.CO_DIEN_GIAI2.Visible = true;
-            this.CO_DIEN_GIAI2.VisibleIndex = 29;
+            this.CO_DIEN_GIAI2.VisibleIndex = 32;
             // 
             // CO_CK
             // 
@@ -695,7 +691,7 @@
             this.CO_CK.FieldName = "CO_CK";
             this.CO_CK.Name = "CO_CK";
             this.CO_CK.Visible = true;
-            this.CO_CK.VisibleIndex = 30;
+            this.CO_CK.VisibleIndex = 33;
             // 
             // TK_CLTG_LAI
             // 
@@ -703,7 +699,7 @@
             this.TK_CLTG_LAI.FieldName = "TK_CLTG_LAI";
             this.TK_CLTG_LAI.Name = "TK_CLTG_LAI";
             this.TK_CLTG_LAI.Visible = true;
-            this.TK_CLTG_LAI.VisibleIndex = 31;
+            this.TK_CLTG_LAI.VisibleIndex = 34;
             // 
             // TK_CLTG_LO
             // 
@@ -711,7 +707,7 @@
             this.TK_CLTG_LO.FieldName = "TK_CLTG_LO";
             this.TK_CLTG_LO.Name = "TK_CLTG_LO";
             this.TK_CLTG_LO.Visible = true;
-            this.TK_CLTG_LO.VisibleIndex = 32;
+            this.TK_CLTG_LO.VisibleIndex = 35;
             // 
             // CO_CHUYEN_KHO
             // 
@@ -719,8 +715,7 @@
             this.CO_CHUYEN_KHO.FieldName = "CO_CHUYEN_KHO";
             this.CO_CHUYEN_KHO.Name = "CO_CHUYEN_KHO";
             this.CO_CHUYEN_KHO.Visible = true;
-            this.CO_CHUYEN_KHO.VisibleIndex = 33;
-            this.CO_CHUYEN_KHO.Width = 90;
+            this.CO_CHUYEN_KHO.VisibleIndex = 36;
             // 
             // CO_TIEN_HANG
             // 
@@ -728,7 +723,7 @@
             this.CO_TIEN_HANG.FieldName = "CO_TIEN_HANG";
             this.CO_TIEN_HANG.Name = "CO_TIEN_HANG";
             this.CO_TIEN_HANG.Visible = true;
-            this.CO_TIEN_HANG.VisibleIndex = 34;
+            this.CO_TIEN_HANG.VisibleIndex = 37;
             // 
             // CO_FORM_RIENG
             // 
@@ -736,7 +731,7 @@
             this.CO_FORM_RIENG.FieldName = "CO_FORM_RIENG";
             this.CO_FORM_RIENG.Name = "CO_FORM_RIENG";
             this.CO_FORM_RIENG.Visible = true;
-            this.CO_FORM_RIENG.VisibleIndex = 35;
+            this.CO_FORM_RIENG.VisibleIndex = 38;
             // 
             // CO_CK_TRUOC
             // 
@@ -744,7 +739,7 @@
             this.CO_CK_TRUOC.FieldName = "CO_CK_TRUOC";
             this.CO_CK_TRUOC.Name = "CO_CK_TRUOC";
             this.CO_CK_TRUOC.Visible = true;
-            this.CO_CK_TRUOC.VisibleIndex = 36;
+            this.CO_CK_TRUOC.VisibleIndex = 39;
             // 
             // CO_DV_PHU
             // 
@@ -752,7 +747,7 @@
             this.CO_DV_PHU.FieldName = "CO_DV_PHU";
             this.CO_DV_PHU.Name = "CO_DV_PHU";
             this.CO_DV_PHU.Visible = true;
-            this.CO_DV_PHU.VisibleIndex = 37;
+            this.CO_DV_PHU.VisibleIndex = 40;
             // 
             // CO_QUY_CACH
             // 
@@ -760,7 +755,7 @@
             this.CO_QUY_CACH.FieldName = "CO_QUY_CACH";
             this.CO_QUY_CACH.Name = "CO_QUY_CACH";
             this.CO_QUY_CACH.Visible = true;
-            this.CO_QUY_CACH.VisibleIndex = 38;
+            this.CO_QUY_CACH.VisibleIndex = 41;
             // 
             // CO_PHE_LIEU
             // 
@@ -768,7 +763,7 @@
             this.CO_PHE_LIEU.FieldName = "CO_PHE_LIEU";
             this.CO_PHE_LIEU.Name = "CO_PHE_LIEU";
             this.CO_PHE_LIEU.Visible = true;
-            this.CO_PHE_LIEU.VisibleIndex = 39;
+            this.CO_PHE_LIEU.VisibleIndex = 42;
             // 
             // CO_MS_KH
             // 
@@ -776,7 +771,7 @@
             this.CO_MS_KH.FieldName = "CO_MS_KH";
             this.CO_MS_KH.Name = "CO_MS_KH";
             this.CO_MS_KH.Visible = true;
-            this.CO_MS_KH.VisibleIndex = 40;
+            this.CO_MS_KH.VisibleIndex = 43;
             // 
             // LOAI_THUE
             // 
@@ -784,12 +779,14 @@
             this.LOAI_THUE.FieldName = "LOAI_THUE";
             this.LOAI_THUE.Name = "LOAI_THUE";
             this.LOAI_THUE.Visible = true;
-            this.LOAI_THUE.VisibleIndex = 41;
+            this.LOAI_THUE.VisibleIndex = 44;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Có ĐG Nhập";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 45;
             // 
             // MA_DTPN_NO
             // 
@@ -797,7 +794,7 @@
             this.MA_DTPN_NO.FieldName = "MA_DTPN_NO";
             this.MA_DTPN_NO.Name = "MA_DTPN_NO";
             this.MA_DTPN_NO.Visible = true;
-            this.MA_DTPN_NO.VisibleIndex = 42;
+            this.MA_DTPN_NO.VisibleIndex = 46;
             // 
             // MA_DTPN_CO
             // 
@@ -805,7 +802,7 @@
             this.MA_DTPN_CO.FieldName = "MA_DTPN_CO";
             this.MA_DTPN_CO.Name = "MA_DTPN_CO";
             this.MA_DTPN_CO.Visible = true;
-            this.MA_DTPN_CO.VisibleIndex = 43;
+            this.MA_DTPN_CO.VisibleIndex = 47;
             // 
             // CO_THUE_TTĐB
             // 
@@ -813,7 +810,7 @@
             this.CO_THUE_TTĐB.FieldName = "CO_THUE_TTĐB";
             this.CO_THUE_TTĐB.Name = "CO_THUE_TTĐB";
             this.CO_THUE_TTĐB.Visible = true;
-            this.CO_THUE_TTĐB.VisibleIndex = 44;
+            this.CO_THUE_TTĐB.VisibleIndex = 48;
             // 
             // NHIEU_USER
             // 
@@ -821,7 +818,7 @@
             this.NHIEU_USER.FieldName = "NHIEU_USER";
             this.NHIEU_USER.Name = "NHIEU_USER";
             this.NHIEU_USER.Visible = true;
-            this.NHIEU_USER.VisibleIndex = 45;
+            this.NHIEU_USER.VisibleIndex = 49;
             // 
             // TRANG_THAI
             // 
@@ -829,7 +826,7 @@
             this.TRANG_THAI.FieldName = "TRANG_THAI";
             this.TRANG_THAI.Name = "TRANG_THAI";
             this.TRANG_THAI.Visible = true;
-            this.TRANG_THAI.VisibleIndex = 46;
+            this.TRANG_THAI.VisibleIndex = 50;
             // 
             // CO_TK_XUAT
             // 
@@ -837,7 +834,7 @@
             this.CO_TK_XUAT.FieldName = "CO_TK_XUAT";
             this.CO_TK_XUAT.Name = "CO_TK_XUAT";
             this.CO_TK_XUAT.Visible = true;
-            this.CO_TK_XUAT.VisibleIndex = 47;
+            this.CO_TK_XUAT.VisibleIndex = 51;
             // 
             // TK_XUAT
             // 
@@ -845,7 +842,7 @@
             this.TK_XUAT.FieldName = "TK_XUAT";
             this.TK_XUAT.Name = "TK_XUAT";
             this.TK_XUAT.Visible = true;
-            this.TK_XUAT.VisibleIndex = 48;
+            this.TK_XUAT.VisibleIndex = 52;
             // 
             // TK_GIA_VON
             // 
@@ -853,7 +850,7 @@
             this.TK_GIA_VON.FieldName = "TK_GIA_VON";
             this.TK_GIA_VON.Name = "TK_GIA_VON";
             this.TK_GIA_VON.Visible = true;
-            this.TK_GIA_VON.VisibleIndex = 49;
+            this.TK_GIA_VON.VisibleIndex = 53;
             // 
             // NHOM_CT
             // 
@@ -861,12 +858,14 @@
             this.NHOM_CT.FieldName = "NHOM_CT";
             this.NHOM_CT.Name = "NHOM_CT";
             this.NHOM_CT.Visible = true;
-            this.NHOM_CT.VisibleIndex = 50;
+            this.NHOM_CT.VisibleIndex = 54;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Nhóm Ds Cột";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 55;
             // 
             // TS_GTGT
             // 
@@ -874,7 +873,7 @@
             this.TS_GTGT.FieldName = "TS_GTGT";
             this.TS_GTGT.Name = "TS_GTGT";
             this.TS_GTGT.Visible = true;
-            this.TS_GTGT.VisibleIndex = 51;
+            this.TS_GTGT.VisibleIndex = 56;
             // 
             // KIEU_CONGTY
             // 
@@ -882,7 +881,7 @@
             this.KIEU_CONGTY.FieldName = "KIEU_CONGTY";
             this.KIEU_CONGTY.Name = "KIEU_CONGTY";
             this.KIEU_CONGTY.Visible = true;
-            this.KIEU_CONGTY.VisibleIndex = 52;
+            this.KIEU_CONGTY.VisibleIndex = 57;
             // 
             // CO_CK_TM
             // 
@@ -890,7 +889,7 @@
             this.CO_CK_TM.FieldName = "CO_CK_TM";
             this.CO_CK_TM.Name = "CO_CK_TM";
             this.CO_CK_TM.Visible = true;
-            this.CO_CK_TM.VisibleIndex = 53;
+            this.CO_CK_TM.VisibleIndex = 58;
             // 
             // CO_CK_TT
             // 
@@ -898,7 +897,7 @@
             this.CO_CK_TT.FieldName = "CO_CK_TT";
             this.CO_CK_TT.Name = "CO_CK_TT";
             this.CO_CK_TT.Visible = true;
-            this.CO_CK_TT.VisibleIndex = 54;
+            this.CO_CK_TT.VisibleIndex = 59;
             // 
             // CO_VANCHUYEN
             // 
@@ -906,7 +905,7 @@
             this.CO_VANCHUYEN.FieldName = "CO_VANCHUYEN";
             this.CO_VANCHUYEN.Name = "CO_VANCHUYEN";
             this.CO_VANCHUYEN.Visible = true;
-            this.CO_VANCHUYEN.VisibleIndex = 55;
+            this.CO_VANCHUYEN.VisibleIndex = 60;
             // 
             // label4
             // 
@@ -1035,9 +1034,7 @@
             this.btnEdit,
             this.btnSave,
             this.btnDelete,
-            this.btnExit,
-            this.btnExport,
-            this.btnPrint});
+            this.btnExit});
             this.itemPanel1.ItemSpacing = 5;
             this.itemPanel1.ItemTemplate = this.btnEdit;
             this.itemPanel1.Location = new System.Drawing.Point(0, 0);
@@ -1162,22 +1159,6 @@
             this.btnExit.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlQ);
             this.btnExit.Text = "Ctrl + Q\r\nThoát";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Text = "Export";
-            this.btnExport.Visible = false;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.ColorTable = DevComponents.DotNetBar.eButtonColor.BlueWithBackground;
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Text = "Print";
-            this.btnPrint.Visible = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // splitContainer1
             // 
@@ -1358,8 +1339,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn CO_CK_TM;
         private DevExpress.XtraGrid.Columns.GridColumn CO_CK_TT;
         private DevExpress.XtraGrid.Columns.GridColumn CO_VANCHUYEN;
-        private DevComponents.DotNetBar.ButtonItem btnExport;
-        private DevComponents.DotNetBar.ButtonItem btnPrint;
 
     }
 }

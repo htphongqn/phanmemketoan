@@ -444,7 +444,6 @@
             this.CO_THUE_GTGT.Name = "CO_THUE_GTGT";
             this.CO_THUE_GTGT.Visible = true;
             this.CO_THUE_GTGT.VisibleIndex = 4;
-            this.CO_THUE_GTGT.Width = 90;
             // 
             // CO_HANG_HOA
             // 

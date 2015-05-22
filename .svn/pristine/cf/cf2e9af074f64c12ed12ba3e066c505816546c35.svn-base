@@ -51,17 +51,13 @@ namespace ketoansoft.app.Class.Global
             }
         }
         /// <summary>
-        /// Unit GridView style Font, color, width 
+        /// Unit GridView style
         /// </summary>
-        /// <param name="grv">Unit GridView style Font, color, width</param>
+        /// <param name="grv">Unit GridView style</param>
         public static void UnitGridview(GridView grv)
         {
             grv.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;
-            for (int i = 0; i < grv.Columns.Count; i++)
-            {
-                grv.Columns[i].AppearanceCell.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            }
-            //grv.Appearance.FocusedCell.Font = new System.Drawing.Font("Tahoma", 12);
+            grv.Appearance.FocusedCell.Font = new System.Drawing.Font("Tahoma", 12);
             grv.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 11.25F);
             grv.ColumnPanelRowHeight = 45;
             grv.RowHeight = 30;

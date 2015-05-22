@@ -51,9 +51,9 @@ namespace ketoansoft.app.Class.Global
             }
         }
         /// <summary>
-        /// Unit GridView style Font, color, width 
+        /// Unit GridView style
         /// </summary>
-        /// <param name="grv">Unit GridView style Font, color, width</param>
+        /// <param name="grv">Unit GridView style</param>
         public static void UnitGridview(GridView grv)
         {
             grv.OptionsView.NewItemRowPosition = NewItemRowPosition.Top;

@@ -11,20 +11,20 @@ using DevExpress.XtraEditors;
 using ketoansoft.app.Components.clsVproUtility;
 using System.Collections;
 using ketoansoft.app.Class.Global;
-using System.Diagnostics;
 using ketoansoft.app.Diaglog;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid.Columns;
 
 namespace ketoansoft.app
 {
-    public partial class DanhMucTaiKhoan : DevComponents.DotNetBar.Metro.MetroForm
+    public partial class DanhMucSoHoaDon : DevComponents.DotNetBar.Metro.MetroForm
     {
-        private dbVstoreAppDataContext _db = new dbVstoreAppDataContext();
-        private KTTKRepo _KTTKRepo = new KTTKRepo();
-        private Unit _unit = new Unit();
+        dbVstoreAppDataContext _db = new dbVstoreAppDataContext();
+        private KTDMHoaDonRepo _KTDMHoaDonRepo = new KTDMHoaDonRepo();
+        public Unit _unit = new Unit();
         private List<int> _listUpdate = new List<int>();
 
-        public DanhMucTaiKhoan()
+        public DanhMucSoHoaDon()
         {
             InitializeComponent();
         }
@@ -34,10 +34,10 @@ namespace ketoansoft.app
         {
             try
             {
+                //gridData.DataSource = _CFGRepo.GetAll();
                 _db = new dbVstoreAppDataContext();
                 gridData.DataSource = null;
-                gridData.DataSource = _db.KT_TKs;
-                //gridData.DataSource = _KTTKRepo.GetAll();
+                gridData.DataSource = _db.KT_DMHoaDons;
                 gridData.RefreshDataSource();
                 gridView1.RefreshData();
             }
@@ -51,20 +51,24 @@ namespace ketoansoft.app
                 foreach (int pos in _listUpdate)
                 {
                     int id = Utils.CIntDef(gridView1.GetRowCellValue(pos, "ID"), 0);
-                    KT_TK obj = _KTTKRepo.GetById(id);
+                    KT_DMHoaDon obj = _KTDMHoaDonRepo.GetById(id);
                     if (obj != null)
                     {
-                        obj.MA_TK = Utils.CStrDef(gridView1.GetRowCellValue(pos, "MA_TK"), "");
-                        obj.TEN_TK = Utils.CStrDef(gridView1.GetRowCellValue(pos, "TEN_TK"), "");
-                        obj.VND_DU_NO = Utils.CDblDef(gridView1.GetRowCellValue(pos, "VND_DU_NO"), 0);
-                        obj.VND_DU_CO = Utils.CDblDef(gridView1.GetRowCellValue(pos, "VND_DU_CO"), 0);
-                        obj.VND_PS_NO = Utils.CDblDef(gridView1.GetRowCellValue(pos, "VND_PS_NO"), 0);
-                        obj.VND_PS_CO = Utils.CDblDef(gridView1.GetRowCellValue(pos, "VND_PS_CO"), 0);
-                        obj.VND_CK_NO = Utils.CDblDef(gridView1.GetRowCellValue(pos, "VND_CK_NO"), 0);
-                        obj.VND_CK_CO = Utils.CDblDef(gridView1.GetRowCellValue(pos, "VND_CK_CO"), 0);
-                        obj.DANH_DAU = Utils.CStrDef(gridView1.GetRowCellValue(pos, "DANH_DAU"), "");
+                        obj.MATK = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MATK"), "");
+                        obj.MADTPN = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MADTPN"), "");
+                        obj.TENDTPN = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TENDTPN"), "");
+                        obj.SO_HD = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SO_HD"), "");
+                        DateTime? temp = null;
+                        if (Utils.CDateDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NGAY_HD"), DateTime.MinValue) != DateTime.MinValue)
+                            temp = Utils.CDateDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NGAY_HD"), DateTime.MinValue);
+                        obj.NGAY_HD = temp;
+                        obj.SR_HD = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SR_HD"), "");
+                        temp = null;
+                        if (Utils.CDateDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NGAY_DH"), DateTime.MinValue) != DateTime.MinValue)
+                            temp = Utils.CDateDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NGAY_DH"), DateTime.MinValue);
+                        obj.NGAY_DH = temp;
 
-                        _KTTKRepo.Update(obj);
+                        _KTDMHoaDonRepo.Update(obj);
                         i++;
                     }
                 }
@@ -77,19 +81,22 @@ namespace ketoansoft.app
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }            
+            }
         }
         private void Save_Tick()
         {
             try
             {
-                int _id = Utils.CIntDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID"), 0);
-                KT_TK obj = _KTTKRepo.GetById(_id);
-                if (obj != null)
-                {
-                    obj.DANH_DAU = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DANH_DAU"), "").Trim() == "T" ? "" : "T";
-                    _KTTKRepo.Update(obj);
-                }
+                //string so_ku = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SO_KU").ToString(), "");
+                //string so_hd = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SO_HD").ToString(), "");
+                //string ma_tk = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MA_TK").ToString(), "");
+                //string ma_dtpn = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MA_DTPN").ToString(), "");
+                //KT_DMKU obj = _KTDMKURepo.GetById(so_ku, so_hd, ma_tk, ma_dtpn);
+                //if (obj != null)
+                //{
+                //    obj.DANH_DAU = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DANH_DAU"), "").Trim() == "T" ? "" : "T";
+                //    _KTDMKURepo.Update(obj);
+                //}
             }
             catch (Exception ex)
             {
@@ -102,18 +109,22 @@ namespace ketoansoft.app
             {
                 if (MessageBox.Show("Bạn có muốn copy dòng này thành dòng mới?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    KT_TK obj = new KT_TK();
-                    obj.MA_TK = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MA_TK"), "");
-                    obj.TEN_TK = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TEN_TK"), "");
-                    obj.VND_DU_NO = Utils.CDblDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "VND_DU_NO"), 0);
-                    obj.VND_DU_CO = Utils.CDblDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "VND_DU_CO"), 0);
-                    obj.VND_PS_NO = Utils.CDblDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "VND_PS_NO"), 0);
-                    obj.VND_PS_CO = Utils.CDblDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "VND_PS_CO"), 0);
-                    obj.VND_CK_NO = Utils.CDblDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "VND_CK_NO"), 0);
-                    obj.VND_CK_CO = Utils.CDblDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "VND_CK_CO"), 0);
-                    obj.DANH_DAU = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "DANH_DAU"), "");
+                    KT_DMHoaDon obj = new KT_DMHoaDon();
+                    obj.MATK = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MATK"), "");
+                    obj.MADTPN = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MADTPN"), "");
+                    obj.TENDTPN = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "TENDTPN"), "");
+                    obj.SO_HD = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SO_HD"), "");
+                    DateTime? temp = null;
+                    if (Utils.CDateDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NGAY_HD"), DateTime.MinValue) != DateTime.MinValue)
+                        temp = Utils.CDateDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NGAY_HD"), DateTime.MinValue);
+                    obj.NGAY_HD = temp;
+                    obj.SR_HD = Utils.CStrDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "SR_HD"), "");
+                    temp = null;
+                    if (Utils.CDateDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NGAY_DH"), DateTime.MinValue) != DateTime.MinValue)
+                        temp = Utils.CDateDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "NGAY_DH"), DateTime.MinValue);
+                    obj.NGAY_DH = temp;
 
-                    _KTTKRepo.Create(obj);
+                    _KTDMHoaDonRepo.Create(obj);
                     MessageBox.Show("Đã copy dòng này vào cuối bảng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -133,9 +144,10 @@ namespace ketoansoft.app
                 //}
                 Save_Data(false);
 
-                int Id = Utils.CIntDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID"), 0);
-                _KTTKRepo.Remove(Id);
-                //Id = Utils.CIntDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "MA_TK"), 0);
+                int id = Utils.CIntDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID"), 0);
+
+                _KTDMHoaDonRepo.Remove(id);
+
                 //MessageBox.Show("Xóa dòng ID:" + Id + " thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Load_Data();
             }
@@ -173,62 +185,67 @@ namespace ketoansoft.app
                 }
             }));
         }
-
         private void gridView1_RowStyle(object sender, RowStyleEventArgs e)
         {
-            _unit.Get_ColorTick(gridView1, sender, e);
+            //_unit.Get_ColorTick(gridView1, sender, e);
         }
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             Load_InfoRows();
         }
-
         private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
-        {
+        {            
             GridView view = sender as GridView;
 
             //Kiểm tra đây là dòng dữ liệu mới hay cũ, nếu là mới thì mình insert
             if (view.IsNewItemRow(e.RowHandle))
             {
                 //e.RowHandle trả về giá trị int là thứ tự của dòng hiện tại
-                KT_TK obj = new KT_TK();
-                obj.MA_TK = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "MA_TK"), "");
-                obj.TEN_TK = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "TEN_TK"), "");
-                obj.VND_DU_NO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_DU_NO"), 0);
-                obj.VND_DU_CO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_DU_CO"), 0);
-                obj.VND_PS_NO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_PS_NO"), 0);
-                obj.VND_PS_CO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_PS_CO"), 0);
-                obj.VND_CK_NO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_CK_NO"), 0);
-                obj.VND_CK_CO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_CK_CO"), 0);
-                obj.DANH_DAU = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "DANH_DAU"), "");
+                KT_DMHoaDon obj = new KT_DMHoaDon();
+                obj.MATK = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "MATK"), "");
+                obj.MADTPN = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "MADTPN"), "");
+                obj.TENDTPN = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "TENDTPN"), "");
+                obj.SO_HD = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "SO_HD"), "");
+                DateTime? temp = null;
+                if (Utils.CDateDef(view.GetRowCellValue(e.RowHandle, "NGAY_HD"), DateTime.MinValue) != DateTime.MinValue)
+                    temp = Utils.CDateDef(view.GetRowCellValue(e.RowHandle, "NGAY_HD"), DateTime.MinValue);
+                obj.NGAY_HD = temp;
+                obj.SR_HD = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "SR_HD"), "");
+                temp = null;
+                if (Utils.CDateDef(view.GetRowCellValue(e.RowHandle, "NGAY_DH"), DateTime.MinValue) != DateTime.MinValue)
+                    temp = Utils.CDateDef(view.GetRowCellValue(e.RowHandle, "NGAY_DH"), DateTime.MinValue);
+                obj.NGAY_DH = temp;
 
-                _KTTKRepo.Create(obj);
+                _KTDMHoaDonRepo.Create(obj);
 
             }
             //Cũ thì update
             else
             {
-                int id = Utils.CIntDef(view.GetRowCellValue(e.RowHandle, "ID"), 0);
-                KT_TK obj = _KTTKRepo.GetById(id);
+                int id = Utils.CIntDef(gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "ID"), 0);
+                KT_DMHoaDon obj = _KTDMHoaDonRepo.GetById(id);
                 if (obj != null)
                 {
-                    obj.MA_TK = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "MA_TK"), "");
-                    obj.TEN_TK = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "TEN_TK"), "");
-                    obj.VND_DU_NO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_DU_NO"), 0);
-                    obj.VND_DU_CO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_DU_CO"), 0);
-                    obj.VND_PS_NO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_PS_NO"), 0);
-                    obj.VND_PS_CO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_PS_CO"), 0);
-                    obj.VND_CK_NO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_CK_NO"), 0);
-                    obj.VND_CK_CO = Utils.CDblDef(view.GetRowCellValue(e.RowHandle, "VND_CK_CO"), 0);
-                    obj.DANH_DAU = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "DANH_DAU"), "");
+                    obj.MATK = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "MATK"), "");
+                    obj.MADTPN = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "MADTPN"), "");
+                    obj.TENDTPN = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "TENDTPN"), "");
+                    obj.SO_HD = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "SO_HD"), "");
+                    DateTime? temp = null;
+                    if (Utils.CDateDef(view.GetRowCellValue(e.RowHandle, "NGAY_HD"), DateTime.MinValue) != DateTime.MinValue)
+                        temp = Utils.CDateDef(view.GetRowCellValue(e.RowHandle, "NGAY_HD"), DateTime.MinValue);
+                    obj.NGAY_HD = temp;
+                    obj.SR_HD = Utils.CStrDef(view.GetRowCellValue(e.RowHandle, "SR_HD"), "");
+                    temp = null;
+                    if (Utils.CDateDef(view.GetRowCellValue(e.RowHandle, "NGAY_DH"), DateTime.MinValue) != DateTime.MinValue)
+                        temp = Utils.CDateDef(view.GetRowCellValue(e.RowHandle, "NGAY_DH"), DateTime.MinValue);
+                    obj.NGAY_DH = temp;
 
-                    _KTTKRepo.Update(obj);
+                    _KTDMHoaDonRepo.Update(obj);
                 }
 
             }
             Load_Data();
         }
-
         #endregion
 
         #region Button Click
@@ -278,24 +295,6 @@ namespace ketoansoft.app
             Load_Data();
         }
         #endregion
-                
-        #region Form function
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            base.OnFormClosing(e);
-            if (!e.Cancel)
-            {
-                if (MessageBox.Show("Bạn có muốn đóng form Tài Khoản không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    Save_Data(false);
-                }
-            }
-        }
-        #endregion
 
         #region Funtion
         private void FocusCol()
@@ -307,7 +306,7 @@ namespace ketoansoft.app
         }
         private void Load_InfoHeader()
         {
-            txtMonth.Text = Utils.CStrDef(fTerm._month, "");
+            txtMonth.Text = Utils.CStrDef(fTerm._month,"");
             txtYear.Text = Utils.CStrDef(fTerm._year, "");
             txtDatabase.Text = "Database";//Chỗ này gán sau
             txtCompanyName.Text = Unit.Get_CompanyName();
@@ -315,8 +314,8 @@ namespace ketoansoft.app
         }
         private void Load_InfoRows()
         {
-            string[] _arr = { "MA_TK", "TEN_TK" };
-            txtInfoRows.Text = Unit.Get_InfoRows(gridView1, _arr);
+            //string[] _arr = {"SO_KU","SO_HD","MA_TK", "MA_DTPN"};
+            txtInfoRows.Text = Unit.Get_InfoRows(gridView1, null);
         }
         #endregion
 
@@ -364,5 +363,6 @@ namespace ketoansoft.app
             return base.ProcessCmdKey(ref msg, keyData);
         }
         #endregion        
+
     }
 }

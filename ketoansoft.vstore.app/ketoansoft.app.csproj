@@ -181,6 +181,12 @@
     <Compile Include="UIs\CauThanhSanPham.Designer.cs">
       <DependentUpon>CauThanhSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\DanhMucSoHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucSoHoaDon.Designer.cs">
+      <DependentUpon>DanhMucSoHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\DanhMucKheUoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\CauThanhSanPham.resx">
       <DependentUpon>CauThanhSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucSoHoaDon.resx">
+      <DependentUpon>DanhMucSoHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\DanhMucKheUoc.resx">
       <DependentUpon>DanhMucKheUoc.cs</DependentUpon>

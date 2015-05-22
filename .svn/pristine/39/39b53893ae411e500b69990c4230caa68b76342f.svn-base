@@ -484,6 +484,94 @@ namespace ketoansoft.app
         {
             Load_Data();
         }
+        #endregion
+
+        #region Form function
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (!e.Cancel)
+            {
+                if (MessageBox.Show("Bạn có muốn đóng form Danh Mục Các Loại Chứng Từ không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+                    Save_Data(false);
+                }
+            }
+        }
+        #endregion
+
+        #region Funtion
+        private void FocusCol()
+        {
+            dlogToCol dialog = new dlogToCol(gridView1);
+            dialog.ShowDialog();
+            string _value = dialog.Result;
+            gridView1.FocusedColumn = gridView1.Columns[_value];
+        }
+        private void Load_InfoHeader()
+        {
+            txtMonth.Text = Utils.CStrDef(fTerm._month, "");
+            txtYear.Text = Utils.CStrDef(fTerm._year, "");
+            txtDatabase.Text = "Database";//Chỗ này gán sau
+            txtCompanyName.Text = Unit.Get_CompanyName("ID01");
+            txtNumRows.Text = Utils.CStrDef(gridView1.RowCount, "0") + " of " + Utils.CStrDef(gridView1.RowCount, "0");
+        }
+        private void Load_InfoRows()
+        {
+            string[] _arr = { "ID", "TEN_CT" };
+            txtInfoRows.Text = Unit.Get_InfoRows(gridView1, _arr);
+        }
+        #endregion
+
+        #region shortcutKey
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            KeyEventArgs e = new KeyEventArgs(keyData);
+            if (e.KeyCode == Keys.F1)
+            {
+                btnSearch_Click(null, null);
+            }
+            else if (e.KeyCode == Keys.F2)
+            {
+                Save_Tick();
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                Save_Duplicate();
+                Load_Data();
+            }
+            else if (e.KeyCode == Keys.F5)
+            {
+                Load_Data();
+            }
+            else if (e.KeyCode == Keys.F6)
+            {
+                FocusCol();
+            }
+            else if (e.KeyCode == Keys.S && e.Control)
+            {
+                Save_Data(true); return true;
+            }
+            else if (e.KeyCode == Keys.Delete)
+            {
+                btnDelete_Click(null, null);
+            }
+            else if (e.KeyCode == Keys.Q && e.Control)
+            {
+                btnExit_Click(null, null);
+            }
+            else if (e.KeyCode == Keys.F10)
+            {
+                _unit.Get_AllowEdit(gridView1);
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
+        #endregion        
+
         private void btnExport_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog saveDialog = new SaveFileDialog())
@@ -539,99 +627,6 @@ namespace ketoansoft.app
                 }
             }
         }
-
-        private void btnPrint_Click(object sender, EventArgs e)
-        {
-            _unit.ShowGridPreview(gridData);
-        }
-        #endregion
-
-        #region Form function
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            base.OnFormClosing(e);
-            if (!e.Cancel)
-            {
-                if (MessageBox.Show("Bạn có muốn đóng form Danh Mục Các Loại Chứng Từ không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
-                {
-                    e.Cancel = true;
-                }
-                else
-                {
-                    Save_Data(false);
-                }
-            }
-        }
-        #endregion
-
-        #region Funtion
-        private void FocusCol()
-        {
-            dlogToCol dialog = new dlogToCol(gridView1);
-            dialog.ShowDialog();
-            string _value = dialog.Result;
-            gridView1.FocusedColumn = gridView1.Columns[_value];
-        }
-        private void Load_InfoHeader()
-        {
-            txtMonth.Text = Utils.CStrDef(fTerm._month, "");
-            txtYear.Text = Utils.CStrDef(fTerm._year, "");
-            txtDatabase.Text = "Database";//Chỗ này gán sau
-            txtCompanyName.Text = Unit.Get_CompanyName();
-            txtNumRows.Text = Utils.CStrDef(gridView1.RowCount, "0") + " of " + Utils.CStrDef(gridView1.RowCount, "0");
-        }
-        private void Load_InfoRows()
-        {
-            string[] _arr = { "ID", "TEN_CT" };
-            txtInfoRows.Text = Unit.Get_InfoRows(gridView1, _arr);
-        }
-        #endregion
-
-        #region shortcutKey
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-            KeyEventArgs e = new KeyEventArgs(keyData);
-            if (e.KeyCode == Keys.F1)
-            {
-                btnSearch_Click(null, null);
-            }
-            else if (e.KeyCode == Keys.F2)
-            {
-                Save_Tick();
-            }
-            else if (e.KeyCode == Keys.F3)
-            {
-                Save_Duplicate();
-                Load_Data();
-            }
-            else if (e.KeyCode == Keys.F5)
-            {
-                Load_Data();
-            }
-            else if (e.KeyCode == Keys.F6)
-            {
-                FocusCol();
-            }
-            else if (e.KeyCode == Keys.S && e.Control)
-            {
-                Save_Data(true); return true;
-            }
-            else if (e.KeyCode == Keys.Delete)
-            {
-                btnDelete_Click(null, null);
-            }
-            else if (e.KeyCode == Keys.Q && e.Control)
-            {
-                btnExit_Click(null, null);
-            }
-            else if (e.KeyCode == Keys.F10)
-            {
-                _unit.Get_AllowEdit(gridView1);
-            }
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
-        #endregion        
- 
 
     }
 }
