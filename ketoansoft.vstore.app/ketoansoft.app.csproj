@@ -192,6 +192,12 @@
     <Compile Include="UIs\ChiTietLenhSanXuat.Designer.cs">
       <DependentUpon>ChiTietLenhSanXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\DonGiaBanTheoHangHoaVaNgayApDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DonGiaBanTheoHangHoaVaNgayApDung.Designer.cs">
+      <DependentUpon>DonGiaBanTheoHangHoaVaNgayApDung.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\DanhMucLenhSanXuat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\ChiTietLenhSanXuat.resx">
       <DependentUpon>ChiTietLenhSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DonGiaBanTheoHangHoaVaNgayApDung.resx">
+      <DependentUpon>DonGiaBanTheoHangHoaVaNgayApDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\DanhMucLenhSanXuat.resx">
       <DependentUpon>DanhMucLenhSanXuat.cs</DependentUpon>
