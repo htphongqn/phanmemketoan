@@ -105,6 +105,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Data\CFGKhacRepo.cs" />
+    <Compile Include="Class\Data\KTCTLenhSXRepo.cs" />
+    <Compile Include="Class\Data\KTDMHHLoRepo.cs" />
+    <Compile Include="Class\Data\KTDGBTheoVungRepo.cs" />
+    <Compile Include="Class\Data\KTDMHHKHORepo.cs" />
+    <Compile Include="Class\Data\KTDMHHRepo.cs" />
     <Compile Include="Class\Data\KTDMKURepo.cs" />
     <Compile Include="Class\Data\KTDMCauThanhSPRepo.cs" />
     <Compile Include="Class\Data\KTYTCPRepo.cs" />
@@ -181,6 +186,48 @@
     <Compile Include="UIs\CauThanhSanPham.Designer.cs">
       <DependentUpon>CauThanhSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\ChiTietLenhSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\ChiTietLenhSanXuat.Designer.cs">
+      <DependentUpon>ChiTietLenhSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DanhMucLenhSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucLenhSanXuat.Designer.cs">
+      <DependentUpon>DanhMucLenhSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoDonGiaBanTheoNhomDoiTuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoDonGiaBanTheoNhomDoiTuong.Designer.cs">
+      <DependentUpon>KhaiBaoDonGiaBanTheoNhomDoiTuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DanhMucVatTuHangHoaTheoLo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucVatTuHangHoaTheoLo.Designer.cs">
+      <DependentUpon>DanhMucVatTuHangHoaTheoLo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoDonGiaBanTheoVung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoDonGiaBanTheoVung.Designer.cs">
+      <DependentUpon>KhaiBaoDonGiaBanTheoVung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DanhMucHangHoaTheoKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucHangHoaTheoKho.Designer.cs">
+      <DependentUpon>DanhMucHangHoaTheoKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DanhMucHangHoaChung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucHangHoaChung.Designer.cs">
+      <DependentUpon>DanhMucHangHoaChung.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\DanhMucSoHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +278,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\CauThanhSanPham.resx">
       <DependentUpon>CauThanhSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\ChiTietLenhSanXuat.resx">
+      <DependentUpon>ChiTietLenhSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucLenhSanXuat.resx">
+      <DependentUpon>DanhMucLenhSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\KhaiBaoDonGiaBanTheoNhomDoiTuong.resx">
+      <DependentUpon>KhaiBaoDonGiaBanTheoNhomDoiTuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucVatTuHangHoaTheoLo.resx">
+      <DependentUpon>DanhMucVatTuHangHoaTheoLo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\KhaiBaoDonGiaBanTheoVung.resx">
+      <DependentUpon>KhaiBaoDonGiaBanTheoVung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucHangHoaTheoKho.resx">
+      <DependentUpon>DanhMucHangHoaTheoKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucHangHoaChung.resx">
+      <DependentUpon>DanhMucHangHoaChung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\DanhMucSoHoaDon.resx">
       <DependentUpon>DanhMucSoHoaDon.cs</DependentUpon>

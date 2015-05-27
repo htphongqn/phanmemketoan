@@ -51,7 +51,6 @@ namespace ketoansoft.app
             f.ShowDialog();
             f.Dispose();
         }
-
         private void buttonItem14_DoubleClick(object sender, EventArgs e)
         {
             _IdAction = Const.DANHMUCTAIKHOAN;
@@ -102,6 +101,55 @@ namespace ketoansoft.app
             f.ShowDialog();
             f.Dispose();
         }
+        private void btnHanghoachung_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.HANGHOACHUNG;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void btnHanghoatheokho_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.HANGHOATHEOKHO;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void btnKhaibaodongiabantheonhomvung_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.KHAIBAODONGIABANTHEOVUNG;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void btnHanghoatheolo_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.HANGHOATHEOLO;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void btnKhaibaodongiabantheonhomdoituong_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.KHAIBAODONGIABANTHEONHOMDOITUONG;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void btnDanhmuclenhsanxuat_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.DANHMUCLENHSANXUAT;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void btnChitietlenhsanxuat_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = Const.CHITIETLENHSANXUAT;
+            fMain f = new fMain();
+            f.ShowDialog();
+            f.Dispose();
+        }
         #endregion
 
         #region shortcutKey
@@ -115,6 +163,8 @@ namespace ketoansoft.app
             return base.ProcessCmdKey(ref msg, keyData);
         }
         #endregion
+
+
 
 
 

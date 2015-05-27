@@ -30,6 +30,10 @@ namespace ketoansoft.app
             {
                 if (MessageBox.Show("Bạn có muốn đóng form Main không?", "Hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 {
+                    //foreach (Form frm in this.MdiChildren)
+                    //{
+                    //    frm.Close();
+                    //}
                     e.Cancel = true;
                 }
             }
@@ -181,6 +185,118 @@ namespace ketoansoft.app
                 _from.Activate();
             }
         }
+        private void showForm_DanhMucHangHoaChung()
+        {
+            if (Unit.IsFormActived("DanhMucHangHoaChung")) return;
+
+            DanhMucHangHoaChung _from = null;
+            if (_from == null || _from.IsDisposed)
+            {
+                _from = new DanhMucHangHoaChung();
+                _from.MdiParent = this;
+                _from.Show();
+            }
+            else
+            {
+                _from.Activate();
+            }
+        }
+        private void showForm_DanhMucHangHoaTheoKho()
+        {
+            if (Unit.IsFormActived("DanhMucHangHoaTheoKho")) return;
+
+            DanhMucHangHoaTheoKho _from = null;
+            if (_from == null || _from.IsDisposed)
+            {
+                _from = new DanhMucHangHoaTheoKho();
+                _from.MdiParent = this;
+                _from.Show();
+            }
+            else
+            {
+                _from.Activate();
+            }
+        }
+        private void showForm_KhaiBaoDonGiaBanTheoVung()
+        {
+            if (Unit.IsFormActived("KhaiBaoDonGiaBanTheoVung")) return;
+
+            KhaiBaoDonGiaBanTheoVung _from = null;
+            if (_from == null || _from.IsDisposed)
+            {
+                _from = new KhaiBaoDonGiaBanTheoVung();
+                _from.MdiParent = this;
+                _from.Show();
+            }
+            else
+            {
+                _from.Activate();
+            }
+        }
+        private void showForm_DanhMucVatTuHangHoaTheoLo()
+        {
+            if (Unit.IsFormActived("DanhMucVatTuHangHoaTheoLo")) return;
+
+            DanhMucVatTuHangHoaTheoLo _from = null;
+            if (_from == null || _from.IsDisposed)
+            {
+                _from = new DanhMucVatTuHangHoaTheoLo();
+                _from.MdiParent = this;
+                _from.Show();
+            }
+            else
+            {
+                _from.Activate();
+            }
+        }
+        private void showForm_KhaiBaoDonGiaBanTheoNhomDoiTuong()
+        {
+            if (Unit.IsFormActived("KhaiBaoDonGiaBanTheoNhomDoiTuong")) return;
+
+            KhaiBaoDonGiaBanTheoNhomDoiTuong _from = null;
+            if (_from == null || _from.IsDisposed)
+            {
+                _from = new KhaiBaoDonGiaBanTheoNhomDoiTuong();
+                _from.MdiParent = this;
+                _from.Show();
+            }
+            else
+            {
+                _from.Activate();
+            }
+        }
+        private void showForm_DanhMucLenhSanXuat()
+        {
+            if (Unit.IsFormActived("DanhMucLenhSanXuat")) return;
+
+            DanhMucLenhSanXuat _from = null;
+            if (_from == null || _from.IsDisposed)
+            {
+                _from = new DanhMucLenhSanXuat();
+                _from.MdiParent = this;
+                _from.Show();
+            }
+            else
+            {
+                _from.Activate();
+            }
+        }
+        private void showForm_ChiTietLenhSanXuat()
+        {
+            if (Unit.IsFormActived("ChiTietLenhSanXuat")) return;
+
+            ChiTietLenhSanXuat _from = null;
+            if (_from == null || _from.IsDisposed)
+            {
+                _from = new ChiTietLenhSanXuat();
+                _from.MdiParent = this;
+                _from.Show();
+            }
+            else
+            {
+                _from.Activate();
+            }
+        }
         private void showForm(int iform)
         {
             switch (iform) 
@@ -194,6 +310,13 @@ namespace ketoansoft.app
                 case Const.DANHMUCCAUTHANHSANPHAM: showForm_DanhMucCauthanhSP(); break;
                 case Const.DANHMUCKHEUOC: showForm_DanhMucKheUoc(); break;
                 case Const.DANHMUCSOHOADON: showForm_DanhMucSoHoaDon(); break;
+                case Const.HANGHOACHUNG: showForm_DanhMucHangHoaChung(); break;
+                case Const.HANGHOATHEOKHO: showForm_DanhMucHangHoaTheoKho(); break;
+                case Const.KHAIBAODONGIABANTHEOVUNG: showForm_KhaiBaoDonGiaBanTheoVung(); break;
+                case Const.HANGHOATHEOLO: showForm_DanhMucVatTuHangHoaTheoLo(); break;
+                case Const.KHAIBAODONGIABANTHEONHOMDOITUONG: showForm_KhaiBaoDonGiaBanTheoNhomDoiTuong(); break;
+                case Const.DANHMUCLENHSANXUAT: showForm_DanhMucLenhSanXuat(); break;
+                case Const.CHITIETLENHSANXUAT: showForm_ChiTietLenhSanXuat(); break;
             }
         }
         #endregion

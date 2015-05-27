@@ -9,11 +9,11 @@ namespace ketoansoft.app.Class.Data
     {
         dbVstoreAppDataContext db = new dbVstoreAppDataContext();
 
-        public virtual KT_DMLenhSX GetById(string id)
+        public virtual KT_DMLenhSX GetById(int id)
         {
             try
             {
-                return this.db.KT_DMLenhSXes.Single(u => u.MA_LENH_SX == id);
+                return this.db.KT_DMLenhSXes.Single(u => u.ID == id);
             }
             catch
             {
@@ -40,7 +40,7 @@ namespace ketoansoft.app.Class.Data
         {
             try
             {
-                KT_DMLenhSX userOld = this.GetById(user.MA_LENH_SX);
+                KT_DMLenhSX userOld = this.GetById(user.ID);
                 userOld = user;
                 db.SubmitChanges();
             }
@@ -51,7 +51,7 @@ namespace ketoansoft.app.Class.Data
         }
 
 
-        public virtual void Remove(string id)
+        public virtual void Remove(int id)
         {
             try
             {
@@ -75,7 +75,7 @@ namespace ketoansoft.app.Class.Data
                 throw new Exception(e.Message);
             }
         }
-        public virtual int Delete(string id)
+        public virtual int Delete(int id)
         {
             try
             {
