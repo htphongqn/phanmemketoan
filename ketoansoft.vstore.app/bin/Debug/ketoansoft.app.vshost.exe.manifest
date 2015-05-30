@@ -1132,14 +1132,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ketoansoft.app.exe" size="6419968">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ketoansoft.app.exe" size="7413760">
       <assemblyIdentity name="ketoansoft.app" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>TsIG/Y8cyP0yTHiR4+33SZ702so=</dsig:DigestValue>
+        <dsig:DigestValue>8diHUBis3KwwkrDJYksoS/09xC4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

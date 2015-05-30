@@ -105,6 +105,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Data\CFGKhacRepo.cs" />
+    <Compile Include="Class\Data\KTCTTPRepo.cs" />
+    <Compile Include="Class\Data\KTCPRepo.cs" />
+    <Compile Include="Class\Data\KTCPCTRepo.cs" />
+    <Compile Include="Class\Data\KTCNKURepo.cs" />
     <Compile Include="Class\Data\KTCNHangHoaRepo.cs" />
     <Compile Include="Class\Data\KTCNChungTuRepo.cs" />
     <Compile Include="Class\Data\KTCNHopDongRepo.cs" />
@@ -198,6 +202,30 @@
     </Compile>
     <Compile Include="UIs\ChiTietLenhSanXuat.Designer.cs">
       <DependentUpon>ChiTietLenhSanXuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\SoTongHopChiPhiTheoCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\SoTongHopChiPhiTheoCongTrinh.Designer.cs">
+      <DependentUpon>SoTongHopChiPhiTheoCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\SoTheoDoiChiPhiTheoBoPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\SoTheoDoiChiPhiTheoBoPhan.Designer.cs">
+      <DependentUpon>SoTheoDoiChiPhiTheoBoPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DanhMucYeuToChiPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucYeuToChiPhi.Designer.cs">
+      <DependentUpon>DanhMucYeuToChiPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\SoCongNoTheoKheUocVay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\SoCongNoTheoKheUocVay.Designer.cs">
+      <DependentUpon>SoCongNoTheoKheUocVay.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\SoCongNoTheoCongTrinhVaDotThanhToan.cs">
       <SubType>Form</SubType>
@@ -336,6 +364,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\ChiTietLenhSanXuat.resx">
       <DependentUpon>ChiTietLenhSanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\SoTongHopChiPhiTheoCongTrinh.resx">
+      <DependentUpon>SoTongHopChiPhiTheoCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\SoTheoDoiChiPhiTheoBoPhan.resx">
+      <DependentUpon>SoTheoDoiChiPhiTheoBoPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucYeuToChiPhi.resx">
+      <DependentUpon>DanhMucYeuToChiPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\SoCongNoTheoKheUocVay.resx">
+      <DependentUpon>SoCongNoTheoKheUocVay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\SoCongNoTheoCongTrinhVaDotThanhToan.resx">
       <DependentUpon>SoCongNoTheoCongTrinhVaDotThanhToan.cs</DependentUpon>
