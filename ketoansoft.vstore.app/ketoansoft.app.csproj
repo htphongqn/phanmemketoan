@@ -105,6 +105,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Data\CFGKhacRepo.cs" />
+    <Compile Include="Class\Data\KTTSCDRepo.cs" />
+    <Compile Include="Class\Data\KTDonMuaHangRepo.cs" />
+    <Compile Include="Class\Data\KTGTCTTHANGRepo.cs" />
+    <Compile Include="Class\Data\KTGTCTRepo.cs" />
     <Compile Include="Class\Data\KTCTTyLePBRepo.cs" />
     <Compile Include="Class\Data\KTCTTPRepo.cs" />
     <Compile Include="Class\Data\KTCPRepo.cs" />
@@ -150,6 +154,7 @@
     <Compile Include="Class\Data\KTDTPNRepo.cs" />
     <Compile Include="Class\Data\KTLCTGRepo.cs" />
     <Compile Include="Class\Data\KTTKRepo.cs" />
+    <Compile Include="Class\Data\KT_CTuGocRepo.cs" />
     <Compile Include="Class\Global\Const.cs" />
     <Compile Include="Class\Global\Security.cs" />
     <Compile Include="Class\Global\Unit.cs" />
@@ -186,6 +191,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UIs\BangGiaThanhCongTrinhGopCaNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\BangGiaThanhCongTrinhGopCaNam.Designer.cs">
+      <DependentUpon>BangGiaThanhCongTrinhGopCaNam.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\CaiThongSo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,17 +209,59 @@
     <Compile Include="UIs\CauThanhSanPham.Designer.cs">
       <DependentUpon>CauThanhSanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\ChiTietDonMuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\ChiTietDonMuaHang.Designer.cs">
+      <DependentUpon>ChiTietDonMuaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\ChiTietLenhSanXuat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UIs\ChiTietLenhSanXuat.Designer.cs">
       <DependentUpon>ChiTietLenhSanXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\BangGiaThanhCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\BangGiaThanhCongTrinh.Designer.cs">
+      <DependentUpon>BangGiaThanhCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\BangKhauHaoTaiSanCoDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\BangKhauHaoTaiSanCoDinh.Designer.cs">
+      <DependentUpon>BangKhauHaoTaiSanCoDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DanhMucChiPhiChoPhanBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucChiPhiChoPhanBo.Designer.cs">
+      <DependentUpon>DanhMucChiPhiChoPhanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DanhMucNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucNhanVien.Designer.cs">
+      <DependentUpon>DanhMucNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DanhMucTaiSanCoDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucTaiSanCoDinh.Designer.cs">
+      <DependentUpon>DanhMucTaiSanCoDinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\DanhMucCongTrinhVaThanhPham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UIs\DanhMucCongTrinhVaThanhPham.Designer.cs">
       <DependentUpon>DanhMucCongTrinhVaThanhPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\SoChungTuGoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\SoChungTuGoc.Designer.cs">
+      <DependentUpon>SoChungTuGoc.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\XemBangPhanBoChiPhiChung.cs">
       <SubType>Form</SubType>
@@ -384,8 +437,14 @@
     <Compile Include="UIs\DanhMucTaiKhoan.Designer.cs">
       <DependentUpon>DanhMucTaiKhoan.cs</DependentUpon>
     </Compile>
+    <None Include="dbVstoreApp.dbml.layout">
+      <DependentUpon>dbVstoreApp.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="Diaglog\dlogToCol.resx">
       <DependentUpon>dlogToCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\BangGiaThanhCongTrinhGopCaNam.resx">
+      <DependentUpon>BangGiaThanhCongTrinhGopCaNam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\CaiThongSo.resx">
       <DependentUpon>CaiThongSo.cs</DependentUpon>
@@ -393,11 +452,32 @@
     <EmbeddedResource Include="UIs\CauThanhSanPham.resx">
       <DependentUpon>CauThanhSanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIs\ChiTietDonMuaHang.resx">
+      <DependentUpon>ChiTietDonMuaHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\ChiTietLenhSanXuat.resx">
       <DependentUpon>ChiTietLenhSanXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIs\BangGiaThanhCongTrinh.resx">
+      <DependentUpon>BangGiaThanhCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\BangKhauHaoTaiSanCoDinh.resx">
+      <DependentUpon>BangKhauHaoTaiSanCoDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucChiPhiChoPhanBo.resx">
+      <DependentUpon>DanhMucChiPhiChoPhanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucNhanVien.resx">
+      <DependentUpon>DanhMucNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucTaiSanCoDinh.resx">
+      <DependentUpon>DanhMucTaiSanCoDinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\DanhMucCongTrinhVaThanhPham.resx">
       <DependentUpon>DanhMucCongTrinhVaThanhPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\SoChungTuGoc.resx">
+      <DependentUpon>SoChungTuGoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\XemBangPhanBoChiPhiChung.resx">
       <DependentUpon>XemBangPhanBoChiPhiChung.cs</DependentUpon>
@@ -487,11 +567,9 @@
       <DependentUpon>DanhMucTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="dbVstoreApp.dbml.layout">
-      <DependentUpon>dbVstoreApp.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="fHome.resx">
       <DependentUpon>fHome.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
