@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using ketoansoft.app.Class.Global;
+using ketoansoft.app.Class.Data;
+namespace ketoansoft.app
+{
+    public partial class NhapPhatSinh : Form
+    {
+        dbVstoreAppDataContext _db = new dbVstoreAppDataContext();
+        private KTLCTGRepo _KTLCTGRepo = new KTLCTGRepo();
+        public NhapPhatSinh()
+        {
+            InitializeComponent();
+        }
+
+        private void NhapPhatSinh_Load(object sender, EventArgs e)
+        {
+            LoadLoaiChungTu();
+        }
+        private void LoadLoaiChungTu()
+        {
+            _KTLCTGRepo = new KTLCTGRepo();
+            cboLoaiChungTu.DataSource = _KTLCTGRepo.GetAll();
+            cboLoaiChungTu.DisplayMember = "ID_LOAI";
+            cboLoaiChungTu.ValueMember = "ID_LOAI";
+            cboLoaiChungTu.DropDownColumns = "ID_LOAI,TEN_CT";
+        }
+    }
+}

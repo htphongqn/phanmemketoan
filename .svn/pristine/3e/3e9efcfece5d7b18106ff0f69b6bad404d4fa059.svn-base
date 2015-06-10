@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using ketoansoft.app.Class.Global;
+using ketoansoft.app.Class.Data;
+namespace ketoansoft.app
+{
+    public partial class NhapPhatSinh : Form
+    {
+        dbVstoreAppDataContext _db = new dbVstoreAppDataContext();
+        private KTLCTGRepo _KTLCTGRepo = new KTLCTGRepo();
+        private KTTKRepo _KTTKRepo = new KTTKRepo();
+        public NhapPhatSinh()
+        {
+            InitializeComponent();
+        }
+
+        private void NhapPhatSinh_Load(object sender, EventArgs e)
+        {
+            LoadLoaiChungTu();
+            LoadTKNo();
+        }
+        private void LoadLoaiChungTu()
+        {
+            _KTLCTGRepo = new KTLCTGRepo();
+            cboLoaiCTu.DataSource = _KTLCTGRepo.GetAll();
+            cboLoaiCTu.DisplayMember = "ID_LOAI";
+            cboLoaiCTu.ValueMember = "ID_LOAI";
+            cboLoaiCTu.DropDownColumns = "ID_LOAI,TEN_CT";
+        }
+        private void cboLoaiCTu_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "ID_LOAI")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        private void LoadTKNo()
+        {
+            _KTTKRepo = new KTTKRepo();
+            cboTKNo.DataSource = _KTTKRepo.GetAll();
+            cboTKNo.DisplayMember = "MA_TK";
+            cboTKNo.ValueMember = "MA_TK";
+            cboTKNo.DropDownColumns = "MA_TK,TEN_TK";
+        }
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            superTabControl1.SelectedTab = superTabItem2;
+        }
+    }
+}
