@@ -86,6 +86,8 @@
     <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -158,6 +160,7 @@
     <Compile Include="Class\Data\KTLCTGRepo.cs" />
     <Compile Include="Class\Data\KTTKRepo.cs" />
     <Compile Include="Class\Data\KT_CTuGocRepo.cs" />
+    <Compile Include="Class\Data\XLDLRepo.cs" />
     <Compile Include="Class\Global\Const.cs" />
     <Compile Include="Class\Global\Security.cs" />
     <Compile Include="Class\Global\Unit.cs" />
@@ -180,6 +183,12 @@
     <Compile Include="fHome.Designer.cs">
       <DependentUpon>fHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="fMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +200,12 @@
     </Compile>
     <Compile Include="fTerm.Designer.cs">
       <DependentUpon>fTerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HTHTL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HTHTL.Designer.cs">
+      <DependentUpon>HTHTL.cs</DependentUpon>
     </Compile>
     <Compile Include="NhapPhatSinh.cs">
       <SubType>Form</SubType>
@@ -272,6 +287,24 @@
     <Compile Include="UIs\DanhMucBaoHanh.Designer.cs">
       <DependentUpon>DanhMucBaoHanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\HachToanChiPhiLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\HachToanChiPhiLuong.Designer.cs">
+      <DependentUpon>HachToanChiPhiLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\HachToanTraTienLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\HachToanTraTienLuong.Designer.cs">
+      <DependentUpon>HachToanTraTienLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\HachToanUngLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\HachToanUngLuong.Designer.cs">
+      <DependentUpon>HachToanUngLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\KhaiBaoMaTinhNgayCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -283,6 +316,30 @@
     </Compile>
     <Compile Include="UIs\KhaiBaoNgayLe.Designer.cs">
       <DependentUpon>KhaiBaoNgayLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\LapBangChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\LapBangChamCong.Designer.cs">
+      <DependentUpon>LapBangChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\LapBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\LapBangLuong.Designer.cs">
+      <DependentUpon>LapBangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\LapBangUngLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\LapBangUngLuong.Designer.cs">
+      <DependentUpon>LapBangUngLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\TinhSoNgayCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\TinhSoNgayCong.Designer.cs">
+      <DependentUpon>TinhSoNgayCong.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\TongHopLuongThoiVu.cs">
       <SubType>Form</SubType>
@@ -518,6 +575,12 @@
     <EmbeddedResource Include="Diaglog\dlogToCol.resx">
       <DependentUpon>dlogToCol.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HTHTL.resx">
+      <DependentUpon>HTHTL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhapPhatSinh.resx">
       <DependentUpon>NhapPhatSinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -557,11 +620,32 @@
     <EmbeddedResource Include="UIs\DanhMucBaoHanh.resx">
       <DependentUpon>DanhMucBaoHanh.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIs\HachToanChiPhiLuong.resx">
+      <DependentUpon>HachToanChiPhiLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\HachToanTraTienLuong.resx">
+      <DependentUpon>HachToanTraTienLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\HachToanUngLuong.resx">
+      <DependentUpon>HachToanUngLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UIs\KhaiBaoMaTinhNgayCong.resx">
       <DependentUpon>KhaiBaoMaTinhNgayCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\KhaiBaoNgayLe.resx">
       <DependentUpon>KhaiBaoNgayLe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\LapBangChamCong.resx">
+      <DependentUpon>LapBangChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\LapBangLuong.resx">
+      <DependentUpon>LapBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\LapBangUngLuong.resx">
+      <DependentUpon>LapBangUngLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\TinhSoNgayCong.resx">
+      <DependentUpon>TinhSoNgayCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\TongHopLuongThoiVu.resx">
       <DependentUpon>TongHopLuongThoiVu.cs</DependentUpon>

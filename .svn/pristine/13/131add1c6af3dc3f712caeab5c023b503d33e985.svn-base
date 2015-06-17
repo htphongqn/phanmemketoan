@@ -1,0 +1,200 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ketoansoft.app.Components.clsVproUtility;
+
+namespace ketoansoft.app.Class.Data
+{
+    public class KTBANGLUONGRepo
+    {
+        dbVstoreAppDataContext db = new dbVstoreAppDataContext();
+
+        public virtual KT_BANG_LUONG GetById(int id)
+        {
+            try
+            {
+                return this.db.KT_BANG_LUONGs.Single(u => u.ID == id);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        public virtual IQueryable GetAll()
+        {
+            return this.db.KT_BANG_LUONGs;
+        }
+        public virtual void Create(KT_BANG_LUONG user)
+        {
+            try
+            {
+                this.db.KT_BANG_LUONGs.InsertOnSubmit(user);
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual void Update(KT_BANG_LUONG user)
+        {
+            try
+            {
+                KT_BANG_LUONG userOld = this.GetById(user.ID);
+                userOld = user;
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+
+        public virtual void Remove(int id)
+        {
+            try
+            {
+                KT_BANG_LUONG user = this.GetById(id);
+                this.Remove(user);
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual void Remove(KT_BANG_LUONG user)
+        {
+            try
+            {
+                db.KT_BANG_LUONGs.DeleteOnSubmit(user);
+                db.SubmitChanges();
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual int Delete(int id)
+        {
+            try
+            {
+                KT_BANG_LUONG user = this.GetById(id);
+                return this.Delete(user);
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception(e.Message);
+            }
+        }
+        public virtual int Delete(KT_BANG_LUONG user)
+        {
+            try
+            {
+                //user.IsDelete = true;
+                db.SubmitChanges();
+                return 0;
+            }
+            catch (Exception e)
+            {
+                throw new Exception(e.Message);
+            }
+        }
+
+        public virtual List<KT_BANG_LUONG> Check_PhongBan(string nam, string thang, string phongban)
+        {
+            try
+            {
+                string _thang = Utils.CStrDef(Utils.CIntDef(thang, 0), "");
+                string _nam = Utils.CStrDef(Utils.CIntDef(nam, 0), "");
+                var obj = this.db.KT_BANG_LUONGs.Where(u => (u.NAM == nam || u.NAM == _nam)
+                    && (u.THANG == thang || u.THANG == _thang)
+                    && u.PHONG_BAN == phongban).ToList();
+                if (obj.Count > 0)
+                {
+                    return obj;
+                }
+                else { return null; }
+            }
+            catch { return null; }
+        }
+        public virtual bool DeleteByPhongBan(List<KT_BANG_LUONG> l)
+        {
+            try
+            {
+                var obj = l;
+                if (obj.Count > 0)
+                {
+                    db.KT_BANG_LUONGs.DeleteAllOnSubmit(obj);
+                    db.SubmitChanges();
+                    return true;
+                }
+                else { return false; }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public virtual bool InsertDuplicate(List<KT_NHANVIEN> cus, string nam, string thang, string loaibangluong)
+        {
+            try
+            {
+                KTCTLUONGRepo _KTCTLUONGRepo = new KTCTLUONGRepo();
+                for (int i = 0; i < cus.Count; i++)
+                {
+                    db.KT_BANG_LUONGs.InsertOnSubmit(
+                        new KT_BANG_LUONG
+                        {
+                            STT = cus[i].STT,
+                            TEN_NV_VIET = cus[i].TEN_NV_VIET,
+                            NAM = nam,
+                            THANG = thang,
+                            LOAI_BL = loaibangluong,
+                            MA_NV = cus[i].MA_NV,
+                            HSO_LUONG = cus[i].HSO_LUONG,
+                            TK_LUONG = cus[i].TK_LUONG,
+                            TK_CP_LUONG = cus[i].TK_CP_LUONG,
+                            TK_KPCD = cus[i].TK_KPCD,
+                            TK_BHXH = cus[i].TK_BHXH,
+                            TK_BHYT = cus[i].TK_BHYT,
+                            TK_BHTN = cus[i].TK_BHTN,
+                            TK_TNCN = cus[i].TK_TNCN,
+                            LUONG_CB = cus[i].LUONG_CB,
+                            PC_CHUCVU = cus[i].PC_CHUCVU,
+                            PC_TRACH_NHIEM = cus[i].PC_TRACH_NHIEM,
+                            PC_AN = cus[i].PC_AN,
+                            PC_THAM_NIEN = cus[i].PC_THAM_NIEN,
+                            TONG_LUONG = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "TONG_LUONG", cus[i].ID),
+                            BHXH_NLD = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "BHXH_NLD", cus[i].ID),
+                            BHXH_CTY = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "BHXH_CTY", cus[i].ID),
+                            BHYT_NLD = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "BHYT_NLD", cus[i].ID),
+                            BHYT_CTY = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "BHYT_CTY", cus[i].ID),
+                            BHTN_NLD = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "BHTN_NLD", cus[i].ID),
+                            BHTN_CTY = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "BHTN_CTY", cus[i].ID),
+                            KP_CD = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "KP_CD", cus[i].ID),
+                            LUONG_TN = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "LUONG_TN", cus[i].ID),
+                            TEN_NV_ANH = cus[i].TEN_NV_ANH,
+                            TEN_NV_HOA = cus[i].TEN_NV_HOA,
+                            NGAY_SINH = cus[i].NGAY_SINH,
+                            GIOI_TINH = cus[i].GIOI_TINH,
+                            NOI_SINH = cus[i].NOI_SINH,
+                            QUOC_GIA = cus[i].QUOC_GIA,
+                            TINH_TP = cus[i].TINH_TP,
+                            QUAN_HUYEN = cus[i].QUAN_HUYEN,
+
+
+                            PHONG_BAN = cus[i].PHONG_BAN,
+                            TEN_PHONG_BAN = cus[i].TEN_PHONG_BAN,
+                            TAM_UNG = _KTCTLUONGRepo.CongThucTinhLuong("KT_NHANVIEN", "TAM_UNG", cus[i].ID)
+                        });
+                    db.SubmitChanges();
+                }
+                return true;
+            }
+            catch { return false; }
+        }
+    }
+}

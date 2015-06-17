@@ -1,0 +1,122 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data.Linq;
+using System.Xml;
+
+namespace ketoansoft.app
+{
+    public partial class fLogin : Form
+    {
+        public fLogin()
+        {
+            InitializeComponent();
+        }
+
+        #region Data
+        private bool Load_Server()
+        {
+            try
+            {
+                string myServer = Environment.MachineName;
+                DataTable servers = SqlDataSourceEnumerator.Instance.GetDataSources();
+                if (servers.Rows.Count > 0)
+                {
+                    for (int i = 0; i < servers.Rows.Count; i++)
+                    {
+                        if (myServer == servers.Rows[i]["ServerName"].ToString())
+                        {
+                            cboNameServer.Items.Add(servers.Rows[i]["ServerName"] + "\\" + servers.Rows[i]["InstanceName"]);
+
+                        }
+                        else
+                        {
+                            cboNameServer.Items.Add(servers.Rows[i]["ServerName"]);
+
+                        }
+                    }
+                    return true;
+                }
+                else { lblMsg.Text = "Không tìm thấy bất kỳ server nào!"; return false; }
+            }
+            catch { lblMsg.Text = "Lỗi kết nối! Hãy tắt và mở lại chương trình"; return false; }
+        }
+        private bool Load_Database()
+        {
+            try
+            {
+                if (cboNameServer.Text != "")
+                {
+                    cboNameDatabase.Text = "";
+                    cboNameDatabase.Items.Clear();
+                    using (var con = new SqlConnection("Data Source=" + cboNameServer.Text + "; Integrated Security=True;"))
+                    {
+                        con.Open();
+                        DataTable databases = con.GetSchema("Databases");
+                        if (databases != null)
+                        {
+                            foreach (DataRow database in databases.Rows)
+                            {
+                                String databaseName = database.Field<String>("database_name");
+                                short dbID = database.Field<short>("dbid");
+                                if (databaseName != "master" && databaseName != "tempdb" && databaseName != "model" && databaseName != "msdb")
+                                    cboNameDatabase.Items.Add(databaseName);
+                            }
+                        }
+                        con.Close();
+                    }
+                }
+                return true;
+            }
+            catch { return false; }
+        }
+        private bool Logon()
+        {
+            try
+            {
+                string connectionString = "Data Source=" + cboNameServer.Text + ";Initial Catalog=" + cboNameDatabase.Text + "; Integrated Security=True; Persist Security Info=True;User ID=" + txtUser.Text + ";Password=" + txtPassword.Text + "";
+                var con = new SqlConnection(connectionString);
+                con.Open();
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                config.ConnectionStrings.ConnectionStrings["ketoansoft.app.Properties.Settings.dbConnectionString"].ConnectionString = connectionString;
+                config.Save(ConfigurationSaveMode.Modified, true);
+                ConfigurationManager.RefreshSection("connectionStrings");
+                return true;
+            }
+            catch { return false; }
+        }
+        #endregion
+
+        #region Event
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            Load_Server();
+        }
+        private void cboNameServer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Load_Database();
+        }
+        private void btnLogon_Click(object sender, EventArgs e)
+        {
+            if (Logon())
+            {
+                this.Hide();
+                fTerm _form = new fTerm();
+                _form.ShowDialog();
+                this.Close();
+            }
+            else {
+                MessageBox.Show("Tài khoản và mật khẩu không đúng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
+    }
+}

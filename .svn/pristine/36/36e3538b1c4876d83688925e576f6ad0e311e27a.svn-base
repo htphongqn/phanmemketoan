@@ -1,0 +1,96 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using DevComponents.DotNetBar;
+using ketoansoft.app.Class.Data;
+using DevExpress.XtraEditors;
+
+namespace ketoansoft.app.UIs
+{
+    public partial class LapBangChamCong : DevComponents.DotNetBar.Metro.MetroForm
+    {
+        private dbVstoreAppDataContext _db = new dbVstoreAppDataContext();
+        KTNHANVIENRepo _KTNHANVIENRepo = new KTNHANVIENRepo();
+
+
+        public LapBangChamCong()
+        {
+            InitializeComponent();
+        }
+
+        #region Data
+        private void Load_PhongBan()
+        {
+            grvData.DataSource = _KTNHANVIENRepo.Get_Departments();
+
+            int[] selectedRows = gridView1.GetSelectedRows();
+            for (int i = 0; i < gridView1.RowCount; i++)
+            {
+                DataRow r = gridView1.GetDataRow(selectedRows[i]);
+            }
+        }
+        #endregion
+
+        #region Event
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LapBangChamCong_Load(object sender, EventArgs e)
+        {
+            Load_PhongBan();
+        }
+        #endregion
+
+        private void grvData_MouseClick(object sender, MouseEventArgs e)
+        {
+            DevExpress.XtraGrid.Views.Grid.ViewInfo.GridHitInfo hitInfo = gridView1.CalcHitInfo(new Point(e.X, e.Y));
+            if (!hitInfo.InColumn || hitInfo.Column.Name != "chk") return;
+            DataTable dt = ((DataTable)grvData.DataSource);
+            if (dt == null || dt.Rows.Count == 0) return;
+            if (gridColCheck.ImageIndex == 1)
+            {
+                gridColCheck.ImageIndex = 2;//Image thể hiện trạng thái Check
+                gridColCheck.ToolTip = "Bỏ chọn tất cả";
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (dt.Rows[i]["CHECK"].ToString() == "False")
+                    {
+                        dt.Rows[i]["CHECK"] = true;
+                    }
+                }
+            }
+            else
+            {
+                gridColCheck.ImageIndex = 1;//Image thể hiện trạng thái uncheck
+                gridColCheck.ToolTip = "Chọn tất cả";
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    if (dt.Rows[i]["CHECK"].ToString() == "True")
+                        dt.Rows[i]["CHECK"] = false;
+                }
+            }
+        }
+
+        private void repositoryItemCheckEdit1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (gridColCheck.ImageIndex == 2)//Nếu ảnh đang là ảnh thể hiện trạng thái check
+          {
+              grvData.EmbeddedNavigator.NavigatableControl.DoAction(NavigatorButtonType.EndEdit);//phải có dòng này
+                gridColCheck.ImageIndex = 1;//thì chuyển ảnh có trạng thái uncheck
+          }
+            grvData.EmbeddedNavigator.NavigatableControl.DoAction(NavigatorButtonType.EndEdit);
+            DataTable dtTemp = ((DataTable)grvData.DataSource);
+          DataRow[] dr = dtTemp.Select("CHECK=False");//Lọc những dòng có dữ liệu cột CHECK là Flase
+          if (dr.Length == 0)//nếu không có dòng nào, tức là trên lưới tất cả các dòng đều được check
+          {
+              gridColCheck.ImageIndex = 2;//Thì chuyển image thể hiện trạng thái check
+          }
+        }
+    }
+}

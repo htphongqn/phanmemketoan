@@ -1,0 +1,496 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using ketoansoft.app.Class.Global;
+using ketoansoft.app.Class.Data;
+using ketoansoft.app.Components.clsVproUtility;
+namespace ketoansoft.app
+{
+    public partial class NhapPhatSinh : Form
+    {
+        #region function 
+        private dbVstoreAppDataContext _db = new dbVstoreAppDataContext();
+        private KTLCTGRepo _KTLCTGRepo = new KTLCTGRepo();
+        private KT_CTuGocRepo _KT_CTuGocRepo = new KT_CTuGocRepo();
+        private KTTKRepo _KTTKRepo = new KTTKRepo();
+        private KTDTPNRepo _KTDTPNRepo = new KTDTPNRepo();
+        private KTYTCPRepo _KTYTCPRepo = new KTYTCPRepo();
+        private KTDMHHRepo _KTDMHHRepo = new KTDMHHRepo();
+        private KTDMHoaDonRepo _KTDMHoaDonRepo = new KTDMHoaDonRepo();
+        private KTDIENGIAIRepo _KTDIENGIAIRepo = new KTDIENGIAIRepo();
+        private KTMaTTRepo _KTMaTTRepo = new KTMaTTRepo();
+        private KTMaHDRepo _KTMaHDRepo = new KTMaHDRepo();
+        private KTCNHopDongRepo _KTCNHopDongRepo = new KTCNHopDongRepo();
+        private KTDMCongTrinhRepo _KTDMCongTrinhRepo = new KTDMCongTrinhRepo();
+        private List<KT_CTuGoc> _listCTuGoc = new List<KT_CTuGoc>();
+        #endregion
+
+        public NhapPhatSinh()
+        {
+            InitializeComponent();
+        }
+
+        private void NhapPhatSinh_Load(object sender, EventArgs e)
+        {
+            LoadLoaiChungTu();
+            LoadSoHD();
+            LoadMaTT();
+            LoadMaHD();
+            LoadSoHopDong();
+            LoadCongTrinh();
+            LoadDiengiai();
+
+            LoadTKNo();
+            LoadDTPNNo();
+            LoadYTCPNo();
+            LoadVTHHNo();
+
+            LoadTKCo();
+            LoadDTPNCo();
+            LoadYTCPCo();
+            LoadVTHHCo();
+        }
+
+        #region Load cbo
+        private void LoadLoaiChungTu()
+        {
+            _KTLCTGRepo = new KTLCTGRepo();
+            cboLoaiCTu.DataSource = _KTLCTGRepo.GetAll();
+            cboLoaiCTu.DisplayMember = "ID_LOAI";
+            cboLoaiCTu.ValueMember = "ID_LOAI";
+            cboLoaiCTu.DropDownColumns = "ID_LOAI,TEN_CT";
+            cboLoaiCTu.SelectedIndex = -1;
+        }
+        private void cboLoaiCTu_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "ID_LOAI")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        private void LoadSoHD()
+        {
+            //_KTDMHoaDonRepo = new KTDMHoaDonRepo();
+            //cboSoHD.DataSource = _KTDMHoaDonRepo.GetAll();
+            cboSoHD.DataSource = _db.KT_DMHoaDons.Select(s => new {
+                SO_HD = s.SO_HD,
+                SR_HD = s.SR_HD,
+                NGAY_HD = Utils.CDateDef(s.NGAY_HD, DateTime.MinValue).ToString("dd/MM/yyyy")
+            });
+            cboSoHD.DisplayMember = "SO_HD";
+            cboSoHD.ValueMember = "SO_HD";
+            cboSoHD.DropDownColumns = "SO_HD,SR_HD,NGAY_HD";
+            cboSoHD.SelectedIndex = -1;
+        }
+        private void cboSoHD_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "SO_HD")
+            {
+                header.Width.Relative = 20; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 40;
+            }
+        }
+        private void LoadMaTT()
+        {
+            _KTMaTTRepo = new KTMaTTRepo();
+            cboMaTT.DataSource = _KTMaTTRepo.GetAll();
+            cboMaTT.DisplayMember = "KY_HIEU";
+            cboMaTT.ValueMember = "KY_HIEU";
+            cboMaTT.DropDownColumns = "KY_HIEU,DIEN_GIAI,GHI_CHU";
+            cboMaTT.SelectedIndex = -1;
+        }
+        private void cboMaTT_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "KY_HIEU")
+            {
+                header.Width.Relative = 20; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 40;
+            }
+        }
+        private void LoadMaHD()
+        {
+            _KTMaHDRepo = new KTMaHDRepo();
+            cboMaHD.DataSource = _KTMaHDRepo.GetAll();
+            cboMaHD.DisplayMember = "KY_HIEU";
+            cboMaHD.ValueMember = "KY_HIEU";
+            cboMaHD.DropDownColumns = "KY_HIEU,DIEN_GIAI,GHI_CHU";
+            cboMaHD.SelectedIndex = -1;
+        }
+        private void cboMaHD_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "KY_HIEU")
+            {
+                header.Width.Relative = 20; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 40;
+            }
+        }
+        private void LoadDiengiai()
+        {
+            _KTDIENGIAIRepo = new KTDIENGIAIRepo();
+            cboDiengiai.DataSource = _KTDIENGIAIRepo.GetAll();
+            cboDiengiai.DisplayMember = "DIEN_GIAI1";
+            cboDiengiai.ValueMember = "ID";
+            cboDiengiai.DropDownColumns = "DIEN_GIAI1,DIEN_GIAI2";
+            cboDiengiai.SelectedIndex = -1;
+        }
+        private void cboDiengiai_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "DIEN_GIAI1")
+            {
+                header.Width.Relative = 20; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 40;
+            }
+        }
+        private void LoadSoHopDong()
+        {
+            _KTCNHopDongRepo = new KTCNHopDongRepo();
+            cboSoHopDong.DataSource = _KTCNHopDongRepo.GetAll();
+            cboSoHopDong.DisplayMember = "SO_HD";
+            cboSoHopDong.ValueMember = "SO_HD";
+            cboSoHopDong.DropDownColumns = "SO_HD,MA_TK";
+            cboSoHopDong.SelectedIndex = -1;
+        }
+        private void cboSoHopDong_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "SO_HD")
+            {
+                header.Width.Relative = 40; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 60;
+            }
+        }
+        private void LoadCongTrinh()
+        {
+            _KTDMCongTrinhRepo = new KTDMCongTrinhRepo();
+            cboCongtrinh.DataSource = _KTDMCongTrinhRepo.GetAll();
+            cboCongtrinh.DisplayMember = "MA_CT";
+            cboCongtrinh.ValueMember = "MA_CT";
+            cboCongtrinh.DropDownColumns = "MA_CT,TEN_CT";
+            cboCongtrinh.SelectedIndex = -1;
+        }
+        private void cboCongtrinh_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_CT")
+            {
+                header.Width.Relative = 40; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 60;
+            }
+        }
+
+        private void LoadTKNo()
+        {
+            _KTTKRepo = new KTTKRepo();
+            cboTKNo.DataSource = _KTTKRepo.GetAll();
+            cboTKNo.DisplayMember = "MA_TK";
+            cboTKNo.ValueMember = "ID";
+            cboTKNo.DropDownColumns = "MA_TK,TEN_TK";
+            cboTKNo.SelectedIndex = -1;
+        }
+        private void cboTKNo_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_TK")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        private void LoadDTPNNo()
+        {
+            _KTDTPNRepo = new KTDTPNRepo();
+            cboDTPNNo.DataSource = _KTDTPNRepo.GetAll();
+            cboDTPNNo.DisplayMember = "MA_DTPN";
+            cboDTPNNo.ValueMember = "ID";
+            cboDTPNNo.DropDownColumns = "MA_DTPN,TEN_DTPN";
+            cboDTPNNo.SelectedIndex = -1;
+        }
+        private void cboDTPNNo_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_DTPN")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        private void LoadYTCPNo()
+        {
+            _KTYTCPRepo = new KTYTCPRepo();
+            cboYTCPNo.DataSource = _KTYTCPRepo.GetAll();
+            cboYTCPNo.DisplayMember = "MA_YTCP";
+            cboYTCPNo.ValueMember = "ID";
+            cboYTCPNo.DropDownColumns = "MA_YTCP,TEN_YTCP_V";
+            cboYTCPNo.SelectedIndex = -1;
+        }
+        private void cboYTCPNo_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_YTCP")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        private void LoadVTHHNo()
+        {
+            _KTDMHHRepo = new KTDMHHRepo();
+            cboVTHHNo.DataSource = _KTDMHHRepo.GetAll();
+            cboVTHHNo.DisplayMember = "MA_DM";
+            cboVTHHNo.ValueMember = "ID";
+            cboVTHHNo.DropDownColumns = "MA_DM,TEN_DM";
+            cboVTHHNo.SelectedIndex = -1;
+        }
+        private void cboVTHHNo_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_DM")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+
+        private void LoadTKCo()
+        {
+            _KTTKRepo = new KTTKRepo();
+            cboTKCo.DataSource = _KTTKRepo.GetAll();
+            cboTKCo.DisplayMember = "MA_TK";
+            cboTKCo.ValueMember = "ID";
+            cboTKCo.DropDownColumns = "MA_TK,TEN_TK";
+            cboTKCo.SelectedIndex = -1;
+        }
+        private void cboTKCo_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_TK")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        private void LoadDTPNCo()
+        {
+            _KTDTPNRepo = new KTDTPNRepo();
+            cboDTPNCo.DataSource = _KTDTPNRepo.GetAll();
+            cboDTPNCo.DisplayMember = "MA_DTPN";
+            cboDTPNCo.ValueMember = "ID";
+            cboDTPNCo.DropDownColumns = "MA_DTPN,TEN_DTPN";
+            cboDTPNCo.SelectedIndex = -1;
+        }
+        private void cboDTPNCo_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_DTPN")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        private void LoadYTCPCo()
+        {
+            _KTYTCPRepo = new KTYTCPRepo();
+            cboYTCPCo.DataSource = _KTYTCPRepo.GetAll();
+            cboYTCPCo.DisplayMember = "MA_YTCP";
+            cboYTCPCo.ValueMember = "ID";
+            cboYTCPCo.DropDownColumns = "MA_YTCP,TEN_YTCP_V";
+            cboYTCPCo.SelectedIndex = -1;
+        }
+        private void cboYTCPCo_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_YTCP")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        private void LoadVTHHCo()
+        {
+            _KTDMHHRepo = new KTDMHHRepo();
+            cboVTHHCo.DataSource = _KTDMHHRepo.GetAll();
+            cboVTHHCo.DisplayMember = "MA_DM";
+            cboVTHHCo.ValueMember = "ID";
+            cboVTHHCo.DropDownColumns = "MA_DM,TEN_DM";
+            cboVTHHCo.SelectedIndex = -1;
+        }
+        private void cboVTHHCo_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_DM")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+
+        #endregion
+
+        #region cbo change
+        private void cboLoaiCTu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _KT_CTuGocRepo = new KT_CTuGocRepo();
+            gridControl1.DataSource = _KT_CTuGocRepo.GetByMaCT(Utils.CStrDef(cboLoaiCTu.SelectedValue, ""), Utils.CIntDef(fTerm._month, 0), Utils.CIntDef(fTerm._year, 0));
+        }
+        private void cboTKNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _KTTKRepo = new KTTKRepo();
+            var item = _KTTKRepo.GetById(Utils.CIntDef(cboTKNo.SelectedValue, 0));
+            if (item != null)
+                txtTKNo.Text = item.TEN_TK; 
+        }
+        private void cboDTPNNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _KTDTPNRepo = new KTDTPNRepo();
+            var item = _KTDTPNRepo.GetById(Utils.CIntDef(cboDTPNNo.SelectedValue, 0));
+            if (item != null)
+                txtDTPNNo.Text = item.TEN_DTPN;
+        }
+        private void cboYTCPNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _KTYTCPRepo = new KTYTCPRepo();
+            var item = _KTYTCPRepo.GetById(Utils.CIntDef(cboYTCPNo.SelectedValue, 0));
+            if (item != null)
+                txtYTCPNo.Text = item.TEN_YTCP_V;
+        }
+        private void cboVTHHNo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _KTDMHHRepo = new KTDMHHRepo();
+            var item = _KTDMHHRepo.GetById(Utils.CIntDef(cboVTHHNo.SelectedValue, 0));
+            if (item != null)
+                txtVTHHNo.Text = item.TEN_DM;
+        }
+        private void cboTKCo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _KTTKRepo = new KTTKRepo();
+            var item = _KTTKRepo.GetById(Utils.CIntDef(cboTKCo.SelectedValue, 0));
+            if (item != null)
+                txtTKCo.Text = item.TEN_TK;
+        }
+        private void cboDTPNCo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _KTDTPNRepo = new KTDTPNRepo();
+            var item = _KTDTPNRepo.GetById(Utils.CIntDef(cboDTPNCo.SelectedValue, 0));
+            if (item != null)
+                txtDTPNCo.Text = item.TEN_DTPN;
+        }
+        private void cboYTCPCo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _KTYTCPRepo = new KTYTCPRepo();
+            var item = _KTYTCPRepo.GetById(Utils.CIntDef(cboYTCPCo.SelectedValue, 0));
+            if (item != null)
+                txtYTCPCo.Text = item.TEN_YTCP_V;
+        }
+        private void cboVTHHCo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            _KTDMHHRepo = new KTDMHHRepo();
+            var item = _KTDMHHRepo.GetById(Utils.CIntDef(cboVTHHCo.SelectedValue, 0));
+            if (item != null)
+                txtVTHHCo.Text = item.TEN_DM;
+        }
+        #endregion
+        
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            KT_CTuGoc CTGoc = new KT_CTuGoc();
+            CTGoc.MA_CTU = Utils.CStrDef(cboLoaiCTu.SelectedValue, "");
+            //CTGoc.MA_TT = Utils.CStrDef(cboLoaiCTu.SelectedValue, "");
+            //CTGoc.MA_HD = Utils.CStrDef(cboLoaiCTu.SelectedValue, "");
+            //CTGoc.KHM_HD = Utils.CStrDef(cboLoaiCTu.SelectedValue, "");
+            CTGoc.HD_SR = Utils.CStrDef(txtSeriHD.Text, "");
+            CTGoc.HD_SO = Utils.CStrDef(cboSoHD.SelectedValue, "");
+            DateTime? temp = null;
+            if(Utils.CDateDef(dtpNgayHD.Value, DateTime.MinValue) != DateTime.MinValue)
+                temp = Utils.CDateDef(dtpNgayHD.Value, DateTime.MinValue);
+            CTGoc.HD_NGAY = temp;
+            //CTGoc.HD_VAT = Utils.CStrDef(cboHDVat.SelectedValue, "");
+            CTGoc.SO_CTU = Utils.CStrDef(txtSoCTu.Text, "");
+            temp = null;
+            if (Utils.CDateDef(dtpNgayCTu.Value, DateTime.MinValue) != DateTime.MinValue)
+                temp = Utils.CDateDef(dtpNgayCTu.Value, DateTime.MinValue);
+            CTGoc.NGAY_CTU = temp;
+            var itemDiengiai = _KTDIENGIAIRepo.GetById(Utils.CIntDef(cboDiengiai.SelectedValue,0));
+            if (itemDiengiai != null)
+            {
+                CTGoc.DIEN_GIAI = Utils.CStrDef(itemDiengiai.DIEN_GIAI1, "");
+                CTGoc.DIEN_GIAI2 = Utils.CStrDef(itemDiengiai.DIEN_GIAI2, "");
+            }
+
+
+            _listCTuGoc.Add(CTGoc);
+
+            gridControl2.DataSource = null;
+            gridControl2.DataSource = _listCTuGoc;
+            gridControl2.RefreshDataSource();
+            gridView2.RefreshData();
+        }
+        private void btnQuaylai_Click(object sender, EventArgs e)
+        {
+            superTabControl1.SelectedTab = superTabItem1;
+        }
+
+        private void gridView2_CustomDrawCell(object sender, DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventArgs e)
+        {
+            if (e.Column == colSTT) //colSTT là tên cột tạo số thứ tự
+            {
+                e.DisplayText = Convert.ToString(e.RowHandle + 1);
+            }
+        }
+    }
+}
