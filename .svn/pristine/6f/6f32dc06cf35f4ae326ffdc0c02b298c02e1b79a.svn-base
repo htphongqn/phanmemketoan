@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HTKK>
+  <ConnectDB>
+    <ServerName>ADMIN13</ServerName>
+    <DatabaseName>NET2010</DatabaseName>
+    <UserName>sa</UserName>
+    <Password>123</Password>
+  </ConnectDB>
+</HTKK>

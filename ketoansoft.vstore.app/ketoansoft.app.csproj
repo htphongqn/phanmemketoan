@@ -86,6 +86,25 @@
     <Reference Include="DevExpress.XtraRichEdit.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v12.1, Version=12.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\100\SDK\Assemblies\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -106,7 +125,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackupDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupDatabase.Designer.cs">
+      <DependentUpon>BackupDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\Data\CFGKhacRepo.cs" />
+    <Compile Include="Class\Data\KBCDKTRepo.cs" />
+    <Compile Include="Class\Data\KBKQKDRepo.cs" />
+    <Compile Include="Class\Data\KBKQKD_PTRepo.cs" />
+    <Compile Include="Class\Data\KBLCTT_GTRepo.cs" />
+    <Compile Include="Class\Data\KBLCTT_TTRepo.cs" />
+    <Compile Include="Class\Data\KBTMRepo.cs" />
     <Compile Include="Class\Data\KTMaHDRepo.cs" />
     <Compile Include="Class\Data\KTMaTTRepo.cs" />
     <Compile Include="Class\Data\KTCPChoPBRepo.cs" />
@@ -162,8 +193,13 @@
     <Compile Include="Class\Data\KT_CTuGocRepo.cs" />
     <Compile Include="Class\Data\XLDLRepo.cs" />
     <Compile Include="Class\Global\Const.cs" />
+    <Compile Include="Class\Global\ExcelUtlity.cs" />
     <Compile Include="Class\Global\Security.cs" />
     <Compile Include="Class\Global\Unit.cs" />
+    <Compile Include="Class\SqlHelper\BackupHelper.cs" />
+    <Compile Include="Class\SqlHelper\DataCopyHelper.cs" />
+    <Compile Include="Class\SqlHelper\RestoreHelper.cs" />
+    <Compile Include="Class\SqlHelper\TestClass.cs" />
     <Compile Include="Components\clsVproUtility.cs" />
     <Compile Include="Class\Data\CFGRepo.cs" />
     <Compile Include="dbVstoreApp.designer.cs">
@@ -215,6 +251,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SOCTCN11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOCTCN11.Designer.cs">
+      <DependentUpon>SOCTCN11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoDatabaseMoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoDatabaseMoi.Designer.cs">
+      <DependentUpon>TaoDatabaseMoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemTSCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemTSCD.Designer.cs">
+      <DependentUpon>ThemTSCD.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\BangChiPhiChoPhanBoSauKhiXuLy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,11 +335,41 @@
     <Compile Include="UIs\CongThucTinhLuong.Designer.cs">
       <DependentUpon>CongThucTinhLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\QuanTriDataNguoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\QuanTriDataNguoc.Designer.cs">
+      <DependentUpon>QuanTriDataNguoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\ThemDoiTuongPhapNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\ThemDoiTuongPhapNhan.Designer.cs">
+      <DependentUpon>ThemDoiTuongPhapNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\ThemSoCongNoTheoCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\ThemSoCongNoTheoCongTrinh.Designer.cs">
+      <DependentUpon>ThemSoCongNoTheoCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\ThemVaoCongNoTheoDoiTuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\ThemVaoCongNoTheoDoiTuong.Designer.cs">
+      <DependentUpon>ThemVaoCongNoTheoDoiTuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\DanhMucBaoHanh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UIs\DanhMucBaoHanh.Designer.cs">
       <DependentUpon>DanhMucBaoHanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\DanhMucNhomHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\DanhMucNhomHH.Designer.cs">
+      <DependentUpon>DanhMucNhomHH.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\HachToanChiPhiLuong.cs">
       <SubType>Form</SubType>
@@ -305,6 +389,36 @@
     <Compile Include="UIs\HachToanUngLuong.Designer.cs">
       <DependentUpon>HachToanUngLuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\KhaiBaoCanDoiKeToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoCanDoiKeToan.Designer.cs">
+      <DependentUpon>KhaiBaoCanDoiKeToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoKetQuaKinhDoanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoKetQuaKinhDoanh.Designer.cs">
+      <DependentUpon>KhaiBaoKetQuaKinhDoanh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoKetQuaKinhDoanhPT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoKetQuaKinhDoanhPT.Designer.cs">
+      <DependentUpon>KhaiBaoKetQuaKinhDoanhPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoLuuChuyenTienTeGT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoLuuChuyenTienTeGT.Designer.cs">
+      <DependentUpon>KhaiBaoLuuChuyenTienTeGT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoLuuChuyenTienTeTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoLuuChuyenTienTeTT.Designer.cs">
+      <DependentUpon>KhaiBaoLuuChuyenTienTeTT.cs</DependentUpon>
+    </Compile>
     <Compile Include="UIs\KhaiBaoMaTinhNgayCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -316,6 +430,12 @@
     </Compile>
     <Compile Include="UIs\KhaiBaoNgayLe.Designer.cs">
       <DependentUpon>KhaiBaoNgayLe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoThuyetMinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\KhaiBaoThuyetMinh.Designer.cs">
+      <DependentUpon>KhaiBaoThuyetMinh.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\LapBangChamCong.cs">
       <SubType>Form</SubType>
@@ -334,6 +454,12 @@
     </Compile>
     <Compile Include="UIs\LapBangUngLuong.Designer.cs">
       <DependentUpon>LapBangUngLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\ThemSoCongNoTheoTungHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\ThemSoCongNoTheoTungHoaDon.Designer.cs">
+      <DependentUpon>ThemSoCongNoTheoTungHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="UIs\TinhSoNgayCong.cs">
       <SubType>Form</SubType>
@@ -569,6 +695,66 @@
     <Compile Include="UIs\DanhMucTaiKhoan.Designer.cs">
       <DependentUpon>DanhMucTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\XemVaSuaChungTuGoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\XemVaSuaChungTuGoc.Designer.cs">
+      <DependentUpon>XemVaSuaChungTuGoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\XuLyGiaVonLaiGop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\XuLyGiaVonLaiGop.Designer.cs">
+      <DependentUpon>XuLyGiaVonLaiGop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIs\XuLyKhauHao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UIs\XuLyKhauHao.Designer.cs">
+      <DependentUpon>XuLyKhauHao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BackupDatabase.resx">
+      <DependentUpon>BackupDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOCTCN11.resx">
+      <DependentUpon>SOCTCN11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoDatabaseMoi.resx">
+      <DependentUpon>TaoDatabaseMoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\QuanTriDataNguoc.resx">
+      <DependentUpon>QuanTriDataNguoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\ThemDoiTuongPhapNhan.resx">
+      <DependentUpon>ThemDoiTuongPhapNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\ThemSoCongNoTheoCongTrinh.resx">
+      <DependentUpon>ThemSoCongNoTheoCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\ThemVaoCongNoTheoDoiTuong.resx">
+      <DependentUpon>ThemVaoCongNoTheoDoiTuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\DanhMucNhomHH.resx">
+      <DependentUpon>DanhMucNhomHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\KhaiBaoKetQuaKinhDoanhPT.resx">
+      <DependentUpon>KhaiBaoKetQuaKinhDoanhPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\KhaiBaoThuyetMinh.resx">
+      <DependentUpon>KhaiBaoThuyetMinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\ThemSoCongNoTheoTungHoaDon.resx">
+      <DependentUpon>ThemSoCongNoTheoTungHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\XemVaSuaChungTuGoc.resx">
+      <DependentUpon>XemVaSuaChungTuGoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\XuLyGiaVonLaiGop.resx">
+      <DependentUpon>XuLyGiaVonLaiGop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\XuLyKhauHao.resx">
+      <DependentUpon>XuLyKhauHao.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="dbVstoreApp.dbml.layout">
       <DependentUpon>dbVstoreApp.dbml</DependentUpon>
     </None>
@@ -583,6 +769,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhapPhatSinh.resx">
       <DependentUpon>NhapPhatSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemTSCD.resx">
+      <DependentUpon>ThemTSCD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\BangChiPhiChoPhanBoSauKhiXuLy.resx">
       <DependentUpon>BangChiPhiChoPhanBoSauKhiXuLy.cs</DependentUpon>
@@ -628,6 +817,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\HachToanUngLuong.resx">
       <DependentUpon>HachToanUngLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\KhaiBaoCanDoiKeToan.resx">
+      <DependentUpon>KhaiBaoCanDoiKeToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\KhaiBaoKetQuaKinhDoanh.resx">
+      <DependentUpon>KhaiBaoKetQuaKinhDoanh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\KhaiBaoLuuChuyenTienTeGT.resx">
+      <DependentUpon>KhaiBaoLuuChuyenTienTeGT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\KhaiBaoLuuChuyenTienTeTT.resx">
+      <DependentUpon>KhaiBaoLuuChuyenTienTeTT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\KhaiBaoMaTinhNgayCong.resx">
       <DependentUpon>KhaiBaoMaTinhNgayCong.cs</DependentUpon>

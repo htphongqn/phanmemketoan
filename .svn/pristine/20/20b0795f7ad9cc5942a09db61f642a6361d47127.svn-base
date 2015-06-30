@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using ketoansoft.app.Class.Data;
+
+namespace ketoansoft.app.UIs
+{
+    public partial class XemVaSuaChungTuGoc : Form
+    {
+        private dbVstoreAppDataContext _db = new dbVstoreAppDataContext();
+        private KTLCTGRepo _KTLCTGRepo = new KTLCTGRepo();
+        private KT_CTuGocRepo _KT_CTuGocRepo = new KT_CTuGocRepo();
+        public XemVaSuaChungTuGoc()
+        {
+            InitializeComponent();
+        }
+
+        private void XemVaSuaChungTuGoc_Load(object sender, EventArgs e)
+        {
+            LoadLoaiChungTu();
+        }
+
+        #region Load cbo
+        private void LoadLoaiChungTu()
+        {
+            _KTLCTGRepo = new KTLCTGRepo();
+            var list = _KTLCTGRepo.GetAll();
+            cboLoaichungtu.DataSource = list;
+            cboLoaichungtu.DisplayMember = "ID_LOAI";
+            cboLoaichungtu.ValueMember = "ID_LOAI";
+            cboLoaichungtu.DropDownColumns = "ID_LOAI,TEN_CT,SO_CT";
+            cboLoaichungtu.SelectedIndex = -1;
+        }
+        private void cboLoaichungtu_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "TEN_CT")
+            {
+                header.Width.Relative = 50; // 20% of available width
+            }
+            else { header.Width.Relative = 25; }
+        }
+        #endregion
+    }
+}

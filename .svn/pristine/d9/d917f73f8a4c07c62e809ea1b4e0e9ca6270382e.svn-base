@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using ketoansoft.app.Class.Data;
+using System.Collections;
+using ketoansoft.app.Class.Global;
+
+namespace ketoansoft.app
+{
+    public partial class TaoDatabaseMoi : Form
+    {
+        private string dataSqlPath = "";
+        public TaoDatabaseMoi()
+        {
+            InitializeComponent();
+        }
+
+        private void TaoDatabaseMoi_Load(object sender, EventArgs e)
+        {
+            dataSqlPath = Application.StartupPath + "\\DATASQL\\";
+            txtThumucluu.Text = dataSqlPath;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            if (txtTenDatabase.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Chưa nhập tên database!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            ArrayList Arr = new ArrayList();
+            Arr = Unit.ReadDatabaseXML();
+            string ServerName = Arr[0].ToString();
+            string DatabaseName = Arr[1].ToString();
+            string UserName = Arr[2].ToString();
+            string Password = Arr[3].ToString();
+            RestoreHelper restore = new RestoreHelper();
+            string fileBak = dataSqlPath + "SQLDefault.bak";
+            string dataFilePath = dataSqlPath;
+            string logFilePath = dataSqlPath;
+            restore.RestoreDatabase(txtTenDatabase.Text, fileBak, ServerName, UserName, Password, dataFilePath, logFilePath);
+            
+            MessageBox.Show("Tạo database mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+        }
+    }
+}

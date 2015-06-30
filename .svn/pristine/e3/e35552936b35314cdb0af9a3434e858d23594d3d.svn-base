@@ -1,0 +1,1021 @@
+﻿namespace ketoansoft.app
+{
+    partial class ThemTSCD
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.lbDatabase = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboKhachhang = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.txtCtuPNK = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxEx2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnXemtruoc = new DevComponents.DotNetBar.ButtonX();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX10 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.textBoxX11 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtTKChietkhau = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtTaikhoanco = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtTKhangbanbitralai = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtCtuHD = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtTenkhachhang = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lbNgayhachtoan = new System.Windows.Forms.Label();
+            this.lbChonsoHD = new System.Windows.Forms.Label();
+            this.lbKhachhang = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cboChonSoHD = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboBoxEx3 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cboDatabase = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.checkBoxX3 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX2 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.checkBoxX1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
+            this.label19 = new System.Windows.Forms.Label();
+            this.comboBoxEx4 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
+            this.superTabControl1.SuspendLayout();
+            this.superTabControlPanel1.SuspendLayout();
+            this.superTabControlPanel2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // lbDatabase
+            // 
+            this.lbDatabase.BackColor = System.Drawing.Color.Transparent;
+            this.lbDatabase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbDatabase.Location = new System.Drawing.Point(84, 9);
+            this.lbDatabase.Name = "lbDatabase";
+            this.lbDatabase.Size = new System.Drawing.Size(109, 19);
+            this.lbDatabase.TabIndex = 5;
+            this.lbDatabase.Text = "Mã tài sản";
+            this.lbDatabase.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(194, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 19);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Mã TS cuối";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(304, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "L.tiền";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Location = new System.Drawing.Point(370, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(496, 19);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Tên tài sản";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Location = new System.Drawing.Point(11, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 19);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Mã TS ID";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cboKhachhang
+            // 
+            this.cboKhachhang.DisplayMember = "Text";
+            this.cboKhachhang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboKhachhang.DropDownColumnsHeaders = "Diễn giải 1\r\nDiễn giải 2";
+            this.cboKhachhang.DropDownHeight = 200;
+            this.cboKhachhang.DropDownWidth = 400;
+            this.cboKhachhang.FormattingEnabled = true;
+            this.cboKhachhang.IntegralHeight = false;
+            this.cboKhachhang.ItemHeight = 14;
+            this.cboKhachhang.Location = new System.Drawing.Point(84, 29);
+            this.cboKhachhang.MaxDropDownItems = 20;
+            this.cboKhachhang.Name = "cboKhachhang";
+            this.cboKhachhang.PopupCloseButtonVisible = false;
+            this.cboKhachhang.Size = new System.Drawing.Size(109, 20);
+            this.cboKhachhang.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cboKhachhang.TabIndex = 9;
+            // 
+            // txtCtuPNK
+            // 
+            this.txtCtuPNK.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.txtCtuPNK.Border.Class = "TextBoxBorder";
+            this.txtCtuPNK.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtCtuPNK.ButtonCustom.Tooltip = "";
+            this.txtCtuPNK.ButtonCustom2.Tooltip = "";
+            this.txtCtuPNK.DisabledBackColor = System.Drawing.Color.White;
+            this.txtCtuPNK.ForeColor = System.Drawing.Color.Black;
+            this.txtCtuPNK.Location = new System.Drawing.Point(194, 29);
+            this.txtCtuPNK.Name = "txtCtuPNK";
+            this.txtCtuPNK.PreventEnterBeep = true;
+            this.txtCtuPNK.Size = new System.Drawing.Size(109, 20);
+            this.txtCtuPNK.TabIndex = 10;
+            // 
+            // comboBoxEx1
+            // 
+            this.comboBoxEx1.DisplayMember = "Text";
+            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx1.DropDownColumnsHeaders = "Diễn giải 1\r\nDiễn giải 2";
+            this.comboBoxEx1.DropDownHeight = 200;
+            this.comboBoxEx1.DropDownWidth = 400;
+            this.comboBoxEx1.FormattingEnabled = true;
+            this.comboBoxEx1.IntegralHeight = false;
+            this.comboBoxEx1.ItemHeight = 14;
+            this.comboBoxEx1.Location = new System.Drawing.Point(304, 28);
+            this.comboBoxEx1.MaxDropDownItems = 20;
+            this.comboBoxEx1.Name = "comboBoxEx1";
+            this.comboBoxEx1.PopupCloseButtonVisible = false;
+            this.comboBoxEx1.Size = new System.Drawing.Size(65, 20);
+            this.comboBoxEx1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx1.TabIndex = 9;
+            // 
+            // textBoxX1
+            // 
+            this.textBoxX1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX1.Border.Class = "TextBoxBorder";
+            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX1.ButtonCustom.Tooltip = "";
+            this.textBoxX1.ButtonCustom2.Tooltip = "";
+            this.textBoxX1.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX1.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX1.Location = new System.Drawing.Point(370, 28);
+            this.textBoxX1.Name = "textBoxX1";
+            this.textBoxX1.PreventEnterBeep = true;
+            this.textBoxX1.Size = new System.Drawing.Size(496, 20);
+            this.textBoxX1.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(11, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 19);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Mã TS Mẹ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBoxEx2
+            // 
+            this.comboBoxEx2.DisplayMember = "Text";
+            this.comboBoxEx2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx2.DropDownColumnsHeaders = "Diễn giải 1\r\nDiễn giải 2";
+            this.comboBoxEx2.DropDownHeight = 200;
+            this.comboBoxEx2.DropDownWidth = 400;
+            this.comboBoxEx2.FormattingEnabled = true;
+            this.comboBoxEx2.IntegralHeight = false;
+            this.comboBoxEx2.ItemHeight = 14;
+            this.comboBoxEx2.Location = new System.Drawing.Point(84, 50);
+            this.comboBoxEx2.MaxDropDownItems = 20;
+            this.comboBoxEx2.Name = "comboBoxEx2";
+            this.comboBoxEx2.PopupCloseButtonVisible = false;
+            this.comboBoxEx2.Size = new System.Drawing.Size(109, 20);
+            this.comboBoxEx2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx2.TabIndex = 9;
+            // 
+            // textBoxX2
+            // 
+            this.textBoxX2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX2.Border.Class = "TextBoxBorder";
+            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX2.ButtonCustom.Tooltip = "";
+            this.textBoxX2.ButtonCustom2.Tooltip = "";
+            this.textBoxX2.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX2.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX2.Location = new System.Drawing.Point(194, 50);
+            this.textBoxX2.Name = "textBoxX2";
+            this.textBoxX2.PreventEnterBeep = true;
+            this.textBoxX2.Size = new System.Drawing.Size(175, 20);
+            this.textBoxX2.TabIndex = 10;
+            // 
+            // textBoxX3
+            // 
+            this.textBoxX3.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX3.Border.Class = "TextBoxBorder";
+            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX3.ButtonCustom.Tooltip = "";
+            this.textBoxX3.ButtonCustom2.Tooltip = "";
+            this.textBoxX3.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX3.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX3.Location = new System.Drawing.Point(370, 49);
+            this.textBoxX3.Name = "textBoxX3";
+            this.textBoxX3.PreventEnterBeep = true;
+            this.textBoxX3.Size = new System.Drawing.Size(496, 20);
+            this.textBoxX3.TabIndex = 10;
+            // 
+            // btnXemtruoc
+            // 
+            this.btnXemtruoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXemtruoc.BackColor = System.Drawing.Color.Lime;
+            this.btnXemtruoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnXemtruoc.Location = new System.Drawing.Point(84, 76);
+            this.btnXemtruoc.Name = "btnXemtruoc";
+            this.btnXemtruoc.Size = new System.Drawing.Size(47, 19);
+            this.btnXemtruoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnXemtruoc.TabIndex = 11;
+            this.btnXemtruoc.Text = "Auto";
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Location = new System.Drawing.Point(137, 76);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 19);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Số lượng";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxX4
+            // 
+            this.textBoxX4.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX4.Border.Class = "TextBoxBorder";
+            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX4.ButtonCustom.Tooltip = "";
+            this.textBoxX4.ButtonCustom2.Tooltip = "";
+            this.textBoxX4.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX4.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX4.Location = new System.Drawing.Point(194, 75);
+            this.textBoxX4.Name = "textBoxX4";
+            this.textBoxX4.PreventEnterBeep = true;
+            this.textBoxX4.Size = new System.Drawing.Size(79, 20);
+            this.textBoxX4.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Location = new System.Drawing.Point(294, 76);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 19);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "ĐVT";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxX5
+            // 
+            this.textBoxX5.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX5.Border.Class = "TextBoxBorder";
+            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX5.ButtonCustom.Tooltip = "";
+            this.textBoxX5.ButtonCustom2.Tooltip = "";
+            this.textBoxX5.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX5.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX5.Location = new System.Drawing.Point(370, 75);
+            this.textBoxX5.Name = "textBoxX5";
+            this.textBoxX5.PreventEnterBeep = true;
+            this.textBoxX5.Size = new System.Drawing.Size(79, 20);
+            this.textBoxX5.TabIndex = 10;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Location = new System.Drawing.Point(455, 76);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 19);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Đơn giá Vnd";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxX6
+            // 
+            this.textBoxX6.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX6.Border.Class = "TextBoxBorder";
+            this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX6.ButtonCustom.Tooltip = "";
+            this.textBoxX6.ButtonCustom2.Tooltip = "";
+            this.textBoxX6.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX6.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX6.Location = new System.Drawing.Point(531, 75);
+            this.textBoxX6.Name = "textBoxX6";
+            this.textBoxX6.PreventEnterBeep = true;
+            this.textBoxX6.Size = new System.Drawing.Size(112, 20);
+            this.textBoxX6.TabIndex = 10;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.Location = new System.Drawing.Point(649, 74);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 19);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Thành tiền Vnd";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxX7
+            // 
+            this.textBoxX7.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX7.Border.Class = "TextBoxBorder";
+            this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX7.ButtonCustom.Tooltip = "";
+            this.textBoxX7.ButtonCustom2.Tooltip = "";
+            this.textBoxX7.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX7.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX7.Location = new System.Drawing.Point(744, 73);
+            this.textBoxX7.Name = "textBoxX7";
+            this.textBoxX7.PreventEnterBeep = true;
+            this.textBoxX7.Size = new System.Drawing.Size(122, 20);
+            this.textBoxX7.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Location = new System.Drawing.Point(294, 98);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 19);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Tỷ giá";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Location = new System.Drawing.Point(455, 98);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 19);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Đơn giá Usd";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label12.Location = new System.Drawing.Point(649, 96);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 19);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Thành tiền Usd";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxX8
+            // 
+            this.textBoxX8.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX8.Border.Class = "TextBoxBorder";
+            this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX8.ButtonCustom.Tooltip = "";
+            this.textBoxX8.ButtonCustom2.Tooltip = "";
+            this.textBoxX8.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX8.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX8.Location = new System.Drawing.Point(370, 97);
+            this.textBoxX8.Name = "textBoxX8";
+            this.textBoxX8.PreventEnterBeep = true;
+            this.textBoxX8.Size = new System.Drawing.Size(79, 20);
+            this.textBoxX8.TabIndex = 10;
+            // 
+            // textBoxX9
+            // 
+            this.textBoxX9.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX9.Border.Class = "TextBoxBorder";
+            this.textBoxX9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX9.ButtonCustom.Tooltip = "";
+            this.textBoxX9.ButtonCustom2.Tooltip = "";
+            this.textBoxX9.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX9.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX9.Location = new System.Drawing.Point(531, 97);
+            this.textBoxX9.Name = "textBoxX9";
+            this.textBoxX9.PreventEnterBeep = true;
+            this.textBoxX9.Size = new System.Drawing.Size(112, 20);
+            this.textBoxX9.TabIndex = 10;
+            // 
+            // textBoxX10
+            // 
+            this.textBoxX10.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX10.Border.Class = "TextBoxBorder";
+            this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX10.ButtonCustom.Tooltip = "";
+            this.textBoxX10.ButtonCustom2.Tooltip = "";
+            this.textBoxX10.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX10.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX10.Location = new System.Drawing.Point(744, 95);
+            this.textBoxX10.Name = "textBoxX10";
+            this.textBoxX10.PreventEnterBeep = true;
+            this.textBoxX10.Size = new System.Drawing.Size(122, 20);
+            this.textBoxX10.TabIndex = 10;
+            // 
+            // superTabControl1
+            // 
+            this.superTabControl1.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.superTabControl1.ControlBox.CloseBox.Name = "";
+            // 
+            // 
+            // 
+            this.superTabControl1.ControlBox.MenuBox.Name = "";
+            this.superTabControl1.ControlBox.Name = "";
+            this.superTabControl1.ControlBox.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.superTabControl1.ControlBox.MenuBox,
+            this.superTabControl1.ControlBox.CloseBox});
+            this.superTabControl1.Controls.Add(this.superTabControlPanel1);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
+            this.superTabControl1.ForeColor = System.Drawing.Color.Black;
+            this.superTabControl1.Location = new System.Drawing.Point(1, 123);
+            this.superTabControl1.Name = "superTabControl1";
+            this.superTabControl1.ReorderTabsEnabled = true;
+            this.superTabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
+            this.superTabControl1.SelectedTabIndex = 0;
+            this.superTabControl1.Size = new System.Drawing.Size(865, 249);
+            this.superTabControl1.TabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.superTabControl1.TabIndex = 12;
+            this.superTabControl1.Tabs.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.superTabItem1,
+            this.superTabItem2});
+            this.superTabControl1.TabStyle = DevComponents.DotNetBar.eSuperTabStyle.WinMediaPlayer12;
+            this.superTabControl1.Text = "superTabControl1";
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.textBoxX11);
+            this.superTabControlPanel1.Controls.Add(this.txtTKChietkhau);
+            this.superTabControlPanel1.Controls.Add(this.label13);
+            this.superTabControlPanel1.Controls.Add(this.txtTaikhoanco);
+            this.superTabControlPanel1.Controls.Add(this.label14);
+            this.superTabControlPanel1.Controls.Add(this.txtTKhangbanbitralai);
+            this.superTabControlPanel1.Controls.Add(this.label15);
+            this.superTabControlPanel1.Controls.Add(this.txtCtuHD);
+            this.superTabControlPanel1.Controls.Add(this.label16);
+            this.superTabControlPanel1.Controls.Add(this.label19);
+            this.superTabControlPanel1.Controls.Add(this.label17);
+            this.superTabControlPanel1.Controls.Add(this.txtTenkhachhang);
+            this.superTabControlPanel1.Controls.Add(this.lbNgayhachtoan);
+            this.superTabControlPanel1.Controls.Add(this.lbChonsoHD);
+            this.superTabControlPanel1.Controls.Add(this.lbKhachhang);
+            this.superTabControlPanel1.Controls.Add(this.label18);
+            this.superTabControlPanel1.Controls.Add(this.comboBoxEx4);
+            this.superTabControlPanel1.Controls.Add(this.cboChonSoHD);
+            this.superTabControlPanel1.Controls.Add(this.comboBoxEx3);
+            this.superTabControlPanel1.Controls.Add(this.cboDatabase);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(0, 23);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Size = new System.Drawing.Size(865, 226);
+            this.superTabControlPanel1.TabIndex = 1;
+            this.superTabControlPanel1.TabItem = this.superTabItem1;
+            // 
+            // textBoxX11
+            // 
+            this.textBoxX11.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.textBoxX11.Border.Class = "TextBoxBorder";
+            this.textBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX11.ButtonCustom.Tooltip = "";
+            this.textBoxX11.ButtonCustom2.Tooltip = "";
+            this.textBoxX11.DisabledBackColor = System.Drawing.Color.White;
+            this.textBoxX11.ForeColor = System.Drawing.Color.Black;
+            this.textBoxX11.Location = new System.Drawing.Point(257, 121);
+            this.textBoxX11.Name = "textBoxX11";
+            this.textBoxX11.PreventEnterBeep = true;
+            this.textBoxX11.Size = new System.Drawing.Size(91, 20);
+            this.textBoxX11.TabIndex = 5;
+            // 
+            // txtTKChietkhau
+            // 
+            this.txtTKChietkhau.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.txtTKChietkhau.Border.Class = "TextBoxBorder";
+            this.txtTKChietkhau.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTKChietkhau.ButtonCustom.Tooltip = "";
+            this.txtTKChietkhau.ButtonCustom2.Tooltip = "";
+            this.txtTKChietkhau.DisabledBackColor = System.Drawing.Color.White;
+            this.txtTKChietkhau.ForeColor = System.Drawing.Color.Black;
+            this.txtTKChietkhau.Location = new System.Drawing.Point(427, 121);
+            this.txtTKChietkhau.Name = "txtTKChietkhau";
+            this.txtTKChietkhau.PreventEnterBeep = true;
+            this.txtTKChietkhau.Size = new System.Drawing.Size(91, 20);
+            this.txtTKChietkhau.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Location = new System.Drawing.Point(203, 123);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "C.từ PNK";
+            // 
+            // txtTaikhoanco
+            // 
+            this.txtTaikhoanco.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.txtTaikhoanco.Border.Class = "TextBoxBorder";
+            this.txtTaikhoanco.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTaikhoanco.ButtonCustom.Tooltip = "";
+            this.txtTaikhoanco.ButtonCustom2.Tooltip = "";
+            this.txtTaikhoanco.DisabledBackColor = System.Drawing.Color.White;
+            this.txtTaikhoanco.ForeColor = System.Drawing.Color.Black;
+            this.txtTaikhoanco.Location = new System.Drawing.Point(427, 95);
+            this.txtTaikhoanco.Name = "txtTaikhoanco";
+            this.txtTaikhoanco.PreventEnterBeep = true;
+            this.txtTaikhoanco.Size = new System.Drawing.Size(91, 20);
+            this.txtTaikhoanco.TabIndex = 5;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Location = new System.Drawing.Point(351, 123);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(75, 13);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "TK Chiết khấu";
+            // 
+            // txtTKhangbanbitralai
+            // 
+            this.txtTKhangbanbitralai.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.txtTKhangbanbitralai.Border.Class = "TextBoxBorder";
+            this.txtTKhangbanbitralai.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTKhangbanbitralai.ButtonCustom.Tooltip = "";
+            this.txtTKhangbanbitralai.ButtonCustom2.Tooltip = "";
+            this.txtTKhangbanbitralai.DisabledBackColor = System.Drawing.Color.White;
+            this.txtTKhangbanbitralai.ForeColor = System.Drawing.Color.Black;
+            this.txtTKhangbanbitralai.Location = new System.Drawing.Point(427, 69);
+            this.txtTKhangbanbitralai.Name = "txtTKhangbanbitralai";
+            this.txtTKhangbanbitralai.PreventEnterBeep = true;
+            this.txtTKhangbanbitralai.Size = new System.Drawing.Size(91, 20);
+            this.txtTKhangbanbitralai.TabIndex = 5;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Location = new System.Drawing.Point(356, 97);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(70, 13);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Tài khoản có";
+            // 
+            // txtCtuHD
+            // 
+            this.txtCtuHD.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.txtCtuHD.Border.Class = "TextBoxBorder";
+            this.txtCtuHD.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtCtuHD.ButtonCustom.Tooltip = "";
+            this.txtCtuHD.ButtonCustom2.Tooltip = "";
+            this.txtCtuHD.DisabledBackColor = System.Drawing.Color.White;
+            this.txtCtuHD.ForeColor = System.Drawing.Color.Black;
+            this.txtCtuHD.Location = new System.Drawing.Point(103, 121);
+            this.txtCtuHD.Name = "txtCtuHD";
+            this.txtCtuHD.PreventEnterBeep = true;
+            this.txtCtuHD.Size = new System.Drawing.Size(91, 20);
+            this.txtCtuHD.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Location = new System.Drawing.Point(318, 71);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(108, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "TK hàng bán bị trả lại";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Location = new System.Drawing.Point(31, 123);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "TK chi phí";
+            // 
+            // txtTenkhachhang
+            // 
+            this.txtTenkhachhang.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            // 
+            // 
+            // 
+            this.txtTenkhachhang.Border.Class = "TextBoxBorder";
+            this.txtTenkhachhang.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtTenkhachhang.ButtonCustom.Tooltip = "";
+            this.txtTenkhachhang.ButtonCustom2.Tooltip = "";
+            this.txtTenkhachhang.DisabledBackColor = System.Drawing.Color.White;
+            this.txtTenkhachhang.ForeColor = System.Drawing.Color.Black;
+            this.txtTenkhachhang.Location = new System.Drawing.Point(200, 43);
+            this.txtTenkhachhang.Name = "txtTenkhachhang";
+            this.txtTenkhachhang.PreventEnterBeep = true;
+            this.txtTenkhachhang.Size = new System.Drawing.Size(318, 20);
+            this.txtTenkhachhang.TabIndex = 5;
+            // 
+            // lbNgayhachtoan
+            // 
+            this.lbNgayhachtoan.AutoSize = true;
+            this.lbNgayhachtoan.BackColor = System.Drawing.Color.Transparent;
+            this.lbNgayhachtoan.Location = new System.Drawing.Point(33, 97);
+            this.lbNgayhachtoan.Name = "lbNgayhachtoan";
+            this.lbNgayhachtoan.Size = new System.Drawing.Size(55, 13);
+            this.lbNgayhachtoan.TabIndex = 4;
+            this.lbNgayhachtoan.Text = "TK tài sản";
+            // 
+            // lbChonsoHD
+            // 
+            this.lbChonsoHD.AutoSize = true;
+            this.lbChonsoHD.BackColor = System.Drawing.Color.Transparent;
+            this.lbChonsoHD.Location = new System.Drawing.Point(16, 71);
+            this.lbChonsoHD.Name = "lbChonsoHD";
+            this.lbChonsoHD.Size = new System.Drawing.Size(75, 13);
+            this.lbChonsoHD.TabIndex = 4;
+            this.lbChonsoHD.Text = "Ngày trích KH";
+            // 
+            // lbKhachhang
+            // 
+            this.lbKhachhang.AutoSize = true;
+            this.lbKhachhang.BackColor = System.Drawing.Color.Transparent;
+            this.lbKhachhang.Location = new System.Drawing.Point(34, 45);
+            this.lbKhachhang.Name = "lbKhachhang";
+            this.lbKhachhang.Size = new System.Drawing.Size(55, 13);
+            this.lbKhachhang.TabIndex = 4;
+            this.lbKhachhang.Text = "Ngày mua";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Location = new System.Drawing.Point(29, 24);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 13);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "Có khấu hao";
+            // 
+            // cboChonSoHD
+            // 
+            this.cboChonSoHD.DisplayMember = "Text";
+            this.cboChonSoHD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboChonSoHD.DropDownColumnsHeaders = "Diễn giải 1\r\nDiễn giải 2";
+            this.cboChonSoHD.DropDownHeight = 200;
+            this.cboChonSoHD.DropDownWidth = 400;
+            this.cboChonSoHD.FormattingEnabled = true;
+            this.cboChonSoHD.IntegralHeight = false;
+            this.cboChonSoHD.ItemHeight = 14;
+            this.cboChonSoHD.Location = new System.Drawing.Point(101, 90);
+            this.cboChonSoHD.MaxDropDownItems = 20;
+            this.cboChonSoHD.Name = "cboChonSoHD";
+            this.cboChonSoHD.PopupCloseButtonVisible = false;
+            this.cboChonSoHD.Size = new System.Drawing.Size(91, 20);
+            this.cboChonSoHD.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cboChonSoHD.TabIndex = 3;
+            // 
+            // comboBoxEx3
+            // 
+            this.comboBoxEx3.DisplayMember = "Text";
+            this.comboBoxEx3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx3.DropDownColumnsHeaders = "Diễn giải 1\r\nDiễn giải 2";
+            this.comboBoxEx3.DropDownHeight = 200;
+            this.comboBoxEx3.DropDownWidth = 400;
+            this.comboBoxEx3.FormattingEnabled = true;
+            this.comboBoxEx3.IntegralHeight = false;
+            this.comboBoxEx3.ItemHeight = 14;
+            this.comboBoxEx3.Location = new System.Drawing.Point(103, 43);
+            this.comboBoxEx3.MaxDropDownItems = 20;
+            this.comboBoxEx3.Name = "comboBoxEx3";
+            this.comboBoxEx3.PopupCloseButtonVisible = false;
+            this.comboBoxEx3.Size = new System.Drawing.Size(91, 20);
+            this.comboBoxEx3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx3.TabIndex = 3;
+            // 
+            // cboDatabase
+            // 
+            this.cboDatabase.DisplayMember = "Text";
+            this.cboDatabase.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cboDatabase.DropDownColumnsHeaders = "Diễn giải 1\r\nDiễn giải 2";
+            this.cboDatabase.DropDownHeight = 200;
+            this.cboDatabase.DropDownWidth = 400;
+            this.cboDatabase.FormattingEnabled = true;
+            this.cboDatabase.IntegralHeight = false;
+            this.cboDatabase.ItemHeight = 14;
+            this.cboDatabase.Location = new System.Drawing.Point(103, 17);
+            this.cboDatabase.MaxDropDownItems = 20;
+            this.cboDatabase.Name = "cboDatabase";
+            this.cboDatabase.PopupCloseButtonVisible = false;
+            this.cboDatabase.Size = new System.Drawing.Size(91, 20);
+            this.cboDatabase.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cboDatabase.TabIndex = 3;
+            // 
+            // superTabItem1
+            // 
+            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
+            this.superTabItem1.GlobalItem = false;
+            this.superTabItem1.Name = "superTabItem1";
+            this.superTabItem1.Text = "Thông tin chính";
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Controls.Add(this.checkBoxX3);
+            this.superTabControlPanel2.Controls.Add(this.checkBoxX2);
+            this.superTabControlPanel2.Controls.Add(this.checkBoxX1);
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(0, 23);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(865, 176);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.superTabItem2;
+            // 
+            // checkBoxX3
+            // 
+            this.checkBoxX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.checkBoxX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX3.Location = new System.Drawing.Point(21, 96);
+            this.checkBoxX3.Name = "checkBoxX3";
+            this.checkBoxX3.Size = new System.Drawing.Size(344, 23);
+            this.checkBoxX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX3.TabIndex = 10;
+            this.checkBoxX3.Text = "Tự động hạch toán Nợ 15* - Có 623";
+            this.checkBoxX3.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // checkBoxX2
+            // 
+            this.checkBoxX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.checkBoxX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX2.Location = new System.Drawing.Point(21, 53);
+            this.checkBoxX2.Name = "checkBoxX2";
+            this.checkBoxX2.Size = new System.Drawing.Size(344, 23);
+            this.checkBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX2.TabIndex = 10;
+            this.checkBoxX2.Text = "Không theo số hóa đơn";
+            this.checkBoxX2.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // checkBoxX1
+            // 
+            this.checkBoxX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.checkBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.checkBoxX1.Location = new System.Drawing.Point(21, 15);
+            this.checkBoxX1.Name = "checkBoxX1";
+            this.checkBoxX1.Size = new System.Drawing.Size(344, 23);
+            this.checkBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.checkBoxX1.TabIndex = 10;
+            this.checkBoxX1.Text = "Tự động xử lý đơn giá BQGQL";
+            this.checkBoxX1.TextColor = System.Drawing.SystemColors.ControlText;
+            // 
+            // superTabItem2
+            // 
+            this.superTabItem2.AttachedControl = this.superTabControlPanel2;
+            this.superTabItem2.GlobalItem = false;
+            this.superTabItem2.Name = "superTabItem2";
+            this.superTabItem2.Text = "Thông tin khác";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Location = new System.Drawing.Point(25, 152);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(65, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "TK hao mòn";
+            // 
+            // comboBoxEx4
+            // 
+            this.comboBoxEx4.DisplayMember = "Text";
+            this.comboBoxEx4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEx4.DropDownColumnsHeaders = "Diễn giải 1\r\nDiễn giải 2";
+            this.comboBoxEx4.DropDownHeight = 200;
+            this.comboBoxEx4.DropDownWidth = 400;
+            this.comboBoxEx4.FormattingEnabled = true;
+            this.comboBoxEx4.IntegralHeight = false;
+            this.comboBoxEx4.ItemHeight = 14;
+            this.comboBoxEx4.Location = new System.Drawing.Point(103, 145);
+            this.comboBoxEx4.MaxDropDownItems = 20;
+            this.comboBoxEx4.Name = "comboBoxEx4";
+            this.comboBoxEx4.PopupCloseButtonVisible = false;
+            this.comboBoxEx4.Size = new System.Drawing.Size(91, 20);
+            this.comboBoxEx4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comboBoxEx4.TabIndex = 3;
+            // 
+            // ThemTSCD
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(896, 569);
+            this.Controls.Add(this.superTabControl1);
+            this.Controls.Add(this.btnXemtruoc);
+            this.Controls.Add(this.textBoxX3);
+            this.Controls.Add(this.textBoxX1);
+            this.Controls.Add(this.textBoxX10);
+            this.Controls.Add(this.textBoxX7);
+            this.Controls.Add(this.textBoxX9);
+            this.Controls.Add(this.textBoxX6);
+            this.Controls.Add(this.textBoxX8);
+            this.Controls.Add(this.textBoxX5);
+            this.Controls.Add(this.textBoxX4);
+            this.Controls.Add(this.textBoxX2);
+            this.Controls.Add(this.txtCtuPNK);
+            this.Controls.Add(this.comboBoxEx1);
+            this.Controls.Add(this.comboBoxEx2);
+            this.Controls.Add(this.cboKhachhang);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbDatabase);
+            this.Name = "ThemTSCD";
+            this.Text = "Thêm vào danh mục tài sản";
+            ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
+            this.superTabControl1.ResumeLayout(false);
+            this.superTabControlPanel1.ResumeLayout(false);
+            this.superTabControlPanel1.PerformLayout();
+            this.superTabControlPanel2.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label lbDatabase;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cboKhachhang;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtCtuPNK;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private System.Windows.Forms.Label label5;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx2;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
+        private DevComponents.DotNetBar.ButtonX btnXemtruoc;
+        private System.Windows.Forms.Label label6;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
+        private System.Windows.Forms.Label label7;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
+        private System.Windows.Forms.Label label8;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
+        private System.Windows.Forms.Label label9;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX8;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX9;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX10;
+        private DevComponents.DotNetBar.SuperTabControl superTabControl1;
+        private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel1;
+        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX11;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTKChietkhau;
+        private System.Windows.Forms.Label label13;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTaikhoanco;
+        private System.Windows.Forms.Label label14;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTKhangbanbitralai;
+        private System.Windows.Forms.Label label15;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtCtuHD;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTenkhachhang;
+        private System.Windows.Forms.Label lbNgayhachtoan;
+        private System.Windows.Forms.Label lbChonsoHD;
+        private System.Windows.Forms.Label lbKhachhang;
+        private System.Windows.Forms.Label label18;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cboChonSoHD;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx3;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cboDatabase;
+        private DevComponents.DotNetBar.SuperTabItem superTabItem1;
+        private DevComponents.DotNetBar.SuperTabControlPanel superTabControlPanel2;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX3;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX2;
+        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
+        private DevComponents.DotNetBar.SuperTabItem superTabItem2;
+        private System.Windows.Forms.Label label19;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx4;
+
+    }
+}
