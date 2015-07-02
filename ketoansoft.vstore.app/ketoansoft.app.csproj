@@ -164,6 +164,7 @@
     <Compile Include="Class\Data\KTDMHHRepo.cs" />
     <Compile Include="Class\Data\KTDMKURepo.cs" />
     <Compile Include="Class\Data\KTDMCauThanhSPRepo.cs" />
+    <Compile Include="Class\Data\KTXuLySoDuRepo.cs" />
     <Compile Include="Class\Data\KTYTCPRepo.cs" />
     <Compile Include="Class\Data\KTUNGLUONGRepo.cs" />
     <Compile Include="Class\Data\KTNHOMHHRepo.cs" />

@@ -16,6 +16,8 @@ namespace ketoansoft.app
     {
         private dbVstoreAppDataContext _db = new dbVstoreAppDataContext(Const.builder.ConnectionString);
         private KT_CTuGocRepo _KT_CTuGocRepo = new KT_CTuGocRepo();
+        private KTTKRepo _KTTKRepo = new KTTKRepo();
+        private KTDTPNRepo _KTDTPNRepo = new KTDTPNRepo();
         public SOCTCN11()
         {
             InitializeComponent();
@@ -24,8 +26,56 @@ namespace ketoansoft.app
         private void SOCTCN11_Load(object sender, EventArgs e)
         {
             loaddtpNgay();
+            LoadTK();
+            LoadDT();
             cboThang.Text = DateTime.Now.Month.ToString();
         }
+
+        #region load data
+        private void LoadTK()
+        {
+            _KTTKRepo = new KTTKRepo();
+
+            cboTaikhoan.DisplayMember = "MA_TK";
+            cboTaikhoan.ValueMember = "ID";
+            cboTaikhoan.DropDownColumns = "MA_TK,TEN_TK";
+            cboTaikhoan.DataSource = _KTTKRepo.GetAll();
+            cboTaikhoan.SelectedIndex = -1;
+        }
+        private void cboTaikhoan_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_TK")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        private void LoadDT()
+        {
+            _KTDTPNRepo = new KTDTPNRepo();
+            cboMaDT.DisplayMember = "MA_DTPN";
+            cboMaDT.ValueMember = "ID";
+            cboMaDT.DropDownColumns = "MA_DTPN,TEN_DTPN";
+            cboMaDT.DataSource = _KTDTPNRepo.GetAll();
+            cboMaDT.SelectedIndex = -1;
+        }
+        private void cboMaDT_DataColumnCreated(object sender, DevComponents.DotNetBar.Controls.DataColumnEventArgs e)
+        {
+            DevComponents.AdvTree.ColumnHeader header = e.ColumnHeader;
+            if (header.DataFieldName == "MA_DTPN")
+            {
+                header.Width.Relative = 30; // 20% of available width
+            }
+            else
+            {
+                header.Width.Relative = 70;
+            }
+        }
+        #endregion
 
         #region process datetime
         private DateTime GetFirstDayOfMonth(DateTime dtInput)
