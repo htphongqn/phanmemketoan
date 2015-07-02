@@ -50,7 +50,7 @@
             this.radioButton27 = new System.Windows.Forms.RadioButton();
             this.radioButton19 = new System.Windows.Forms.RadioButton();
             this.radioButton22 = new System.Windows.Forms.RadioButton();
-            this.rdViewtatcaDT = new System.Windows.Forms.RadioButton();
+            this.radioButton20 = new System.Windows.Forms.RadioButton();
             this.rdInchitietquycach = new System.Windows.Forms.RadioButton();
             this.rdMauchuan = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -229,7 +229,7 @@
             this.groupBox6.Controls.Add(this.radioButton27);
             this.groupBox6.Controls.Add(this.radioButton19);
             this.groupBox6.Controls.Add(this.radioButton22);
-            this.groupBox6.Controls.Add(this.rdViewtatcaDT);
+            this.groupBox6.Controls.Add(this.radioButton20);
             this.groupBox6.Controls.Add(this.rdInchitietquycach);
             this.groupBox6.Controls.Add(this.rdMauchuan);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -389,15 +389,15 @@
             this.radioButton22.Text = "7. Subtotal theo Hợp đồng";
             this.radioButton22.UseVisualStyleBackColor = true;
             // 
-            // rdViewtatcaDT
+            // radioButton20
             // 
-            this.rdViewtatcaDT.AutoSize = true;
-            this.rdViewtatcaDT.Location = new System.Drawing.Point(13, 66);
-            this.rdViewtatcaDT.Name = "rdViewtatcaDT";
-            this.rdViewtatcaDT.Size = new System.Drawing.Size(108, 17);
-            this.rdViewtatcaDT.TabIndex = 0;
-            this.rdViewtatcaDT.Text = "3. View tất cả ĐT";
-            this.rdViewtatcaDT.UseVisualStyleBackColor = true;
+            this.radioButton20.AutoSize = true;
+            this.radioButton20.Location = new System.Drawing.Point(13, 66);
+            this.radioButton20.Name = "radioButton20";
+            this.radioButton20.Size = new System.Drawing.Size(108, 17);
+            this.radioButton20.TabIndex = 0;
+            this.radioButton20.Text = "3. View tất cả ĐT";
+            this.radioButton20.UseVisualStyleBackColor = true;
             // 
             // rdInchitietquycach
             // 
@@ -1312,7 +1312,7 @@
         private System.Windows.Forms.RadioButton radioButton17;
         private System.Windows.Forms.RadioButton radioButton18;
         private System.Windows.Forms.RadioButton radioButton19;
-        private System.Windows.Forms.RadioButton rdViewtatcaDT;
+        private System.Windows.Forms.RadioButton radioButton20;
         private System.Windows.Forms.RadioButton rdInchitietquycach;
         private System.Windows.Forms.RadioButton rdMauchuan;
         private System.Windows.Forms.GroupBox groupBox5;

@@ -125,8 +125,8 @@ namespace ketoansoft.app
         private void btnIn_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[] { new DataColumn("DTPN"), new DataColumn("TK"), new DataColumn("LOAI"), new DataColumn("SO"), new DataColumn("NGAY"), 
-                new DataColumn("MADM"), new DataColumn("DIENGIAI"), new DataColumn("DONVI"), new DataColumn("SOLUONG"), new DataColumn("DAI"), new DataColumn("RONG"), 
+            dt.Columns.AddRange(new DataColumn[] { new DataColumn("DTPN"), new DataColumn("TK"), new DataColumn("LOAI"), new DataColumn("SO"), new DataColumn("NGAY"), new DataColumn("MADM"), 
+                new DataColumn("DIENGIAI"), new DataColumn("DONVI"), new DataColumn("SOLUONG"), new DataColumn("DAI"), new DataColumn("RONG"), 
                 new DataColumn("SOM2"), new DataColumn("DONGIA"), new DataColumn("TKDU"), new DataColumn("NO"), new DataColumn("CO") });
 
             _db = new dbVstoreAppDataContext(Const.builder.ConnectionString);
@@ -171,8 +171,6 @@ namespace ketoansoft.app
                 Utlity.WriteDataTableToExcel_SOCTCN30_InChiTietQuyCach(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
             else if (rdViewtatcaDT.Checked)
                 Utlity.WriteDataTableToExcel_SOCTCN11_03_V_ViewtatcaDT(dt, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value, listDTPB);
-            else
-                Utlity.WriteDataTableToExcel_SOCTCN11_Mauchuan(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
         }
         #endregion
 

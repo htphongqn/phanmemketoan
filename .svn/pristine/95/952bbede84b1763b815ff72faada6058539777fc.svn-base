@@ -125,18 +125,16 @@ namespace ketoansoft.app
         private void btnIn_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[] { new DataColumn("DTPN"), new DataColumn("TK"), new DataColumn("LOAI"), new DataColumn("SO"), new DataColumn("NGAY"), 
-                new DataColumn("MADM"), new DataColumn("DIENGIAI"), new DataColumn("DONVI"), new DataColumn("SOLUONG"), new DataColumn("DAI"), new DataColumn("RONG"), 
+            dt.Columns.AddRange(new DataColumn[] { new DataColumn("LOAI"), new DataColumn("SO"), new DataColumn("NGAY"), new DataColumn("MADM"), 
+                new DataColumn("DIENGIAI"), new DataColumn("DONVI"), new DataColumn("SOLUONG"), new DataColumn("DAI"), new DataColumn("RONG"), 
                 new DataColumn("SOM2"), new DataColumn("DONGIA"), new DataColumn("TKDU"), new DataColumn("NO"), new DataColumn("CO") });
 
             _db = new dbVstoreAppDataContext(Const.builder.ConnectionString);
             var list = this._db.KT_CTuGocs.Where(u => u.NGAY_CTU.Value != null && u.NGAY_CTU.Value.Date >= dtpTuNgay.Value.Date && u.NGAY_CTU.Value.Date <= dtpDenngay.Value.Date 
-                && (u.TK_NO == cboTaikhoan.Text || cboTaikhoan.Text == "") && (u.MA_DTPN_NO == cboMaDT.Text || cboMaDT.Text == ""));
+                && u.TK_NO == cboTaikhoan.Text && u.MA_DTPN_NO == cboMaDT.Text);
             foreach (var item in list)
             {
                 DataRow dr = dt.NewRow();
-                dr["DTPN"] = item.MA_DTPN_NO;
-                dr["TK"] = item.TK_NO;
                 dr["LOAI"] = item.MA_CTU;
                 dr["SO"] = item.SO_CTU;
                 dr["NGAY"] = item.NGAY_CTU;
@@ -153,26 +151,12 @@ namespace ketoansoft.app
                 dr["CO"] = "";
                 dt.Rows.Add(dr);
             }
-            //List<string> listDTPB = new List<string>();
-            //foreach (var item in list)
-            //{
-            //    bool b = listDTPB.Exists(a => a == item.MA_DTPN_NO);
-            //    if (!b)
-            //    {
-            //        listDTPB.Add(item.MA_DTPN_NO);
-            //    }
-            //}
-            var listDTPB = list.Select(a=>a.MA_DTPN_NO).Distinct().ToList();
-
+            
             ExcelUtlity Utlity = new ExcelUtlity();
             if(rdMauchuan.Checked)
                 Utlity.WriteDataTableToExcel_SOCTCN11_Mauchuan(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
             else if(rdInchitietquycach.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN30_InChiTietQuyCach(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
-            else if (rdViewtatcaDT.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN11_03_V_ViewtatcaDT(dt, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value, listDTPB);
-            else
-                Utlity.WriteDataTableToExcel_SOCTCN11_Mauchuan(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
+                Utlity.WriteDataTableToExcel_InChiTietQuyCach(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
         }
         #endregion
 

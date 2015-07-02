@@ -494,9 +494,6 @@ namespace ketoansoft.app.Class.Global
                     excelSheet.Range["A" + (rowcount + 4), "L" + (rowcount + 7)].HorizontalAlignment = -4108;
                     excelSheet.Range["A" + (rowcount + 9), "L" + (rowcount + 10)].HorizontalAlignment = -4108;
                     excelSheet.Range["A" + (rowcount + 11), "E" + (rowcount + dataRow.Length + 11)].HorizontalAlignment = -4108;
-                    excelSheet.Range["F" + (rowcount + dataRow.Length + 11), "F" + (rowcount + dataRow.Length + 11)].HorizontalAlignment = -4108;
-                    excelSheet.Range["F" + (rowcount + dataRow.Length + 12), "F" + (rowcount + dataRow.Length + 12)].HorizontalAlignment = -4108;
-                    excelSheet.Range["F" + (rowcount + dataRow.Length + 13), "F" + (rowcount + dataRow.Length + 13)].HorizontalAlignment = -4108;
                     //Merge
                     excelSheet.Range["A" + (rowcount + 4), "L" + (rowcount + 4)].MergeCells = true;
                     excelSheet.Range["A" + (rowcount + 5), "L" + (rowcount + 5)].MergeCells = true;
@@ -522,19 +519,15 @@ namespace ketoansoft.app.Class.Global
                     //Border
                     excelSheet.Range["A" + (rowcount + 9), "L" + (rowcount + 10)].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
                     excelSheet.Range["A" + (rowcount + 9), "L" + (rowcount + 10)].Borders.Weight = 2d;
-                    excelSheet.Range["A" + (rowcount + 11), "L" + (rowcount+ dataRow.Length + 10)].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDot;
-                    excelSheet.Range["A" + (rowcount + 11), "L" + (rowcount + dataRow.Length + 10)].Borders.Weight = 2d;
-                    excelSheet.Range["F" + (rowcount + dataRow.Length + 11), "L" + (rowcount + dataRow.Length + 13)].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
-                    excelSheet.Range["F" + (rowcount + dataRow.Length + 11), "L" + (rowcount + dataRow.Length + 13)].Borders.Weight = 2d;
+                    excelSheet.Range["A" + (rowcount + 11), "L" + (rowcount+ dataRow.Length + 11)].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlDot;
+                    excelSheet.Range["A" + (rowcount + 11), "L" + (rowcount + dataRow.Length + 11)].Borders.Weight = 2d;
+                    excelSheet.Range["F" + (rowcount + dataRow.Length + 11), "L" + (rowcount + dataRow.Length + 11)].Borders.LineStyle = Microsoft.Office.Interop.Excel.XlLineStyle.xlContinuous;
+                    excelSheet.Range["F" + (rowcount + dataRow.Length + 11), "L" + (rowcount + dataRow.Length + 11)].Borders.Weight = 2d;
                     //Công thức
                     excelSheet.Range["I" + (rowcount + dataRow.Length + 11), "I" + (rowcount + dataRow.Length + 11)].Formula = String.Format("=sum(I{0}:I{1})", rowcount+11, rowcount + dataRow.Length + 10);
                     excelSheet.Range["J" + (rowcount + dataRow.Length + 11), "J" + (rowcount + dataRow.Length + 11)].Formula = String.Format("=sum(J{0}:J{1})", rowcount+11, rowcount + dataRow.Length + 10);
                     excelSheet.Range["K" + (rowcount + dataRow.Length + 11), "K" + (rowcount + dataRow.Length + 11)].Formula = String.Format("=sum(K{0}:K{1})", rowcount+11, rowcount + dataRow.Length + 10);
                     excelSheet.Range["L" + (rowcount + dataRow.Length + 11), "L" + (rowcount + dataRow.Length + 11)].Formula = String.Format("=sum(L{0}:L{1})",  rowcount+11, rowcount + dataRow.Length + 10);
-                    //excelSheet.Range["I" + (rowcount + dataRow.Length + 12), "I" + (rowcount + dataRow.Length + 12)].Formula = String.Format("=sum(I{0}:I{1})", rowcount + 11, rowcount + dataRow.Length + 10);
-                    //excelSheet.Range["J" + (rowcount + dataRow.Length + 12), "J" + (rowcount + dataRow.Length + 12)].Formula = String.Format("=sum(J{0}:J{1})", rowcount + 11, rowcount + dataRow.Length + 10);
-                    //excelSheet.Range["K" + (rowcount + dataRow.Length + 12), "K" + (rowcount + dataRow.Length + 12)].Formula = String.Format("=sum(K{0}:K{1})", rowcount + 11, rowcount + dataRow.Length + 10);
-                    //excelSheet.Range["L" + (rowcount + dataRow.Length + 12), "L" + (rowcount + dataRow.Length + 12)].Formula = String.Format("=sum(L{0}:L{1})", rowcount + 11, rowcount + dataRow.Length + 10);
                     #endregion
 
                     //gắn header & footer
@@ -562,9 +555,9 @@ namespace ketoansoft.app.Class.Global
                     excelSheet.Range["J" + (rowcount + 10)].Value2 = "Có";
                     excelSheet.Range["K" + (rowcount + 10)].Value2 = "Nợ";
                     excelSheet.Range["L" + (rowcount + 10)].Value2 = "Có";
-                    excelSheet.Range["F" + (rowcount + dataRow.Length + 11)].Value2 = "CỘNG PHÁT SINH";
-                    excelSheet.Range["F" + (rowcount + dataRow.Length + 12)].Value2 = "SỐ DƯ ĐẦU KỲ";
-                    excelSheet.Range["F" + (rowcount + dataRow.Length + 13)].Value2 = "SỐ DƯ CUỐI KỲ";
+                    excelSheet.Range["G" + (rowcount + dataRow.Length + 11)].Value2 = "CỘNG PHÁT SINH";
+                    excelSheet.Range["G" + (rowcount + dataRow.Length + 12)].Value2 = "SỐ DƯ ĐẦU KỲ";
+                    excelSheet.Range["G" + (rowcount + dataRow.Length + 13)].Value2 = "SỐ DƯ CUỐI KỲ";
                     excelSheet.Range["J" + (rowcount + dataRow.Length + 14)].Value2 = "Ngày " + print.Day + " tháng " + print.Month + " năm " + print.Year;
                     excelSheet.Range["C" + (rowcount + dataRow.Length + 15)].Value2 = "Người lập";
                     excelSheet.Range["F" + (rowcount + dataRow.Length + 15)].Value2 = "Kế toán trưởng";
