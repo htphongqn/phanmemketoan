@@ -40,7 +40,7 @@
             this.radioButton26 = new System.Windows.Forms.RadioButton();
             this.radioButton25 = new System.Windows.Forms.RadioButton();
             this.radioButton29 = new System.Windows.Forms.RadioButton();
-            this.rdSubtotaltheocongtrinh = new System.Windows.Forms.RadioButton();
+            this.radioButton17 = new System.Windows.Forms.RadioButton();
             this.radioButton33 = new System.Windows.Forms.RadioButton();
             this.radioButton24 = new System.Windows.Forms.RadioButton();
             this.radioButton28 = new System.Windows.Forms.RadioButton();
@@ -219,7 +219,7 @@
             this.groupBox6.Controls.Add(this.radioButton26);
             this.groupBox6.Controls.Add(this.radioButton25);
             this.groupBox6.Controls.Add(this.radioButton29);
-            this.groupBox6.Controls.Add(this.rdSubtotaltheocongtrinh);
+            this.groupBox6.Controls.Add(this.radioButton17);
             this.groupBox6.Controls.Add(this.radioButton33);
             this.groupBox6.Controls.Add(this.radioButton24);
             this.groupBox6.Controls.Add(this.radioButton28);
@@ -289,15 +289,15 @@
             this.radioButton29.Text = "15. Chi tiết hàng hóa - Không cộng ngày";
             this.radioButton29.UseVisualStyleBackColor = true;
             // 
-            // rdSubtotaltheocongtrinh
+            // radioButton17
             // 
-            this.rdSubtotaltheocongtrinh.AutoSize = true;
-            this.rdSubtotaltheocongtrinh.Location = new System.Drawing.Point(13, 135);
-            this.rdSubtotaltheocongtrinh.Name = "rdSubtotaltheocongtrinh";
-            this.rdSubtotaltheocongtrinh.Size = new System.Drawing.Size(150, 17);
-            this.rdSubtotaltheocongtrinh.TabIndex = 0;
-            this.rdSubtotaltheocongtrinh.Text = "6. Subtotal theo công trình";
-            this.rdSubtotaltheocongtrinh.UseVisualStyleBackColor = true;
+            this.radioButton17.AutoSize = true;
+            this.radioButton17.Location = new System.Drawing.Point(13, 135);
+            this.radioButton17.Name = "radioButton17";
+            this.radioButton17.Size = new System.Drawing.Size(150, 17);
+            this.radioButton17.TabIndex = 0;
+            this.radioButton17.Text = "6. Subtotal theo công trình";
+            this.radioButton17.UseVisualStyleBackColor = true;
             // 
             // radioButton33
             // 
@@ -1311,7 +1311,7 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX4;
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RadioButton rdSubtotaltheocongtrinh;
+        private System.Windows.Forms.RadioButton radioButton17;
         private System.Windows.Forms.RadioButton rdSubtotaltheothang;
         private System.Windows.Forms.RadioButton rdSubtotaltheochungtu;
         private System.Windows.Forms.RadioButton rdViewtatcaDT;

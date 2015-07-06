@@ -258,6 +258,12 @@
     <Compile Include="SOCTCN11.Designer.cs">
       <DependentUpon>SOCTCN11.cs</DependentUpon>
     </Compile>
+    <Compile Include="SOCTCN19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOCTCN19.Designer.cs">
+      <DependentUpon>SOCTCN19.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaoDatabaseMoi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -719,6 +725,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SOCTCN11.resx">
       <DependentUpon>SOCTCN11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOCTCN19.resx">
+      <DependentUpon>SOCTCN19.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TaoDatabaseMoi.resx">
       <DependentUpon>TaoDatabaseMoi.cs</DependentUpon>

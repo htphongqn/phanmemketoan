@@ -5,6 +5,7 @@ D:\PhongHT\Websites\dev\phanmemketoan\ketoansoft.vstore.app\bin\Debug\ketoansoft
 D:\PhongHT\Websites\dev\phanmemketoan\ketoansoft.vstore.app\bin\Debug\ketoansoft.app.pdb
 D:\PhongHT\Websites\dev\phanmemketoan\ketoansoft.vstore.app\obj\x86\Debug\ketoansoft.app.BackupDatabase.resources
 D:\PhongHT\Websites\dev\phanmemketoan\ketoansoft.vstore.app\obj\x86\Debug\ketoansoft.app.SOCTCN11.resources
+D:\PhongHT\Websites\dev\phanmemketoan\ketoansoft.vstore.app\obj\x86\Debug\ketoansoft.app.SOCTCN19.resources
 D:\PhongHT\Websites\dev\phanmemketoan\ketoansoft.vstore.app\obj\x86\Debug\ketoansoft.app.TaoDatabaseMoi.resources
 D:\PhongHT\Websites\dev\phanmemketoan\ketoansoft.vstore.app\obj\x86\Debug\ketoansoft.app.UIs.QuanTriDataNguoc.resources
 D:\PhongHT\Websites\dev\phanmemketoan\ketoansoft.vstore.app\obj\x86\Debug\ketoansoft.app.UIs.ThemDoiTuongPhapNhan.resources

@@ -28,7 +28,7 @@ namespace ketoansoft.app
             loaddtpNgay();
             LoadTK();
             LoadDT();
-            cboThang.Text = fTerm._month;
+            cboThang.Text = DateTime.Now.Month.ToString();
         }
 
         #region load data
@@ -86,7 +86,7 @@ namespace ketoansoft.app
         }
         private DateTime GetFirstDayOfMonth(int iMonth)
         {
-            DateTime dtResult = new DateTime(Utils.CIntDef(fTerm._year, 0), iMonth, 1);
+            DateTime dtResult = new DateTime(DateTime.Now.Year, iMonth, 1);
             dtResult = dtResult.AddDays((-dtResult.Day) + 1);
             return dtResult;
         }
@@ -99,15 +99,15 @@ namespace ketoansoft.app
         }
         private DateTime GetLastDayOfMonth(int iMonth)
         {
-            DateTime dtResult = new DateTime(Utils.CIntDef(fTerm._year, 0), iMonth, 1);
+            DateTime dtResult = new DateTime(DateTime.Now.Year, iMonth, 1);
             dtResult = dtResult.AddMonths(1);
             dtResult = dtResult.AddDays(-(dtResult.Day));
             return dtResult;
         }
         private void loaddtpNgay()
         {
-            dtpTuNgay.Value = GetFirstDayOfMonth(Utils.CIntDef(fTerm._month, 0));
-            dtpDenngay.Value = GetLastDayOfMonth(Utils.CIntDef(fTerm._month, 0));
+            dtpTuNgay.Value = GetFirstDayOfMonth(DateTime.Now);
+            dtpDenngay.Value = GetLastDayOfMonth(DateTime.Now);
             dtNgayin.Value = DateTime.Now;
         }
         private void cboThang_SelectedIndexChanged(object sender, EventArgs e)
@@ -126,7 +126,7 @@ namespace ketoansoft.app
         {
             DataTable dt = new DataTable();
             dt.Columns.AddRange(new DataColumn[] { new DataColumn("DTPN"), new DataColumn("TK"), new DataColumn("LOAI_CT"), new DataColumn("SO_CT"), new DataColumn("NGAY_CT"), 
-                new DataColumn("SO_HOADON"), new DataColumn("NGAY_HOADON"),new DataColumn("TEN_KH"),new DataColumn("NGUOI_GD"), new DataColumn("MA_CTRINH"),   
+                new DataColumn("SO_HOADON"), new DataColumn("NGAY_HOADON"),new DataColumn("TEN_KH"),new DataColumn("NGUOI_GD"),  
                 new DataColumn("MADM"), new DataColumn("DIENGIAI"), new DataColumn("DONVI"), new DataColumn("SOLUONG", System.Type.GetType("System.Double")), new DataColumn("DAI"), new DataColumn("RONG"), 
                 new DataColumn("SOM2"), new DataColumn("DONGIA", System.Type.GetType("System.Double")), new DataColumn("TKDU")
                 , new DataColumn("NO_VND",System.Type.GetType("System.Double")), new DataColumn("CO_VND", System.Type.GetType("System.Double")), new DataColumn("NO_USD", System.Type.GetType("System.Double")), new DataColumn("CO_USD", System.Type.GetType("System.Double")) });
@@ -138,7 +138,6 @@ namespace ketoansoft.app
             {
                 DataRow dr = dt.NewRow();
                 dr["DTPN"] = item.MA_DTPN_NO;
-                dr["MA_CTRINH"] = item.MA_CTRINH;
                 dr["TK"] = item.TK_NO;
                 dr["LOAI_CT"] = item.MA_CTU;
                 dr["SO_CT"] = item.SO_CTU;
@@ -172,14 +171,13 @@ namespace ketoansoft.app
                 Utlity.WriteDataTableToExcel_SOCTCN11_03_V_ViewtatcaDT(dt, list, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
             else if (rdSubtotaltheochungtu.Checked)
                 Utlity.WriteDataTableToExcel_SOCTCN11_04_V_Subtotaltheochungtu(dt, list, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
-            else if (rdSubtotaltheothang.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN11_05_V_Subtotaltheothang(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
-            else if (rdSubtotaltheocongtrinh.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN11_06_V_Subtotaltheocongtrinh(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
             else
                 Utlity.WriteDataTableToExcel_SOCTCN11_Mauchuan(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
         }
         #endregion
+
+
+
 
     }
 }

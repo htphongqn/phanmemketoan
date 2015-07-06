@@ -40,11 +40,11 @@
             this.radioButton26 = new System.Windows.Forms.RadioButton();
             this.radioButton25 = new System.Windows.Forms.RadioButton();
             this.radioButton29 = new System.Windows.Forms.RadioButton();
-            this.rdSubtotaltheocongtrinh = new System.Windows.Forms.RadioButton();
+            this.radioButton17 = new System.Windows.Forms.RadioButton();
             this.radioButton33 = new System.Windows.Forms.RadioButton();
             this.radioButton24 = new System.Windows.Forms.RadioButton();
             this.radioButton28 = new System.Windows.Forms.RadioButton();
-            this.rdSubtotaltheothang = new System.Windows.Forms.RadioButton();
+            this.radioButton18 = new System.Windows.Forms.RadioButton();
             this.radioButton32 = new System.Windows.Forms.RadioButton();
             this.radioButton23 = new System.Windows.Forms.RadioButton();
             this.radioButton27 = new System.Windows.Forms.RadioButton();
@@ -219,11 +219,11 @@
             this.groupBox6.Controls.Add(this.radioButton26);
             this.groupBox6.Controls.Add(this.radioButton25);
             this.groupBox6.Controls.Add(this.radioButton29);
-            this.groupBox6.Controls.Add(this.rdSubtotaltheocongtrinh);
+            this.groupBox6.Controls.Add(this.radioButton17);
             this.groupBox6.Controls.Add(this.radioButton33);
             this.groupBox6.Controls.Add(this.radioButton24);
             this.groupBox6.Controls.Add(this.radioButton28);
-            this.groupBox6.Controls.Add(this.rdSubtotaltheothang);
+            this.groupBox6.Controls.Add(this.radioButton18);
             this.groupBox6.Controls.Add(this.radioButton32);
             this.groupBox6.Controls.Add(this.radioButton23);
             this.groupBox6.Controls.Add(this.radioButton27);
@@ -289,15 +289,15 @@
             this.radioButton29.Text = "15. Chi tiết hàng hóa - Không cộng ngày";
             this.radioButton29.UseVisualStyleBackColor = true;
             // 
-            // rdSubtotaltheocongtrinh
+            // radioButton17
             // 
-            this.rdSubtotaltheocongtrinh.AutoSize = true;
-            this.rdSubtotaltheocongtrinh.Location = new System.Drawing.Point(13, 135);
-            this.rdSubtotaltheocongtrinh.Name = "rdSubtotaltheocongtrinh";
-            this.rdSubtotaltheocongtrinh.Size = new System.Drawing.Size(150, 17);
-            this.rdSubtotaltheocongtrinh.TabIndex = 0;
-            this.rdSubtotaltheocongtrinh.Text = "6. Subtotal theo công trình";
-            this.rdSubtotaltheocongtrinh.UseVisualStyleBackColor = true;
+            this.radioButton17.AutoSize = true;
+            this.radioButton17.Location = new System.Drawing.Point(13, 135);
+            this.radioButton17.Name = "radioButton17";
+            this.radioButton17.Size = new System.Drawing.Size(150, 17);
+            this.radioButton17.TabIndex = 0;
+            this.radioButton17.Text = "6. Subtotal theo công trình";
+            this.radioButton17.UseVisualStyleBackColor = true;
             // 
             // radioButton33
             // 
@@ -329,15 +329,15 @@
             this.radioButton28.Text = "14. Chi tiết hàng hóa - Cộng theo ngày";
             this.radioButton28.UseVisualStyleBackColor = true;
             // 
-            // rdSubtotaltheothang
+            // radioButton18
             // 
-            this.rdSubtotaltheothang.AutoSize = true;
-            this.rdSubtotaltheothang.Location = new System.Drawing.Point(13, 112);
-            this.rdSubtotaltheothang.Name = "rdSubtotaltheothang";
-            this.rdSubtotaltheothang.Size = new System.Drawing.Size(130, 17);
-            this.rdSubtotaltheothang.TabIndex = 0;
-            this.rdSubtotaltheothang.Text = "5. Subtotal theo tháng";
-            this.rdSubtotaltheothang.UseVisualStyleBackColor = true;
+            this.radioButton18.AutoSize = true;
+            this.radioButton18.Location = new System.Drawing.Point(13, 112);
+            this.radioButton18.Name = "radioButton18";
+            this.radioButton18.Size = new System.Drawing.Size(130, 17);
+            this.radioButton18.TabIndex = 0;
+            this.radioButton18.Text = "5. Subtotal theo tháng";
+            this.radioButton18.UseVisualStyleBackColor = true;
             // 
             // radioButton32
             // 
@@ -850,7 +850,6 @@
             this.dtpTuNgay.ButtonDropDown.Visible = true;
             this.dtpTuNgay.ButtonFreeText.Tooltip = "";
             this.dtpTuNgay.CustomFormat = "dd/MM/yyyy";
-            this.dtpTuNgay.Enabled = false;
             this.dtpTuNgay.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpTuNgay.IsPopupCalendarOpen = false;
             this.dtpTuNgay.Location = new System.Drawing.Point(71, 47);
@@ -906,7 +905,6 @@
             this.dtpDenngay.ButtonDropDown.Visible = true;
             this.dtpDenngay.ButtonFreeText.Tooltip = "";
             this.dtpDenngay.CustomFormat = "dd/MM/yyyy";
-            this.dtpDenngay.Enabled = false;
             this.dtpDenngay.Format = DevComponents.Editors.eDateTimePickerFormat.Custom;
             this.dtpDenngay.IsPopupCalendarOpen = false;
             this.dtpDenngay.Location = new System.Drawing.Point(71, 69);
@@ -1311,8 +1309,8 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX4;
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.RadioButton rdSubtotaltheocongtrinh;
-        private System.Windows.Forms.RadioButton rdSubtotaltheothang;
+        private System.Windows.Forms.RadioButton radioButton17;
+        private System.Windows.Forms.RadioButton radioButton18;
         private System.Windows.Forms.RadioButton rdSubtotaltheochungtu;
         private System.Windows.Forms.RadioButton rdViewtatcaDT;
         private System.Windows.Forms.RadioButton rdInchitietquycach;
