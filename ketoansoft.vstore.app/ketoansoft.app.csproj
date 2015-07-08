@@ -203,6 +203,24 @@
     <Compile Include="Class\SqlHelper\TestClass.cs" />
     <Compile Include="Components\clsVproUtility.cs" />
     <Compile Include="Class\Data\CFGRepo.cs" />
+    <Compile Include="Reports\SOCTCN14_Mau2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SOCTCN14_Mau2.Designer.cs">
+      <DependentUpon>SOCTCN14_Mau2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SOCTCN14_Mau1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SOCTCN14_Mau1.Designer.cs">
+      <DependentUpon>SOCTCN14_Mau1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SOCTCN14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SOCTCN14.Designer.cs">
+      <DependentUpon>SOCTCN14.cs</DependentUpon>
+    </Compile>
     <Compile Include="dbVstoreApp.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -722,6 +740,15 @@
     </Compile>
     <EmbeddedResource Include="BackupDatabase.resx">
       <DependentUpon>BackupDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SOCTCN14_Mau2.resx">
+      <DependentUpon>SOCTCN14_Mau2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SOCTCN14_Mau1.resx">
+      <DependentUpon>SOCTCN14_Mau1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SOCTCN14.resx">
+      <DependentUpon>SOCTCN14.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SOCTCN11.resx">
       <DependentUpon>SOCTCN11.cs</DependentUpon>

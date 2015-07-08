@@ -182,8 +182,6 @@ namespace ketoansoft.app
                 Utlity.WriteDataTableToExcel_SOCTCN27_Chitiettheosohoadonhanghoa(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
             else if (rdChitiettheohanghoa.Checked)
                 Utlity.WriteDataTableToExcel_SOCTCN19_04_Chitiettheohanghoa(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
-            else if (rdChitiettheosohoadon2.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN26_Chitiettheosohoadon(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
             else
                 Utlity.WriteDataTableToExcel_SOCTCN19_01_V_Mauchuan(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
         }

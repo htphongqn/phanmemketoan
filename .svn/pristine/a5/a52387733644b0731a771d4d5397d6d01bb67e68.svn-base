@@ -9,29 +9,27 @@ using System.Windows.Forms;
 using ketoansoft.app.Components.clsVproUtility;
 using ketoansoft.app.Class.Global;
 using ketoansoft.app.Class.Data;
+using ketoansoft.app.Reports;
 
 namespace ketoansoft.app
 {
-    public partial class SOCTCN19 : Form
+    public partial class SOCTCN14 : Form
     {
         private dbVstoreAppDataContext _db = new dbVstoreAppDataContext(Const.builder.ConnectionString);
         private KT_CTuGocRepo _KT_CTuGocRepo = new KT_CTuGocRepo();
         private KTTKRepo _KTTKRepo = new KTTKRepo();
         private KTDTPNRepo _KTDTPNRepo = new KTDTPNRepo();
-        public SOCTCN19()
+        public SOCTCN14()
         {
             InitializeComponent();
         }
 
-        private void SOCTCN19_Load(object sender, EventArgs e)
+        private void SOCTCN14_Load(object sender, EventArgs e)
         {
             loaddtpNgay();
             LoadTK();
             LoadDT();
             cboThang.Text = fTerm._month;
-            cboLoaitien.Text = "1";
-            cboNgonngu.Text = "1";
-            cboExportsangExcel.Text = "F";
         }
 
         #region load data
@@ -127,65 +125,47 @@ namespace ketoansoft.app
         }
         private void btnIn_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt.Columns.AddRange(new DataColumn[] { new DataColumn("DTPN"), new DataColumn("TK"), new DataColumn("LOAI_CT"), new DataColumn("SO_CT"), new DataColumn("NGAY_CT"), 
-                new DataColumn("SO_HOADON"), new DataColumn("NGAY_HOADON"),new DataColumn("TEN_KH"),new DataColumn("NGUOI_GD"), new DataColumn("MA_CTRINH"), new DataColumn("MUA"),    
-                new DataColumn("MADM"), new DataColumn("DIENGIAI"), new DataColumn("DONVI"), new DataColumn("SOLUONG", System.Type.GetType("System.Double")), new DataColumn("DAI"),
-                new DataColumn("RONG"), new DataColumn("SOM2"), new DataColumn("DONGIA", System.Type.GetType("System.Double")), new DataColumn("TKDU"), new DataColumn("NO_VND",System.Type.GetType("System.Double")),
-                new DataColumn("NO_CUOIKY_VND", System.Type.GetType("System.Double")), new DataColumn("CO_CUOIKY_VND", System.Type.GetType("System.Double")), 
-                new DataColumn("MAHH"), new DataColumn("TENHH"),
-                new DataColumn("CO_VND", System.Type.GetType("System.Double")), new DataColumn("NO_USD", System.Type.GetType("System.Double")), new DataColumn("CO_USD", System.Type.GetType("System.Double")) });
+            string tencongty = "CÔNG TY ABCDab";
+            string diachi = "M17 LÊ HOÀNG PHÁI,GÒ VẤP,TP.HCM";
+            string masothue = "Mã số thuế : 0300688235";
+            string tieude = "SỔ CHI TIẾT TÀI KHOẢN THEO ĐỐI TƯỢNG";
+            string tungaydenngay = "Từ ngày 01/01/08 đến ngày 31/01/08";
+            string ngayin = "Ngày 01 tháng 01 năm 2015";
+            string taikhoan = "Tài khoản : 1112 - - Ngoại tệ";
+            string dtpn = "Mã ĐTPN :  - ";
 
             _db = new dbVstoreAppDataContext(Const.builder.ConnectionString);
-            var list = this._db.KT_CTuGocs.Where(u => u.NGAY_CTU.Value != null && u.NGAY_CTU.Value.Date >= dtpTuNgay.Value.Date && u.NGAY_CTU.Value.Date <= dtpDenngay.Value.Date
+            var list = this._db.KT_CTuGocs.Where(u => u.NGAY_CTU.Value != null && u.NGAY_CTU.Value.Date >= dtpTuNgay.Value.Date && u.NGAY_CTU.Value.Date <= dtpDenngay.Value.Date 
                 && (u.TK_NO == cboTaikhoan.Text || cboTaikhoan.Text == "") && (u.MA_DTPN_NO == cboMaDT.Text || cboMaDT.Text == ""));
-            foreach (var item in list)
-            {
-                DataRow dr = dt.NewRow();
-                dr["DTPN"] = item.MA_DTPN_NO;
-                dr["MA_CTRINH"] = item.MA_CTRINH;
-                dr["TK"] = item.TK_NO;
-                dr["LOAI_CT"] = item.MA_CTU;
-                dr["SO_CT"] = item.SO_CTU;
-                dr["NGAY_CT"] = item.NGAY_CTU;
-                dr["SO_HOADON"] = item.HD_SO;
-                dr["NGAY_HOADON"] = item.HD_NGAY;
-                dr["TEN_KH"] = item.TEN_KH;
-                dr["NGUOI_GD"] = item.TEN_KH_GD;
-                dr["MADM"] = item.MA_DM_XUAT;
-                dr["MAHH"] = "";
-                dr["TENHH"] = "";
-                dr["DIENGIAI"] = item.DIEN_GIAI;
-                dr["DONVI"] = item.DON_VI1;
-                dr["SOLUONG"] = Utils.CDblDef(item.SO_LUONG, 0);
-                dr["DAI"] = "";
-                dr["RONG"] = "";
-                dr["SOM2"] = "";
-                dr["DONGIA"] = Utils.CDblDef(item.DON_GIA_VND, 0);
-                dr["TKDU"] = item.TK_CO;
-                dr["MUA"] = Utils.CDblDef(150000, 0);
-                dr["NO_CUOIKY_VND"] = Utils.CDblDef(150000, 0);
-                dr["CO_CUOIKY_VND"] = Utils.CDblDef(150000, 0);
-                dr["NO_VND"] = Utils.CDblDef(150000, 0);
-                dr["CO_VND"] = Utils.CDblDef(150000, 0);
-                dr["NO_USD"] = Utils.CDblDef(150000, 0);
-                dr["CO_USD"] = Utils.CDblDef(150000, 0);
-                dt.Rows.Add(dr);
-            }
-
+                                    
             ExcelUtlity Utlity = new ExcelUtlity();
-            if (rdMauchuan.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN19_01_V_Mauchuan(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
-            else if (rdChitiettheosohoadon.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN26_Chitiettheosohoadon(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
-            else if (rdChitiettheosohoadonhanghoa.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN27_Chitiettheosohoadonhanghoa(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
-            else if (rdChitiettheohanghoa.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN19_04_Chitiettheohanghoa(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
-            else if (rdChitiettheosohoadon2.Checked)
-                Utlity.WriteDataTableToExcel_SOCTCN26_Chitiettheosohoadon(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
-            else
-                Utlity.WriteDataTableToExcel_SOCTCN19_01_V_Mauchuan(dt, cboTaikhoan.Text, cboMaDT.Text, dtpTuNgay.Value, dtpDenngay.Value, dtNgayin.Value);
+            if (rdMau1.Checked)
+            {
+                SOCTCN14_Mau1 report = new SOCTCN14_Mau1();
+                report.lbTencongty.Text = tencongty;
+                report.lbDiachi.Text = diachi;
+                report.lbMasothue.Text = masothue;
+                report.lbTieude.Text = tieude;
+                report.lbTungaydenngay.Text = tungaydenngay;
+                report.lbNgayin.Text = ngayin;
+                report.lbTaikhoan.Text = taikhoan;
+                report.lbDtpn.Text = dtpn;
+
+                report.DataSource = list;
+                report.xrLoaiCT.DataBindings.Add("Text", list, "MA_CTU");
+                report.xrSoCT.DataBindings.Add("Text", list, "SO_CTU");
+                report.xrNgayCT.DataBindings.Add("Text", list, "NGAY_CTU", "{0:dd/MM/yyyy}");
+                report.xrSoHD.DataBindings.Add("Text", list, "HD_SO");
+                report.xrNgayHD.DataBindings.Add("Text", list, "HD_NGAY", "{0:dd/MM/yyyy}");
+                report.xrDiengiai.DataBindings.Add("Text", list, "DIEN_GIAI");
+                report.xrTenhanghoa.DataBindings.Add("Text", list, "TEN_HH_IN");
+                report.xrTKDU.DataBindings.Add("Text", list, "TK_CO");
+                //report.xrPhatsinhtrongkyNo.DataBindings.Add("Text", list, "HD_NGAY", "{0:###,###}");
+                //report.xrPhatsinhtrongkyCo.DataBindings.Add("Text", list, "HD_NGAY", "{0:###,###}");
+                //report.xrSoducuoikyNo.DataBindings.Add("Text", list, "HD_NGAY", "{0:###,###}");
+                //report.xrSoducuoikyCo.DataBindings.Add("Text", list, "HD_NGAY", "{0:###,###}");
+                report.ShowPreview();
+            }            
         }
         #endregion
 

@@ -10,7 +10,6 @@ namespace ketoansoft.app.Class.Global
 {
     public class ExcelUtlity
     {
-        //mẫu
         public bool WriteDataTableToExcel(System.Data.DataTable dataTable)
         {
             string saveAsLocation = "";
@@ -163,7 +162,6 @@ namespace ketoansoft.app.Class.Global
                 range.Font.Bold = IsFontbool;
             }
         }
-        //1
         public bool WriteDataTableToExcel_SOCTCN11_Mauchuan(System.Data.DataTable dataTable, string taikhoan, string madtpn, DateTime from, DateTime to, DateTime print)
         {
             string saveAsLocation = Application.StartupPath + @"\Excel\SOCTCN11.xls";  
