@@ -10,6 +10,7 @@ namespace ketoansoft.app.Class.Global
     {
         //system
         public const string DATABASEXML_FILEPATH = "\\XML\\Database.xml";
+        public const string ACTIVATEXML_FILEPATH = "\\XML\\Activate.xml";
         public static bool ISCHANGEDATABASE = false;
         public static string ConnectionString = ConfigurationManager.ConnectionStrings["ketoansoft.app.Properties.Settings.dbConnectionString"].ConnectionString;
         public static System.Data.SqlClient.SqlConnectionStringBuilder builder;

@@ -95,6 +95,34 @@ namespace ketoansoft.app.Class.Global
             return false;
         }
         /// <summary>
+        /// Read XML Activate info
+        /// </summary>
+        /// <param name="ReadDatabaseXML">Read XML Activate info</param>
+        public static ArrayList ReadActivateXML()
+        {
+            String path = Application.StartupPath + Const.ACTIVATEXML_FILEPATH;
+            if (!File.Exists(path)) return null;
+            int count = 0;
+            ArrayList Arr = new ArrayList();
+            XmlTextReader xml = new XmlTextReader(path);
+            while (xml.Read())
+            {
+                switch (xml.NodeType)
+                {
+                    case XmlNodeType.Text:
+                        path = EmptyNull(xml.Value);
+                        if (path != "")
+                        {
+                            Arr.Insert(count, path);
+                            count++;
+                        }
+                        break;
+                }
+            }
+            xml.Close();
+            return Arr;
+        }
+        /// <summary>
         /// Read XML Database info
         /// </summary>
         /// <param name="ReadDatabaseXML">Read XML Database info</param>

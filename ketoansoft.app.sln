@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ketoansoft.app", "ketoansoft.vstore.app\ketoansoft.app.csproj", "{DDEA886B-69A5-4915-8BAE-9A2C68F39D20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Activate", "Activate\Activate.csproj", "{54307210-CB72-47E1-85FC-CFF609D02750}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{DDEA886B-69A5-4915-8BAE-9A2C68F39D20}.Debug|x86.Build.0 = Debug|x86
 		{DDEA886B-69A5-4915-8BAE-9A2C68F39D20}.Release|x86.ActiveCfg = Release|x86
 		{DDEA886B-69A5-4915-8BAE-9A2C68F39D20}.Release|x86.Build.0 = Release|x86
+		{54307210-CB72-47E1-85FC-CFF609D02750}.Debug|x86.ActiveCfg = Debug|x86
+		{54307210-CB72-47E1-85FC-CFF609D02750}.Debug|x86.Build.0 = Debug|x86
+		{54307210-CB72-47E1-85FC-CFF609D02750}.Release|x86.ActiveCfg = Release|x86
+		{54307210-CB72-47E1-85FC-CFF609D02750}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

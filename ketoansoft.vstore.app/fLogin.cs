@@ -13,6 +13,7 @@ using System.Data.Linq;
 using System.Xml;
 using System.Collections;
 using ketoansoft.app.Class.Global;
+using Microsoft.Win32;
 
 namespace ketoansoft.app
 {
@@ -124,11 +125,103 @@ namespace ketoansoft.app
             }
             catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
+        private bool CheckActivate()
+        {
+            try
+            {
+                ArrayList Arr = new ArrayList();
+                Arr = Unit.ReadActivateXML();
+                string Appcode = Arr[0].ToString();
+                string HardwareID = HardwareInfo.GetHDDSerialNo();
+                string keyValue = Security.Encrypt(HardwareID, Appcode);
+                try
+                {
+                    RegistryKey RegMachine = Registry.LocalMachine;
+                    RegistryKey RegSoftware = RegMachine.OpenSubKey("Software", true);
+                    if (RegSoftware != null)
+                    {
+                        RegistryKey RegMine = RegSoftware.OpenSubKey("Ketoan", true);
+                        if (RegMine != null)
+                        {
+                            String Tmp = "";
+                            try
+                            {
+                                Tmp = RegMine.GetValue("KetoanKey").ToString();
+                            }
+                            catch
+                            {
+                                btnLogon.Enabled = false;
+                                btnListData.Enabled = false;
+                                btnSearchDatabase.Enabled = false;
+                                MessageBox.Show("You must activate ketoan key...", "Ketoan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                RegMine.Close();
+                                RegMachine.Close();
+                                RegSoftware.Close();
+                                return false;
+                            }
+                            if (Tmp != "")
+                            {
+                                if (Tmp != keyValue)
+                                {
+                                    btnLogon.Enabled = false;
+                                    btnListData.Enabled = false;
+                                    btnSearchDatabase.Enabled = false;
+                                    MessageBox.Show("Read ketoan key is validation. You should activate again!", "Activate");
+                                    RegMine.Close();
+                                    RegMachine.Close();
+                                    RegSoftware.Close();
+                                    return false;
+                                }
+                                else
+                                {
+                                    return true;
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("You must activate ketoan key...", "Ketoan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                btnLogon.Enabled = false;
+                                btnListData.Enabled = false;
+                                btnSearchDatabase.Enabled = false;
+                                return false;
+                            }
+                            RegMine.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("You must activate ketoan key...", "Ketoan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            btnLogon.Enabled = false;
+                            btnListData.Enabled = false;
+                            btnSearchDatabase.Enabled = false;
+                            return false;
+                        }
+                        RegSoftware.Close();
+                    }
+                    RegMachine.Close();
+                }
+                catch
+                {
+                    MessageBox.Show("You must activate ketoan key...", "Ketoan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnLogon.Enabled = false;
+                    btnListData.Enabled = false;
+                    btnSearchDatabase.Enabled = false;
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); btnLogon.Enabled = false;
+                btnSearchDatabase.Enabled = false;
+                btnListData.Enabled = false; return false;
+            }
+            return false;
+        }
         #endregion
 
         #region Event
         private void fLogin_Load(object sender, EventArgs e)
         {
+            if (!CheckActivate()) return;
             if(!Const.ISCHANGEDATABASE)
                 ReadXML();
             Load_Server();

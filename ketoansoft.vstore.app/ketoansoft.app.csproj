@@ -112,6 +112,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -195,6 +196,7 @@
     <Compile Include="Class\Data\XLDLRepo.cs" />
     <Compile Include="Class\Global\Const.cs" />
     <Compile Include="Class\Global\ExcelUtlity.cs" />
+    <Compile Include="Class\Global\HardwareInfo.cs" />
     <Compile Include="Class\Global\Security.cs" />
     <Compile Include="Class\Global\Unit.cs" />
     <Compile Include="Class\SqlHelper\BackupHelper.cs" />

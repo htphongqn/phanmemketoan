@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using Microsoft.Win32;
+
+namespace Activate
+{
+    public partial class frmActivate : Form
+    {
+        private RegistryKey RegMachine, RegSoftware, RegMine;
+        public frmActivate()
+        {
+            InitializeComponent();
+        }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void btnGetHardwareID_Click(object sender, EventArgs e)
+        {
+            txtHardwareID.Text = HardwareInfo.GetHDDSerialNo();
+        }
+        private void btnActivate_Click(object sender, EventArgs e)
+        {
+            if (txtKhachhang.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập tên khách hàng!", "Thông báo");
+                return;
+            } 
+            if (txtAppcode.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập Appcode!", "Thông báo");
+                return;
+            } 
+            if (txtHardwareID.Text.Length == 0)
+            {
+                MessageBox.Show("Chưa nhập hardware ID!", "Thông báo");
+                return;
+            }
+
+            try
+            {
+                RegMachine = Registry.LocalMachine;
+                RegSoftware = RegMachine.OpenSubKey("Software", true);
+                if (RegMachine == null) return;
+                if (RegSoftware != null)
+                {
+                    if (RegSoftware.OpenSubKey("Ketoan") != null)
+                    {
+                        RegSoftware.DeleteSubKeyTree("Ketoan");
+                    }
+                    RegSoftware.CreateSubKey("Ketoan");
+                    RegMine = RegSoftware.OpenSubKey("Ketoan", true);
+                    if (RegMine != null)
+                    {
+                        RegMine.SetValue("KetoanKey", txtHardwareID.Text);
+                        RegMine.Close();
+                    }
+                    RegSoftware.Close();
+                    MessageBox.Show("You activated Ketoan Key successfull...", "KetoanKey", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                RegMachine.Close();
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Error activated Ketoan Key..." + E.Source.ToString(), "KetoanKey", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+    }
+}
