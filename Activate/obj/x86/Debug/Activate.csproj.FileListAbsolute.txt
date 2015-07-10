@@ -1,0 +1,7 @@
+D:\PhongHT\Websites\dev\phanmemketoan\Activate\bin\Debug\Activate.exe
+D:\PhongHT\Websites\dev\phanmemketoan\Activate\bin\Debug\Activate.pdb
+D:\PhongHT\Websites\dev\phanmemketoan\Activate\obj\x86\Debug\Activate.frmActivate.resources
+D:\PhongHT\Websites\dev\phanmemketoan\Activate\obj\x86\Debug\Activate.Properties.Resources.resources
+D:\PhongHT\Websites\dev\phanmemketoan\Activate\obj\x86\Debug\Activate.csproj.GenerateResource.Cache
+D:\PhongHT\Websites\dev\phanmemketoan\Activate\obj\x86\Debug\Activate.exe
+D:\PhongHT\Websites\dev\phanmemketoan\Activate\obj\x86\Debug\Activate.pdb
