@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HTKK>
   <ConnectDB>
-    <ServerName>ADMIN12\SQLEXPRESS</ServerName>
-    <DatabaseName>db_ketoan</DatabaseName>
-    <UserName>quanly</UserName>
-    <Password>1</Password>
+    <ServerName>admin13</ServerName>
+    <DatabaseName>ketoan</DatabaseName>
+    <UserName>sa</UserName>
+    <Password>123</Password>
   </ConnectDB>
 </HTKK>

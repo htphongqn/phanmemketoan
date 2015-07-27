@@ -757,6 +757,20 @@ namespace ketoansoft.app
             f.ShowDialog();
             f.Dispose();
         }
+        private void btnXacnhancongno_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = 112233;
+            SOCTCN21 f = new SOCTCN21();
+            f.ShowDialog();
+            f.Dispose();
+        }
+        private void btnDoichieucongno_DoubleClick(object sender, EventArgs e)
+        {
+            _IdAction = 112233;
+            SOCTCN20 f = new SOCTCN20();
+            f.ShowDialog();
+            f.Dispose();
+        }
         #endregion
 
         #endregion

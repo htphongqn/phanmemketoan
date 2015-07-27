@@ -132,8 +132,8 @@ namespace ketoansoft.app
                 , new DataColumn("NO_VND",System.Type.GetType("System.Double")), new DataColumn("CO_VND", System.Type.GetType("System.Double")), new DataColumn("NO_USD", System.Type.GetType("System.Double")), new DataColumn("CO_USD", System.Type.GetType("System.Double")) });
 
             _db = new dbVstoreAppDataContext(Const.builder.ConnectionString);
-            var list = this._db.KT_CTuGocs.Where(u => u.NGAY_CTU.Value != null && u.NGAY_CTU.Value.Date >= dtpTuNgay.Value.Date && u.NGAY_CTU.Value.Date <= dtpDenngay.Value.Date 
-                && (u.TK_NO == cboTaikhoan.Text || u.TK_CO == cboTaikhoan.Text) && (u.MA_DTPN_NO == cboMaDT.Text));
+            var list = this._db.KT_CTuGocs.Where(u => u.NGAY_CTU.Value != null && u.NGAY_CTU.Value.Date >= dtpTuNgay.Value.Date && u.NGAY_CTU.Value.Date <= dtpDenngay.Value.Date
+                && (u.TK_NO == cboTaikhoan.Text || cboTaikhoan.Text == "") && (u.MA_DTPN_NO == cboMaDT.Text || cboMaDT.Text == ""));
             foreach (var item in list)
             {
                 DataRow dr = dt.NewRow();
